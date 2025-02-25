@@ -15,7 +15,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
 
-        <Link href="/" className="text-2xl font-agbalumo text-primary">
+        <Link href="/" className="text-2xl font-pinyon text-primary">
           LeoBrd
         </Link>
 
