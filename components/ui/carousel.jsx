@@ -175,10 +175,10 @@ export default function Carousel({
       <div className="absolute flex justify-center w-full top-[calc(100%+1rem)]">
         <CarouselControl
           type="previous"
-          title="Go to previous slide"
+          title="Voir le projet précédent"
           handleClick={handlePreviousClick} />
 
-        <CarouselControl type="next" title="Go to next slide" handleClick={handleNextClick} />
+        <CarouselControl type="next" title="Voir le projet suivant" handleClick={handleNextClick} />
       </div>
     </div>)
   );

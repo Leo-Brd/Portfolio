@@ -14,7 +14,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        pinyon: ['Pinyon Script', 'serif'],
+        tinos: ['Tinos', 'serif'],
       },
       colors: {
         background: 'rgb(var(--background) / <alpha-value>)',

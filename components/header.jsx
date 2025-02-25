@@ -15,21 +15,21 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
 
-        <Link href="/" className="text-2xl font-pinyon text-primary">
+        <Link href="/" className="text-3xl text-primary">
           LeoBrd
         </Link>
 
         <nav className="hidden md:flex space-x-8">
-          <Link href="/" className="text-foreground hover:text-primary transition-colors">
+          <Link href="/" className="text-2xl text-foreground hover:text-primary transition-colors">
             Accueil
           </Link>
-          <Link href="/about" className="text-foreground hover:text-primary transition-colors">
+          <Link href="/about" className="text-2xl text-foreground hover:text-primary transition-colors">
             À propos
           </Link>
-          <Link href="/projects" className="text-foreground hover:text-primary transition-colors">
+          <Link href="/projects" className="text-2xl text-foreground hover:text-primary transition-colors">
             Projets
           </Link>
-          <Link href="/contact" className="text-foreground hover:text-primary transition-colors">
+          <Link href="/contact" className="text-2xl text-foreground hover:text-primary transition-colors">
             Contact
           </Link>
         </nav>

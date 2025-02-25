@@ -36,7 +36,7 @@ body {
   color: rgb(var(--foreground));
   background: rgb(var(--background));
   border-color: rgb(var(--border));
-  font-family: 'Limelight', sans-serif;
+  font-family: 'Tinos', sans-serif;
 }
 
 a {

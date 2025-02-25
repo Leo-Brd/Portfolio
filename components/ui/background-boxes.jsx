@@ -7,21 +7,13 @@ export const BoxesCore = ({
   className,
   ...rest
 }) => {
-  const rows = new Array(150).fill(1);
-  const cols = new Array(100).fill(1);
-  let colors = [
-    "rgb(0, 0, 0)",
-    "rgb(249, 250, 250)",
-    "rgb(4, 86, 251)",
-  ];
-  const getRandomColor = () => {
-    return colors[Math.floor(Math.random() * colors.length)];
-  };
+  const rows = new Array(75).fill(1);
+  const cols = new Array(50).fill(1);
 
   return (
     (<div
       style={{
-        transform: `translate(-40%,-60%) skewX(-48deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0)`,
+        transform: `translate(-40%,-60%) skewX(-48deg) skewY(14deg) scale(1) rotate(0deg) translateZ(0)`,
       }}
       className={cn(
         "absolute left-1/4 p-4 -top-1/4 flex  -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 ",
@@ -33,7 +25,7 @@ export const BoxesCore = ({
           {cols.map((_, j) => (
             <motion.div
               whileHover={{
-                backgroundColor: `var(${getRandomColor()})`,
+                backgroundColor: `var(rgb(4, 86, 251))`,
                 transition: { duration: 0 },
               }}
               animate={{
