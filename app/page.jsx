@@ -2,9 +2,17 @@
 import { Boxes } from "@/components/ui/background-boxes";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import { IconBrandGithub, IconBrandLinkedin, IconBrandDiscord } from '@tabler/icons-react';
 
 export default function Home() {
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = "smooth";
+    return () => {
+      document.documentElement.style.scrollBehavior = "auto";
+    };
+  }, []);
+
   return (
     <main className="min-h-screen flex flex-col items-center bg-background text-foreground p-8">
 
@@ -30,7 +38,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="mt-12 mb-20 flex space-x-6 z-20"
+        className="mt-12 mb-[150px] flex space-x-6 z-20"
       >
         <a
           href="https://github.com/Leo-Brd"
@@ -73,6 +81,42 @@ export default function Home() {
         <Boxes />
       
       </motion.div>
+
+      <motion.h1
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="text-8xl mt-20 md:text-9xl font-tinos text-primary"
+      >
+        Leo
+      </motion.h1>
+
+      <motion.h1
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="text-8xl mt-20 md:text-9xl font-tinos text-primary"
+      >
+        Leo
+      </motion.h1>
+
+      <motion.h1
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="text-8xl mt-20 md:text-9xl font-tinos text-primary"
+      >
+        Leo
+      </motion.h1>
+
+      <motion.h1
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="text-8xl mt-20 md:text-9xl font-tinos text-primary"
+      >
+        Leo
+      </motion.h1>
     </main>
     
   );
