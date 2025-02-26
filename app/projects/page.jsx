@@ -26,7 +26,7 @@ export default function Projects() {
   ];
   
   return (
-    (<div className="relative overflow-hidden w-full h-full py-20">
+    (<div className="relative overflow-hidden w-full h-full py-20 my-10">
       <Carousel slides={slideData} />
     </div>)
   );

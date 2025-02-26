@@ -3,7 +3,7 @@ import { Boxes } from "@/components/ui/background-boxes";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import { IconBrandGithub, IconBrandLinkedin, IconBrandDiscord } from '@tabler/icons-react';
+import {SiGithub, SiLinkedin, SiDiscord} from "react-icons/si";
 
 export default function Home() {
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function Home() {
           className="text-muted-foreground hover:text-primary transition-colors"
           aria-label="GitHub"
         >
-          <IconBrandGithub className="w-10 h-10 hover:scale-110 transition-transform duration-300" />
+          <SiGithub className="w-10 h-10 hover:scale-110 transition-transform duration-300" />
         </a>
         <a
           href="https://www.linkedin.com/in/leo-bordet/"
@@ -56,7 +56,7 @@ export default function Home() {
           className="text-muted-foreground hover:text-primary transition-colors"
           aria-label="LinkedIn"
         >
-          <IconBrandLinkedin className="w-10 h-10 hover:scale-110 transition-transform duration-300" />
+          <SiLinkedin className="w-10 h-10 hover:scale-110 transition-transform duration-300" />
         </a>
         <a
           href="https://discord.com/users/leo_brd"
@@ -65,7 +65,7 @@ export default function Home() {
           className="text-muted-foreground hover:text-primary transition-colors"
           aria-label="Discord"
         >
-          <IconBrandDiscord className="w-10 h-10 hover:scale-110 transition-transform duration-300" />
+          <SiDiscord className="w-10 h-10 hover:scale-110 transition-transform duration-300" />
         </a>
       </motion.div>
       

@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link';
-import { IconBrandGithub, IconBrandLinkedin, IconBrandDiscord } from '@tabler/icons-react';
+import {SiGithub, SiLinkedin, SiDiscord} from "react-icons/si";
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
           © 2023 LeoBrd. Tous droits réservés.
         </p>
 
-        <div className="flex space-x-6">
+        <div className="flex space-x-8">
           <a
             href="https://github.com/Leo-Brd"
             target="_blank"
@@ -19,7 +19,7 @@ export default function Footer() {
             className="text-muted-foreground hover:text-primary transition-colors"
             aria-label="GitHub"
           >
-            <IconBrandGithub className="w-6 h-6 hover:scale-110 transition-transform duration-300" />
+            <SiGithub className="w-6 h-6 hover:scale-110 transition-transform duration-300" />
           </a>
           <a
             href="https://www.linkedin.com/in/leo-bordet/"
@@ -28,7 +28,7 @@ export default function Footer() {
             className="text-muted-foreground hover:text-primary transition-colors"
             aria-label="LinkedIn"
           >
-            <IconBrandLinkedin className="w-6 h-6 hover:scale-110 transition-transform duration-300" />
+            <SiLinkedin className="w-6 h-6 hover:scale-110 transition-transform duration-300" />
           </a>
           <a
             href="https://discord.com/users/leo_brd"
@@ -37,7 +37,7 @@ export default function Footer() {
             className="text-muted-foreground hover:text-primary transition-colors"
             aria-label="Discord"
           >
-            <IconBrandDiscord className="w-6 h-6 hover:scale-110 transition-transform duration-300" />
+            <SiDiscord className="w-6 h-6 hover:scale-110 transition-transform duration-300" />
           </a>
         </div>
       </div>
