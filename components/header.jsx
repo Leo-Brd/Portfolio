@@ -23,8 +23,8 @@ export default function Header() {
           <Link href="/" className="text-2xl text-foreground hover:text-primary transition-colors">
             Accueil
           </Link>
-          <Link href="/about" className="text-2xl text-foreground hover:text-primary transition-colors">
-            À propos
+          <Link href="/skills" className="text-2xl text-foreground hover:text-primary transition-colors">
+            Skills
           </Link>
           <Link href="/projects" className="text-2xl text-foreground hover:text-primary transition-colors">
             Projets
