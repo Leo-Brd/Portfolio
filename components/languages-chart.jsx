@@ -1,62 +1,63 @@
 "use client";
-import { TrendingUp } from "lucide-react";
-import { Bar, BarChart, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, XAxis, YAxis, Tooltip } from "recharts";
 
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
+  CardFooter,
 } from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
 } from "@/components/ui/chart";
 
+// Données des langues
 const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
+  { language: "francais", value: 4, fill: "hsl(var(--chart-1))", description: "Langue maternelle" },
+  { language: "anglais", value: 3, fill: "hsl(var(--chart-2))", description: "Courant" },
+  { language: "espagnol", value: 2, fill: "hsl(var(--chart-3))", description: "Intermédiaire" },
+  { language: "japonais", value: 1, fill: "hsl(var(--chart-4))", description: "Débutant" },
 ];
 
+// Configuration des couleurs et des étiquettes
 const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
-  chrome: {
-    label: "Chrome",
+  francais: {
+    label: "🇫🇷",
     color: "hsl(var(--chart-1))",
   },
-  safari: {
-    label: "Safari",
+  anglais: {
+    label: "🇬🇧",
     color: "hsl(var(--chart-2))",
   },
-  firefox: {
-    label: "Firefox",
+  espagnol: {
+    label: "🇪🇸",
     color: "hsl(var(--chart-3))",
   },
-  edge: {
-    label: "Edge",
+  japonais: {
+    label: "🇯🇵",
     color: "hsl(var(--chart-4))",
   },
-  other: {
-    label: "Other",
-    color: "hsl(var(--chart-5))",
-  },
+};
+
+const CustomTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    const data = payload[0].payload;
+    return (
+      <div className="bg-background border border-border p-3 rounded-lg shadow-sm">
+        <p className="text-sm text-foreground">{data.description}</p>
+      </div>
+    );
+  }
+  return null;
 };
 
 export function Languages() {
   return (
-    <Card>
+    <Card className="w-[400px]">
       <CardHeader>
-        <CardTitle>Bar Chart - Mixed</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle className="text-3xl">Je peux parler en...</CardTitle>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -65,33 +66,51 @@ export function Languages() {
             data={chartData}
             layout="vertical"
             margin={{
-              left: 0,
+              left: 20,
+              right: 20,
             }}
           >
             <YAxis
-              dataKey="browser"
+              dataKey="language"
               type="category"
               tickLine={false}
               tickMargin={10}
               axisLine={false}
-              tickFormatter={(value) => chartConfig[value]?.label}
+              tick={(props) => {
+                const { x, y, payload } = props;
+                const emoji = chartConfig[payload.value]?.label || payload.value;
+                return (
+                  <g transform={`translate(${x},${y})`}>
+                    <text
+                      x={0}
+                      y={0}
+                      dy={10}
+                      textAnchor="end"
+                      fontSize={28}
+                      fill="currentColor"
+                    >
+                      {emoji}
+                    </text>
+                  </g>
+                );
+              }}
             />
-            <XAxis dataKey="visitors" type="number" hide />
-            <ChartTooltip
+            <XAxis dataKey="value" type="number" hide />
+            <Tooltip
               cursor={false}
-              content={<ChartTooltipContent hideLabel />}
+              content={<CustomTooltip />}
             />
-            <Bar dataKey="visitors" layout="vertical" radius={5} />
+            <Bar
+              dataKey="value"
+              layout="vertical"
+              radius={5}
+              fill={(entry) => entry.fill}
+            />
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
-        </div>
+      <CardFooter className="text-sm text-muted-foreground">
+        Mis à jour récemment...
       </CardFooter>
     </Card>
   );
