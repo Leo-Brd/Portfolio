@@ -26,9 +26,9 @@ const tools = [
 ];
 
 const mainSkills = [
-  { icon: <SiReact className="w-[60px] h-[60px] text-[#61DAFB]" />, name: "React", description: "Développement d'interfaces dynamiques et réactives." },
-  { icon: <SiNodedotjs className="w-[60px] h-[60px] text-[#339933]" />, name: "Node.js", description: "Développement back-end avec JavaScript." },
-  { icon: <SiGit className="w-[60px] h-[60px] text-[#F05032]" />, name: "Git", description: "Gestion de versions pour le travail collaboratif." },
+  { icon: <SiReact className="w-[80px] h-[80px] text-[#61DAFB]" />, name: "React", description: "Développement d'interfaces dynamiques et réactives." },
+  { icon: <SiNodedotjs className="w-[80px] h-[80px] text-[#339933]" />, name: "Node.js", description: "Développement back-end avec JavaScript." },
+  { icon: <SiGit className="w-[80px] h-[80px] text-[#F05032]" />, name: "Git", description: "Gestion de versions pour le travail collaboratif." },
 ];
 
 const learningSkills = [

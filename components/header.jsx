@@ -20,17 +20,33 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex space-x-8">
-          <Link href="/" className="text-2xl text-foreground hover:text-primary transition-colors">
+        <Link
+            href="/"
+            className="text-2xl text-foreground hover:text-primary transition-colors relative group"
+          >
             Accueil
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
           </Link>
-          <Link href="/skills" className="text-2xl text-foreground hover:text-primary transition-colors">
+          <Link
+            href="/skills"
+            className="text-2xl text-foreground hover:text-primary transition-colors relative group"
+          >
             Skills
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
           </Link>
-          <Link href="/projects" className="text-2xl text-foreground hover:text-primary transition-colors">
+          <Link
+            href="/projects"
+            className="text-2xl text-foreground hover:text-primary transition-colors relative group"
+          >
             Projets
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
           </Link>
-          <Link href="/contact" className="text-2xl text-foreground hover:text-primary transition-colors">
+          <Link
+            href="/contact"
+            className="text-2xl text-foreground hover:text-primary transition-colors relative group"
+          >
             Contact
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
           </Link>
         </nav>
 
