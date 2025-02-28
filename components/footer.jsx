@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-around space-y-4 md:space-y-0">
 
         <p className="text-muted-foreground text-sm">
-          © 2023 LeoBrd. Tous droits réservés.
+          © 2025 LeoBrd. Tous droits réservés.
         </p>
 
         <div className="flex space-x-8">
