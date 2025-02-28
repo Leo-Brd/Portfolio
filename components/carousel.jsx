@@ -84,9 +84,10 @@ const Slide = ({
             className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
             style={{
               opacity: current === index ? 1 : 0.5,
+              objectPosition: "left center",
             }}
             alt={title}
-            src={src}
+            src={src.src}
             onLoad={imageLoaded}
             loading="eager"
             decoding="sync" />
