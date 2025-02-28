@@ -1,5 +1,6 @@
 "use client";
-import { Boxes } from "@/components/ui/background-boxes";
+import { Boxes } from "@/components/background-boxes";
+import { Languages } from "@/components/languages-chart"
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
@@ -81,6 +82,8 @@ export default function Home() {
         <Boxes />
       
       </motion.div>
+
+      <Languages />
       
     </main>
     

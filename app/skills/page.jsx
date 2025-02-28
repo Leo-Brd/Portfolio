@@ -1,7 +1,24 @@
 "use client";
 import { motion } from "framer-motion";
-
-import {SiHtml5, SiCss3, SiJavascript, SiPython, SiGithub, SiFigma, SiSass, SiMongodb, SiFeedly, SiCanva, SiChatbot, SiReact, SiNodedotjs, SiGit, SiNextdotjs, SiTailwindcss, SiC} from "react-icons/si";
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiPython,
+  SiGithub,
+  SiFigma,
+  SiSass,
+  SiMongodb,
+  SiFeedly,
+  SiCanva,
+  SiChatbot,
+  SiReact,
+  SiNodedotjs,
+  SiGit,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiC,
+} from "react-icons/si";
 import { TbBrandVscode, TbSeo } from "react-icons/tb";
 import { VscDebugAll } from "react-icons/vsc";
 import { IoTerminal } from "react-icons/io5";
@@ -80,7 +97,8 @@ export default function Skills() {
               initial={{ opacity: 0, x: (index % 2 === 0 ? -50 : 50), y: (index % 3 === 0 ? -50 : 50) }}
               animate={{ opacity: 1, x: 0, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="p-4 rounded-full shadow-md bg-card flex items-center justify-center hover:shadow-lg transition-shadow"
+              whileHover={{ scale: 1.2, rotate: 10, transition: { duration: 0.1 } }}
+              className="p-4 rounded-full shadow-md bg-card flex items-center justify-center hover:shadow-lg transition-all cursor-pointer"
             >
               {tool.icon}
             </motion.div>

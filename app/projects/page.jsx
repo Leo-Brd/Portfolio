@@ -1,5 +1,5 @@
 "use client";
-import Carousel from "@/components/ui/carousel";
+import Carousel from "@/components/carousel";
 
 export default function Projects() {
   const slideData = [
