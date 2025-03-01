@@ -22,6 +22,7 @@ import {
 import { TbBrandVscode, TbSeo } from "react-icons/tb";
 import { VscDebugAll } from "react-icons/vsc";
 import { IoTerminal } from "react-icons/io5";
+import ChatGPTLogo from "@/public/ChatGPT_logo.png"
 
 const tools = [
   { icon: <SiHtml5 className="w-[40px] h-[40px] text-[#E34F26]" />, name: "HTML5" },
@@ -37,7 +38,7 @@ const tools = [
   { icon: <SiMongodb className="w-[40px] h-[40px] text-[#47A248]" />, name: "MongoDB" },
   { icon: <SiFeedly className="w-[40px] h-[40px] text-[#3ba83b]" />, name: "Feedly" },
   { icon: <SiCanva className="w-[40px] h-[40px] text-[#3bc5ba]" />, name: "Canva" },
-  { icon: <SiChatbot className="w-[40px] h-[40px] text-[#3bc5ba]" />, name: "ChatGPT" },
+  { icon: <img src={ChatGPTLogo.src} alt="Logo de ChatGPT" className="w-[40px] h-[40px] text-[#3bc5ba]" />, name: "ChatGPT" },
   { icon: <IoTerminal className="w-[40px] h-[40px] text-black dark:text-[#ffffff]" />, name: "Terminal" },
   { icon: <SiC className="w-[40px] h-[40px] text-[#226db3]" />, name: "C" },
 ];
