@@ -1,6 +1,7 @@
 "use client";
 import { Boxes } from "@/components/background-boxes";
 import { Languages } from "@/components/languages-chart";
+import { GithubActivity } from "@/components/github-activity"
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
@@ -94,8 +95,7 @@ export default function Home() {
           </h2>
           <p className="text-lg text-muted-foreground">
             Passionné par le développement web, j'aime créer des interfaces
-            intuitives et des expériences utilisateur mémorables. Découvrez mes
-            compétences et mon parcours ci-dessous.
+            intuitives et des expériences utilisateur mémorables. Découvrez en un peu plus ci-dessous.
           </p>
         </motion.div>
 
@@ -137,7 +137,7 @@ export default function Home() {
               </div>
 
               <div className="flex items-center w-full">
-                <div className="w-1/2 pr-8 text-right">
+                <div className="w-1/2 pr-8 flex justify-end">
                   <div className="w-4 h-4 bg-primary rounded-full" />
                 </div>
                 <div className="w-1/2 pl-8">
@@ -161,7 +161,7 @@ export default function Home() {
               </div>
               
               <div className="flex items-center w-full">
-                <div className="w-1/2 pr-8 text-right">
+                <div className="w-1/2 pr-8 flex justify-end">
                   <div className="w-4 h-4 bg-primary rounded-full" />
                 </div>
                 <div className="w-1/2 pl-8">
@@ -175,6 +175,8 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
+      <GithubActivity />
     </main>
   );
 }

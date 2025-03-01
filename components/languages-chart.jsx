@@ -15,10 +15,10 @@ import {
 
 // Données des langues
 const chartData = [
-  { language: "francais", value: 4, fill: "rgb(var(--chart-1))", description: "Langue maternelle" },
-  { language: "anglais", value: 3, fill: "rgb(var(--chart-2))", description: "Courant" },
-  { language: "espagnol", value: 2, fill: "rgb(var(--chart-3))", description: "Intermédiaire" },
-  { language: "japonais", value: 1, fill: "rgb(var(--chart-4))", description: "Débutant" },
+  { language: "francais", value: 4, fill: "rgb(var(--chart-1))", description: "Français" },
+  { language: "anglais", value: 3, fill: "rgb(var(--chart-2))", description: "English" },
+  { language: "espagnol", value: 2, fill: "rgb(var(--chart-3))", description: "Español" },
+  { language: "japonais", value: 1, fill: "rgb(var(--chart-4))", description: "日本語" },
 ];
 
 // Configuration des couleurs et des étiquettes
