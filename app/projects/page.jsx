@@ -1,52 +1,49 @@
 "use client";
 import Carousel from "@/components/carousel";
 import Booki from "@/public/booki.png"
+import SophieBluel from "@/public/sophie_bluel.png"
+import NinaCarducci from "@/public/nina_carducci.png"
+import Kasa from "@/public/kasa.png"
+import MonVieuxGrimoire from "@/public/mon_vieux_grimoire.png"
+import Qwenta from "@/public/qwenta.png"
 
 export default function Projects() {
 
   const openClassroomsProjects = [
     {
       title: "Booki",
-      button: "Voir le projet",
       src: Booki,
     },
     {
       title: "Sophie Bluel",
-      button: "Voir le projet",
-      src: "",
+      src: SophieBluel,
     },
     {
       title: "Nina Carducci",
-      button: "Voir le projet",
-      src: "",
+      src: NinaCarducci,
     },
     {
       title: "Kasa",
-      button: "Voir le projet",
-      src: "",
+      src: Kasa,
     },
     {
       title: "Mon vieux grimoire",
-      button: "Voir le projet",
-      src: "",
+      src: MonVieuxGrimoire,
     },
     {
       title: "Qwenta",
-      button: "Voir le projet",
-      src: "",
+      src: Qwenta,
     }
   ];
 
   const otherProjects = [
     {
       title: "MangaBunka",
-      button: "Voir le projet",
-      src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "",
     },
     {
       title: "Projet Divers 2",
-      button: "Voir le projet",
-      src: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=3538&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "",
     }
   ];
 
