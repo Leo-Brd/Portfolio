@@ -1,3 +1,8 @@
+import { Si42 } from "react-icons/si";
+import OCLogo from "@/public/OC_logo.png"
+import EstiamLogo from "@/public/Estiam_logo.png"
+import Lyon2Logo from "@/public/Lyon2_logo.png"
+import JpsLogo from "@/public/JPS_logo.jpg"
 
 export function CareerPath() {
     return (
@@ -14,13 +19,13 @@ export function CareerPath() {
                   </p>
                 </div>
                 <div className="w-1/2 pl-8">
-                  <div className="w-4 h-4 bg-primary rounded-full" />
+                  <img src={OCLogo.src} alt="Logo d'OpenClassrooms" className="w-10 h-10"/>
                 </div>
               </div>
 
               <div className="flex items-center w-full">
                 <div className="w-1/2 pr-8 flex justify-end">
-                  <div className="w-4 h-4 bg-primary rounded-full" />
+                  <Si42 className="w-10 h-10" />
                 </div>
                 <div className="w-1/2 pl-8">
                   <p className="text-lg font-semibold">Juillet 2024</p>
@@ -38,22 +43,35 @@ export function CareerPath() {
                   </p>
                 </div>
                 <div className="w-1/2 pl-8">
-                  <div className="w-4 h-4 bg-primary rounded-full" />
+                    <img src={EstiamLogo.src} alt="Logo de l'ESTIAM" className="w-10 h-10 rounded"/>
                 </div>
               </div>
               
               <div className="flex items-center w-full">
                 <div className="w-1/2 pr-8 flex justify-end">
-                  <div className="w-4 h-4 bg-primary rounded-full" />
+                    <img src={Lyon2Logo.src} alt="Logo de l'université Lyon 2" className="w-16 h-12 object-cover"/>
                 </div>
                 <div className="w-1/2 pl-8">
+                  <p className="text-lg font-semibold">2022</p>
+                  <p className="text-muted-foreground">
+                    Université Lumière Lyon 2
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center w-full">
+                <div className="w-1/2 pr-8 text-right">
                   <p className="text-lg font-semibold">2021</p>
                   <p className="text-muted-foreground">
                     Lycée Jean Paul Sartre
                   </p>
                 </div>
+                <div className="w-1/2 pl-8">
+                    <img src={JpsLogo.src} alt="Logo du lycée Jean Paul Sartre" className="w-12 h-10 rounded"/>
+                </div>
               </div>
-            </div>
+
+              </div>
           </div>
     )
 }

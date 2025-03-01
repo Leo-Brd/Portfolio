@@ -1,11 +1,11 @@
 "use client";
 import Carousel from "@/components/carousel";
-import Booki from "@/public/booki.png"
-import SophieBluel from "@/public/sophie_bluel.png"
-import NinaCarducci from "@/public/nina_carducci.png"
-import Kasa from "@/public/kasa.png"
-import MonVieuxGrimoire from "@/public/mon_vieux_grimoire.png"
-import Qwenta from "@/public/qwenta.png"
+import Booki from "@/public/projects/booki.png"
+import SophieBluel from "@/public/projects/sophie_bluel.png"
+import NinaCarducci from "@/public/projects/nina_carducci.png"
+import Kasa from "@/public/projects/kasa.png"
+import MonVieuxGrimoire from "@/public/projects/mon_vieux_grimoire.png"
+import Qwenta from "@/public/projects/qwenta.png"
 
 export default function Projects() {
 
