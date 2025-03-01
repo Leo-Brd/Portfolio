@@ -21,8 +21,8 @@ export function GithubActivity() {
     <div className="p-6">
       <h2 className="text-4xl font-bold mb-6 text-center">Activité Récente sur GitHub</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {events.slice(0, 9).map((event, index) => (
-          <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+        {events.slice(0, 6).map((event, index) => (
+          <Card key={index} className="hover:shadow-lg dark:shadow-white/10 transition-shadow duration-300">
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
                 <span className="text-lg font-semibold">
@@ -32,7 +32,7 @@ export function GithubActivity() {
                   href={`https://github.com/${event.repo.name}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:text-primary-foreground"
+                  className="text-primary hover:text-black dark:hover:text-primary-foreground"
                 >
                   <ArrowRight className="w-5 h-5" />
                 </a>
@@ -44,7 +44,7 @@ export function GithubActivity() {
               </p>
               {event.payload?.commits?.map((commit, i) => (
                 <p key={i} className="text-sm mt-2">
-                  ✨ Commit : <span className="text-foreground">{commit.message}</span>
+                  💻 Commit : <span className="text-foreground">{commit.message}</span>
                 </p>
               ))}
               <p className="text-sm text-muted-foreground mt-2">

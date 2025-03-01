@@ -38,7 +38,7 @@ const tools = [
   { icon: <SiFeedly className="w-[40px] h-[40px] text-[#3ba83b]" />, name: "Feedly" },
   { icon: <SiCanva className="w-[40px] h-[40px] text-[#3bc5ba]" />, name: "Canva" },
   { icon: <SiChatbot className="w-[40px] h-[40px] text-[#3bc5ba]" />, name: "ChatGPT" },
-  { icon: <IoTerminal className="w-[40px] h-[40px] text-[#ffffff]" />, name: "Terminal" },
+  { icon: <IoTerminal className="w-[40px] h-[40px] text-black dark:text-[#ffffff]" />, name: "Terminal" },
   { icon: <SiC className="w-[40px] h-[40px] text-[#226db3]" />, name: "C" },
 ];
 
@@ -66,14 +66,14 @@ export default function Skills() {
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-foreground">
           Mes Compétences Principales
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 ">
           {mainSkills.map((skill, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 * index }}
-              className="p-8 bg-card border border-border rounded-2xl shadow-lg flex flex-col items-center text-center hover:shadow-xl transition-shadow"
+              className="p-8 bg-card border border-border rounded-2xl shadow-lg flex flex-col items-center text-center hover:shadow-xl dark:shadow-white/10 transition-shadow"
             >
               <div className="w-20 h-20 mb-6 flex items-center justify-center text-6xl">
                 {skill.icon}
@@ -112,7 +112,7 @@ export default function Skills() {
         transition={{ duration: 0.8, delay: 0.8 }}
       >
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-foreground">
-          En Cours d'Apprentissage
+          En Cours d'Apprentissage...
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {learningSkills.map((skill, index) => (
@@ -121,7 +121,7 @@ export default function Skills() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 * index }}
-              className="p-8 bg-card border border-border rounded-2xl shadow-lg flex flex-col items-center text-center hover:shadow-xl transition-shadow"
+              className="p-8 bg-card border border-border rounded-2xl shadow-lg flex flex-col items-center text-center hover:shadow-xl dark:shadow-white/10 transition-shadow"
             >
               <div className="w-20 h-20 mb-6 flex items-center justify-center text-6xl">
                 {skill.icon}

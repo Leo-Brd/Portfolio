@@ -22,7 +22,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-8xl mt-20 md:text-9xl font-tinos text-primary"
+        className="text-8xl mt-20 md:text-9xl font-tinos text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent"
       >
         Leo
       </motion.h1>
@@ -176,7 +176,15 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <GithubActivity />
+      <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
+      viewport={{ once: true }}
+      className="w-full max-w-6xl mt-10 px-4"
+      >
+        <GithubActivity />
+      </motion.div>
     </main>
   );
 }
