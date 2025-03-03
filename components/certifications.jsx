@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { FaCar } from "react-icons/fa";
 
-export function DrivingLicense() {
+export function Certifications() {
   return (
     <div className="relative bg-background/80 backdrop-blur-sm border border-primary/20 rounded-lg p-4 hover:shadow-lg dark:hover:shadow-white/10 transition-shadow duration-300 w-52 h-42 flex flex-col justify-center items-center text-center">   
         <FaCar className="w-12 h-12 text-primary" />

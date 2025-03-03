@@ -3,7 +3,8 @@ import { Boxes } from "@/components/background-boxes";
 import { Languages } from "@/components/languages-chart";
 import { GithubActivity } from "@/components/github-activity"
 import { CareerPath } from "@/components/career-path"
-import { DrivingLicense } from "@/components/drivingLicense"
+import { Certifications } from "@/components/certifications"
+import { Passions } from "@/components/passions"
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
@@ -103,15 +104,17 @@ Explorez mes réalisations et découvrez comment je peux vous aider à concréti
           </p>
         </motion.div>
 
+        <Passions />
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-16 flex justify-around"
         >
           <Languages />
-          <DrivingLicense />
+          <Certifications />
         </motion.div>
 
         <motion.div
