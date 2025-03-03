@@ -27,8 +27,8 @@ export function Passions() {
   ];
 
   return (
-    <div className=" flex flex-col items-center justify-center bg-background text-foreground p-8 mb-12">
-      {/* Titre de la section */}
+    <div className=" flex flex-col items-center justify-center bg-background text-foreground p-8 mb-28">
+
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -38,7 +38,6 @@ export function Passions() {
         Mes Passions
       </motion.h2>
 
-      {/* Grille des passions */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl">
         {passions.map((passion, index) => (
           <motion.div
@@ -47,19 +46,16 @@ export function Passions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="bg-card backdrop-blur-sm border border-border rounded-lg p-6 shadow-lg hover:shadow-xl dark:hover:shadow-white/10 transition-shadow duration-300"
           >
-            {/* Icône */}
             <div className="flex items-center justify-center mb-4">
               {passion.icon}
             </div>
 
-            {/* Titre */}
             <h3 className="text-2xl font-semibold text-primary text-center mb-4">
               {passion.title}
             </h3>
 
-            {/* Description */}
             <p className="text-muted-foreground text-center">
               {passion.description}
             </p>

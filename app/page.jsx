@@ -111,7 +111,7 @@ Explorez mes réalisations et découvrez comment je peux vous aider à concréti
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mb-16 flex justify-around"
+          className="mb-28 flex justify-around"
         >
           <Languages />
           <Certifications />
