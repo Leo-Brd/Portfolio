@@ -1,6 +1,7 @@
 "use client";
 import { Boxes } from "@/components/background-boxes";
 import { Languages } from "@/components/languages-chart";
+import { ProgrammingLanguages } from "@/components/programming-languages-chart"
 import { GithubActivity } from "@/components/github-activity"
 import { CareerPath } from "@/components/career-path"
 import { Certifications } from "@/components/certifications"
@@ -93,13 +94,13 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-primary mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+          <h2 className="text-4xl font-bold text-primary mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
             À propos de moi
           </h2>
           <p className="text-lg text-muted-foreground">
           Développeur web passionné, je transforme des idées en interfaces intuitives et performantes.
 Adepte des défis techniques et des designs soignés, j'aime créer des expériences numériques qui marquent les esprits.
-Que ce soit en front-end, back-end ou en conception d'API, je mets mon expertise au service de projets innovants.
+Que ce soit en front-end ou en back-end, je mets mon expertise au service de projets innovants.
 Explorez mes réalisations et découvrez comment je peux vous aider à concrétiser vos ambitions numériques.
           </p>
         </motion.div>
@@ -119,6 +120,8 @@ Explorez mes réalisations et découvrez comment je peux vous aider à concréti
           <CareerPath />
         </motion.div>
 
+        <Certifications />
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -127,7 +130,7 @@ Explorez mes réalisations et découvrez comment je peux vous aider à concréti
           className="mb-28 flex justify-around"
         >
           <Languages />
-          <Certifications />
+          <ProgrammingLanguages />
         </motion.div>
       </section>
 
