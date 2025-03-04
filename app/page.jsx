@@ -109,25 +109,25 @@ Explorez mes réalisations et découvrez comment je peux vous aider à concréti
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <h2 className="text-4xl font-bold text-center mb-12">
+            Mon parcours
+          </h2>
+          <CareerPath />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
           className="mb-28 flex justify-around"
         >
           <Languages />
           <Certifications />
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <h3 className="text-3xl font-bold text-primary text-center mb-8">
-            Mon parcours
-          </h3>
-          <CareerPath />
         </motion.div>
       </section>
 
