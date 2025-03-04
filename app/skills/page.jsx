@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState } from "react"; // Importez useState depuis react
+import { useState } from "react";
+import { ToolIcon } from "@/components/ui/toolIcon"
 import {
   SiHtml5,
   SiCss3,
@@ -24,6 +25,7 @@ import { VscDebugAll } from "react-icons/vsc";
 import { IoTerminal } from "react-icons/io5";
 import ChatGPTLogo from "@/public/ChatGPT_logo.png";
 import { BiHandicap } from "react-icons/bi";
+import { FaChrome } from "react-icons/fa";
 
 const tools = [
   { icon: <SiHtml5 className="w-[40px] h-[40px] text-[#E34F26]" />, name: "HTML5", category: "Langages" },
@@ -31,21 +33,22 @@ const tools = [
   { icon: <SiJavascript className="w-[40px] h-[40px] text-[#F7DF1E]" />, name: "JavaScript", category: "Langages" },
   { icon: <SiPython className="w-[40px] h-[40px] text-[#3776AB]" />, name: "Python", category: "Langages" },
   { icon: <SiC className="w-[40px] h-[40px] text-[#226db3]" />, name: "C", category: "Langages" },
+  { icon: <SiSass className="w-[40px] h-[40px] text-[#CC6699]" />, name: "Sass", category: "Langages" },
   { icon: <TbBrandVscode className="w-[40px] h-[40px] text-[#007ACC]" />, name: "VS Code", category: "Outils de développement" },
   { icon: <SiGithub className="w-[40px] h-[40px] text-black dark:text-white" />, name: "GitHub", category: "Outils de développement" },
-  { icon: <SiGit className="w-[40px] h-[40px] text-[#F05032]" />, name: "VS Code", category: "Outils de développement" },
+  { icon: <SiGit className="w-[40px] h-[40px] text-[#F05032]" />, name: "Git", category: "Outils de développement" },
   { icon: <IoTerminal className="w-[40px] h-[40px] text-black dark:text-[#ffffff]" />, name: "Terminal", category: "Outils de développement" },
-  { icon: <img src={ChatGPTLogo.src} alt="Logo de ChatGPT" className="w-[40px] h-[40px] text-[#3bc5ba]" />, name: "ChatGPT", category: "Outils de développement" },
+  { icon: <img src={ChatGPTLogo.src} alt="Logo de ChatGPT" className="w-[40px] h-[40px] text-[#3bc5ba]" />, name: "IA", category: "Outils de développement" },
+  { icon: <FaChrome className="w-[40px] h-[40px] text-[#237aff]" />, name: "Chrome Devtools", category: "Outils de développement" },
   { icon: <SiFigma className="w-[40px] h-[40px] text-[#F24E1E]" />, name: "Figma", category: "Design" },
   { icon: <SiCanva className="w-[40px] h-[40px] text-[#3bc5ba]" />, name: "Canva", category: "Design" },
   { icon: <SiReact className="w-[40px] h-[40px] text-[#61DAFB]" />, name: "React", category: "Frameworks" },
-  { icon: <SiNodedotjs className="w-[40px] h-[40px] text-[#339933]" />, name: "React", category: "Frameworks" },
-  { icon: <SiSass className="w-[40px] h-[40px] text-[#CC6699]" />, name: "Sass", category: "Frameworks" },
+  { icon: <SiNodedotjs className="w-[40px] h-[40px] text-[#339933]" />, name: "Node.js Express", category: "Frameworks" },
   { icon: <SiMongodb className="w-[40px] h-[40px] text-[#47A248]" />, name: "MongoDB", category: "Bases de données" },
-  { icon: <TbSeo className="w-[40px] h-[40px] text-[#0D6EFD]" />, name: "SEO", category: "Autres" },
-  { icon: <BiHandicap className="w-[40px] h-[40px] text-black dark:text-white" />, name: "Debug", category: "Autres" },
+  { icon: <TbSeo className="w-[40px] h-[40px] text-[#0D6EFD]" />, name: "Référencement", category: "Autres" },
+  { icon: <BiHandicap className="w-[40px] h-[40px] text-black dark:text-white" />, name: "Accessibilité", category: "Autres" },
   { icon: <VscDebugAll className="w-[40px] h-[40px] text-[#DC3545]" />, name: "Debug", category: "Autres" },
-  { icon: <SiFeedly className="w-[40px] h-[40px] text-[#3ba83b]" />, name: "Feedly", category: "Autres" },
+  { icon: <SiFeedly className="w-[40px] h-[40px] text-[#3ba83b]" />, name: "Feedly (veille technologique)", category: "Autres" },
 ];
 
 const mainSkills = [
@@ -77,7 +80,7 @@ export default function Skills() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="mb-20"
+        className="mb-20 mt-8"
       >
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-foreground">
           Mes Compétences Principales
@@ -109,7 +112,7 @@ export default function Skills() {
         className="mb-28"
       >
         <h2 className="text-2xl md:text-4xl font-bold mb-12 text-left text-foreground">
-          Mes Outils et Technologies
+          Ce que je maîtrise...
         </h2>
 
         {/* Boutons de filtrage */}
@@ -130,20 +133,12 @@ export default function Skills() {
         </div>
 
         {/* Outils filtrés */}
-        <div className="relative flex flex-wrap gap-6 justify-start items-center">
+        <div className="relative flex flex-wrap gap-6 h-40 justify-start items-center">
           {filteredTools.map((tool, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: (index % 2 === 0 ? -50 : 50), y: (index % 3 === 0 ? -50 : 50) }}
-              animate={{ opacity: 1, x: 0, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 * index }}
-              whileHover={{ scale: 1.2, rotate: 10, transition: { duration: 0.1 } }}
-              className="p-4 rounded-full shadow-md bg-card flex items-center justify-center hover:shadow-lg transition-all cursor-pointer"
-            >
-              {tool.icon}
-            </motion.div>
+            <ToolIcon key={index} tool={tool} index={index} />
           ))}
         </div>
+
       </motion.div>
 
       {/* En cours d'apprentissage */}
