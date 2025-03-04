@@ -65,10 +65,8 @@ const learningSkills = [
 export default function Skills() {
   const [selectedCategory, setSelectedCategory] = useState("Tous");
 
-  // Catégories disponibles
   const categories = ["Tous", "Langages", "Outils de développement", "Design", "Frameworks", "Bases de données", "Autres"];
 
-  // Filtrer les outils en fonction de la catégorie sélectionnée
   const filteredTools = selectedCategory === "Tous"
     ? tools
     : tools.filter((tool) => tool.category === selectedCategory);
@@ -133,10 +131,12 @@ export default function Skills() {
         </div>
 
         {/* Outils filtrés */}
-        <div className="relative flex flex-wrap gap-6 h-40 justify-start items-center">
-          {filteredTools.map((tool, index) => (
-            <ToolIcon key={index} tool={tool} index={index} />
-          ))}
+        <div className="relative h-40">
+          <div className="flex flex-wrap gap-6 justify-start items-start align-content-start">
+            {filteredTools.map((tool, index) => (
+              <ToolIcon key={index} tool={tool} index={index} />
+            ))}
+          </div>
         </div>
 
       </motion.div>
