@@ -16,6 +16,7 @@ module.exports = {
     extend: {
       fontFamily: {
         tinos: ['Tinos', 'serif'],
+        poiret: ["Poiret One", 'sans-serif'],
       },
       colors: {
         background: 'rgb(var(--background) / <alpha-value>)',
