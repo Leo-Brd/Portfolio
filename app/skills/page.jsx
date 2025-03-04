@@ -11,7 +11,6 @@ import {
   SiMongodb,
   SiFeedly,
   SiCanva,
-  SiChatbot,
   SiReact,
   SiNodedotjs,
   SiGit,

@@ -112,7 +112,7 @@ export function Languages() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="text-sm text-muted-foreground">
-        Mis à jour récemment...
+        J'apprends le japonais quotidiennement...
       </CardFooter>
     </Card>
   );

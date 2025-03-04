@@ -28,7 +28,7 @@ export default function Home() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="text-8xl mt-20 md:text-9xl font-tinos text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent"
       >
-        Leo
+        {"<LeoBrd />"}
       </motion.h1>
 
       <motion.p

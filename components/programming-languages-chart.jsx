@@ -1,4 +1,6 @@
 "use client";
+
+import Link from 'next/link';
 import { Bar, BarChart, XAxis, YAxis, Tooltip } from "recharts";
 import {
   Card,
@@ -106,7 +108,9 @@ export function ProgrammingLanguages() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="text-sm text-muted-foreground">
-        Mis à jour récemment...
+        <Link href="/skills">
+            <p className=' hover:text-blue-600'> {"⏩ "} Pour en savoir plus...</p>
+        </Link>
       </CardFooter>
     </Card>
   );
