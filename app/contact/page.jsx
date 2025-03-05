@@ -1,9 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
-import { SiGithub, SiLinkedin, SiDiscord } from "react-icons/si";
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import { useTranslation } from 'next-i18next';
 
 export default function ContactPage() {
+  const { t, i18n } = useTranslation('common');
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

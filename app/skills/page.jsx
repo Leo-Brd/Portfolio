@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from 'next-i18next';
 import { ToolIcon } from "@/components/ui/toolIcon"
 import {
   SiHtml5,
@@ -23,7 +24,7 @@ import {
 import { TbBrandVscode, TbSeo } from "react-icons/tb";
 import { VscDebugAll } from "react-icons/vsc";
 import { IoTerminal } from "react-icons/io5";
-import ChatGPTLogo from "@/public/ChatGPT_logo.png";
+import ChatGPTLogo from "@/public/logos//ChatGPT_logo.png";
 import { BiHandicap } from "react-icons/bi";
 import { FaChrome } from "react-icons/fa";
 import { CiMobile1 } from "react-icons/ci";
@@ -67,6 +68,7 @@ const learningSkills = [
 ];
 
 export default function Skills() {
+  const { t, i18n } = useTranslation('common');
   const [selectedCategory, setSelectedCategory] = useState("Tous");
 
   const categories = ["Tous", "Langages", "Outils de développement", "Design", "Frameworks", "Bases de données", "Autres"];

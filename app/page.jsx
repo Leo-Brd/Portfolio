@@ -10,8 +10,11 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { SiGithub, SiLinkedin, SiDiscord } from "react-icons/si";
+import { useTranslation } from 'next-i18next';
 
 export default function Home() {
+  const { t, i18n } = useTranslation('common');
+
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth";
     return () => {
@@ -37,7 +40,7 @@ export default function Home() {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="text-2xl md:text-3xl text-muted-foreground mt-6"
       >
-        Développeur web
+        {t("devweb")}
       </motion.p>
 
       <motion.p

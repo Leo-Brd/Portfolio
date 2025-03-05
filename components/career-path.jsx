@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
 import { Si42 } from "react-icons/si";
-import OCLogo from "@/public/OC_logo.png";
-import EstiamLogo from "@/public/Estiam_logo.png";
-import Lyon2Logo from "@/public/Lyon2_logo.png";
-import JpsLogo from "@/public/JPS_logo.jpg";
+import OCLogo from "@/public/logos/OC_logo.png";
+import EstiamLogo from "@/public/logos/Estiam_logo.png";
+import Lyon2Logo from "@/public/logos/Lyon2_logo.png";
+import JpsLogo from "@/public/logos/JPS_logo.jpg";
 
 export function CareerPath() {
   const [hoveredLogo, setHoveredLogo] = useState(null);

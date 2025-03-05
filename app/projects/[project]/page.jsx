@@ -2,9 +2,11 @@
 import { useParams } from "next/navigation";
 import { openClassroomsProjects, otherProjects } from "@/public/projects/projects.js";
 import { useState } from "react";
-import { motion } from "framer-motion"; // Pour les animations
+import { motion } from "framer-motion";
+import { useTranslation } from 'next-i18next';
 
 export default function ProjectPage() {
+  const { t, i18n } = useTranslation('common');
   const params = useParams();
 
   const allProjects = [...openClassroomsProjects, ...otherProjects];
