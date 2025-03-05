@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { SiGithub, SiLinkedin, SiDiscord } from "react-icons/si";
-import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 
 export default function ContactPage() {
   return (
@@ -98,20 +98,27 @@ export default function ContactPage() {
 
           {/* Liens de contact */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* E-mail */}
-            <a
-              href="mailto:leobordet.pro@gmail.com"
-              className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white rounded-lg hover:bg-background/70 transition-all duration-300 hover:shadow-lg dark:shadow-white/10 "
-            >
-              <FaEnvelope className="w-6 h-6 text-primary" />
-              <span className="text-muted-foreground">leobordet.pro@gmail.com</span>
-            </a>
 
-            {/* Localisation */}
-            <div className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white rounded-lg hover:shadow-lg dark:shadow-white/10 transition-shadow duration-300">
-              <FaMapMarkerAlt className="w-6 h-6 text-primary" />
-              <span className="text-muted-foreground">Lyon, France</span>
-            </div>
+              <div className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white rounded-lg hover:shadow-lg dark:shadow-white/10 transition-shadow duration-300">
+                <FaMapMarkerAlt className="w-6 h-6 text-primary" />
+                <span className="text-muted-foreground">Lyon, France</span>
+              </div>
+
+              <a
+                href="mailto:leobordet.pro@gmail.com"
+                className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white rounded-lg hover:bg-background/70 transition-all duration-300 hover:shadow-lg dark:shadow-white/10"
+              >
+                <FaEnvelope className="w-6 h-6 text-primary" />
+                <span className="text-muted-foreground">leobordet.pro@gmail.com</span>
+              </a>
+
+              <a
+                href="tel:+33783194855"
+                className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white rounded-lg hover:bg-background/70 transition-all duration-300 hover:shadow-lg dark:shadow-white/10"
+              >
+                <FaPhone className="w-6 h-6 text-primary" />
+                <span className="text-muted-foreground">+33 7 83 19 48 55</span>
+              </a>
           </div>
         </motion.div>
       </div>
