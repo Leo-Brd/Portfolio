@@ -1,4 +1,6 @@
-import Booki from "@/public/projects/booki.png"
+import Booki_1 from "@/public/projects/booki_1.png"
+import Booki_2 from "@/public/projects/booki_2.png"
+import Booki_3 from "@/public/projects/booki_3.png"
 import SophieBluel from "@/public/projects/sophie_bluel.png"
 import NinaCarducci from "@/public/projects/nina_carducci.png"
 import Kasa from "@/public/projects/kasa.png"
@@ -23,12 +25,12 @@ import { RiNotionFill } from "react-icons/ri";
 export const openClassroomsProjects = [
     {
       title: "Booki",
-      images: [Booki, SophieBluel],
+      images: [Booki_1, Booki_2, Booki_3],
       icons: [
         { icon: SiHtml5, color: "text-[#E34F26]" },
         { icon: SiCss3, color: "text-[#1572B6]" },
         { icon: CiMobile1, color: "text-black", darkColor: "text-white" },],
-      description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      description:"( scénario fictif )\nLa start-up Booki souhaitait réaliser leur site internet et m'ont chargés d'intégrer son interface. Il permet aux usagers de trouver les hébergements et des activités dans la ville de leur choix. J'ai utilisé les langages HTML et CSS afin de reproduire la maquette qui m'était fournie.\n \nLe site est responsive, ce qui signifie que le contenu s'adapte selon la taille d'écran. Le site a une version tablette ainsi qu'une version mobile.",
       github: "https://github.com/Leo-Brd/OC_Booki",
     },
     {

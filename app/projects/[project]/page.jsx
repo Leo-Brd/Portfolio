@@ -48,7 +48,7 @@ export default function ProjectPage() {
             <img
               src={project.images[currentImageIndex].src}
               alt={`${project.title} - Image ${currentImageIndex + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-left-top"
             />
 
             {/* Boutons de navigation du carrousel */}
@@ -103,7 +103,7 @@ export default function ProjectPage() {
             <h2 className="text-3xl font-semibold text-primary mb-6">
               Description du Projet
             </h2>
-            <p className="text-lg text-foreground leading-relaxed">
+            <p className="text-lg text-foreground leading-relaxed whitespace-pre-line">
               {project.description}
             </p>
           </div>
