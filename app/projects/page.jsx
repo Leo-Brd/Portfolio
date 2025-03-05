@@ -30,6 +30,8 @@ import { IoTerminal } from "react-icons/io5";
 import ChatGPTLogo from "@/public/ChatGPT_logo.png";
 import { BiHandicap } from "react-icons/bi";
 import { FaChrome } from "react-icons/fa";
+import { CiMobile1 } from "react-icons/ci";
+import { RiNotionFill } from "react-icons/ri";
 
 export default function Projects() {
 
@@ -38,37 +40,51 @@ export default function Projects() {
       title: "Booki",
       src: Booki,
       icons: [
-        { icon: SiHtml5, color: "#E34F26" },
-        { icon: SiCss3, color: "#264de4" },
+        { icon: SiHtml5, color: "text-[#E34F26]" },
+        { icon: SiCss3, color: "text-[#264de4]" },
+        { icon: CiMobile1, color: "text-black", darkColor: "text-white" },
       ],
     },
     {
       title: "Sophie Bluel",
       src: SophieBluel,
-      icons: [{ icon: SiJavascript, color: "#F7DF1E" }],
+      icons: [
+        { icon: SiHtml5, color: "text-[#E34F26]" },
+        { icon: SiCss3, color: "text-[#264de4]" },
+        { icon: SiJavascript, color: "text-[#F7DF1E]" }],
     },
     {
       title: "Nina Carducci",
       src: NinaCarducci,
-      icons: [{ icon: SiReact, color: "#61DAFB" }],
+      icons: [
+        { icon: VscDebugAll, color: "text-[#DC3545]" },
+        { icon: BiHandicap, color: "text-black", darkColor: "text-white" },
+        { icon: TbSeo, color: "text-[#0D6EFD]" },
+      ],
     },
     {
       title: "Kasa",
       src: Kasa,
       icons: [
-        { icon: SiReact, color: "#61DAFB" },
-        { icon: SiCss3, color: "#264de4" },
+        { icon: SiReact, color: "text-[#61DAFB]" },
+        { icon: SiSass, color: "text-[#CC6699]" },
       ],
     },
     {
       title: "Mon vieux grimoire",
       src: MonVieuxGrimoire,
-      icons: [{ icon: SiJavascript, color: "#F7DF1E" }],
+      icons: [
+        { icon: SiNodedotjs, color: "text-[#339933]" },
+        { icon: SiMongodb, color: "text-[#47A248]" },
+      ],
     },
     {
       title: "Qwenta",
       src: Qwenta,
-      icons: [],
+      icons: [
+        { icon: SiFeedly, color: "text-[#339933]" },
+        { icon: RiNotionFill, color: "text-black", darkColor: "text-white" },
+      ],
     },
   ];
   
@@ -77,10 +93,14 @@ export default function Projects() {
     {
       title: "MangaBunka",
       src: "",
-      icons: [{ icon: SiJavascript, color: "#F7DF1E" }],
+      icons: [
+        { icon: SiReact, color: "text-[#61DAFB]" },
+        { icon: SiNodedotjs, color: "text-[#339933]" },
+        { icon: SiMongodb, color: "text-[#47A248]" },
+      ],
     },
     {
-      title: "Qwenta",
+      title: "Autre",
       src: "",
       icons: [],
     },

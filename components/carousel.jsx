@@ -96,10 +96,14 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
             </h2>
             {/* Affichage des icônes */}
             <div className="flex space-x-2">
-              {icons.map(({ icon: Icon, color }, i) => (
-                <Icon key={i} className="w-8 h-8" style={{ color }} />
+              {icons.map(({ icon: Icon, color, darkColor }, i) => (
+                <Icon
+                  key={i}
+                  className={`w-8 h-8 ${color} ${darkColor ? `dark:${darkColor}` : ""}`}
+                />
               ))}
             </div>
+
           </div>
           <button className="mt-4 px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl">
             Voir le projet

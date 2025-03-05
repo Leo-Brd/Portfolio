@@ -27,6 +27,7 @@ import ChatGPTLogo from "@/public/ChatGPT_logo.png";
 import { BiHandicap } from "react-icons/bi";
 import { FaChrome } from "react-icons/fa";
 import { CiMobile1 } from "react-icons/ci";
+import { RiNotionFill } from "react-icons/ri";
 
 const tools = [
   { icon: <SiHtml5 className="w-[40px] h-[40px] text-[#E34F26]" />, name: "HTML5", category: "Langages" },
@@ -51,6 +52,7 @@ const tools = [
   { icon: <BiHandicap className="w-[40px] h-[40px] text-black dark:text-white" />, name: "Accessibilité", category: "Autres" },
   { icon: <VscDebugAll className="w-[40px] h-[40px] text-[#DC3545]" />, name: "Debug", category: "Autres" },
   { icon: <SiFeedly className="w-[40px] h-[40px] text-[#3ba83b]" />, name: "Feedly (veille technologique)", category: "Autres" },
+  { icon: <RiNotionFill className="w-[40px] h-[40px] text-black dark:text-white" />, name: "Notion", category: "Autres" },
 ];
 
 const mainSkills = [
