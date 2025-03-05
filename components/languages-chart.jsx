@@ -1,6 +1,5 @@
 "use client";
 import { Bar, BarChart, XAxis, YAxis, Tooltip } from "recharts";
-
 import {
   Card,
   CardContent,
@@ -12,31 +11,32 @@ import {
   ChartConfig,
   ChartContainer,
 } from "@/components/ui/chart";
+import { GB, FR, ES, JP } from "country-flag-icons/react/3x2";
 
 // Données des langues
 const chartData = [
-  { language: "francais", value: 4, fill: "rgb(var(--chart-1))", description: "Français" },
-  { language: "anglais", value: 3, fill: "rgb(var(--chart-2))", description: "English" },
-  { language: "espagnol", value: 2, fill: "rgb(var(--chart-3))", description: "Español" },
-  { language: "japonais", value: 1, fill: "rgb(var(--chart-4))", description: "日本語" },
+  { language: "fr", value: 4, fill: "rgb(var(--chart-1))", description: "Français" },
+  { language: "gb", value: 3, fill: "rgb(var(--chart-2))", description: "English" },
+  { language: "es", value: 2, fill: "rgb(var(--chart-3))", description: "Español" },
+  { language: "jp", value: 1, fill: "rgb(var(--chart-4))", description: "日本語" },
 ];
 
 // Configuration des couleurs et des étiquettes
 const chartConfig = {
-  francais: {
-    label: "🇫🇷",
+  fr: {
+    icon: <FR className="w-8 h-8" />,
     color: "hsl(var(--chart-1))",
   },
-  anglais: {
-    label: "🇬🇧",
+  gb: {
+    icon: <GB className="w-8 h-8" />,
     color: "hsl(var(--chart-2))",
   },
-  espagnol: {
-    label: "🇪🇸",
+  es: {
+    icon: <ES className="w-8 h-8" />,
     color: "hsl(var(--chart-3))",
   },
-  japonais: {
-    label: "🇯🇵",
+  jp: {
+    icon: <JP className="w-8 h-8" />,
     color: "hsl(var(--chart-4))",
   },
 };
@@ -78,19 +78,12 @@ export function Languages() {
               axisLine={false}
               tick={(props) => {
                 const { x, y, payload } = props;
-                const emoji = chartConfig[payload.value]?.label || payload.value;
+                const { icon } = chartConfig[payload.value];
                 return (
                   <g transform={`translate(${x},${y})`}>
-                    <text
-                      x={0}
-                      y={0}
-                      dy={10}
-                      textAnchor="end"
-                      fontSize={28}
-                      fill="currentColor"
-                    >
-                      {emoji}
-                    </text>
+                    <foreignObject x={-25} y={-16} width={60} height={60}>
+                      {icon}
+                    </foreignObject>
                   </g>
                 );
               }}
@@ -107,12 +100,11 @@ export function Languages() {
               isAnimationActive={true}
               fill={({ payload }) => chartConfig[payload.language]?.color}
             />
-
           </BarChart>
         </ChartContainer>
       </CardContent>
       <CardFooter className="text-sm text-muted-foreground">
-        J'apprends le japonais quotidiennement...
+        J'apprends le japonais quotidiennement !
       </CardFooter>
     </Card>
   );

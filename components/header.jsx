@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { IconSun, IconMoon } from '@tabler/icons-react';
 import { useState } from 'react';
 import { useTranslation } from 'next-i18next';
+import { GB, FR } from "country-flag-icons/react/3x2";
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
@@ -77,7 +78,11 @@ export default function Header() {
             className="p-2 rounded-lg hover:bg-muted transition-colors"
             aria-label="Toggle language"
           >
-            {i18n.language === 'fr' ? '🇫🇷' : '🇬🇧'}
+            {i18n.language === 'fr' ? (
+              <FR className="w-7 h-7" />
+            ) : (
+              <GB className="w-7 h-7" />
+            )}
           </button>
         </div>
         
