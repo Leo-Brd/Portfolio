@@ -40,7 +40,7 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
     yRef.current = 0;
   };
 
-  const { src, button, title, icons = [] } = slide; // Ajout des icônes
+  const { images, button, title, icons = [] } = slide;
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
@@ -75,8 +75,8 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
               opacity: current === index ? 1 : 0.5,
               objectPosition: "left center",
             }}
-            alt={title}
-            src={src.src}
+            alt={images[0].alt} // Utilisez la propriété alt
+            src={images[0].src} // Utilisez la propriété src
             loading="eager"
             decoding="sync"
           />
@@ -104,7 +104,6 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
                 />
               ))}
             </div>
-
           </div>
           <Link href={`/projects/${title.toLowerCase().replace(/\s+/g, "-")}`}>
             <button className="mt-4 px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl">
