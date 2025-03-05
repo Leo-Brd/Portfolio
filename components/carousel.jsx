@@ -2,14 +2,8 @@
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
 
-const Slide = ({
-  slide,
-  index,
-  current,
-  handleSlideClick
-}) => {
+const Slide = ({ slide, index, current, handleSlideClick }) => {
   const slideRef = useRef(null);
-
   const xRef = useRef(0);
   const yRef = useRef(0);
   const frameRef = useRef();
@@ -18,11 +12,8 @@ const Slide = ({
     const animate = () => {
       if (!slideRef.current) return;
 
-      const x = xRef.current;
-      const y = yRef.current;
-
-      slideRef.current.style.setProperty("--x", `${x}px`);
-      slideRef.current.style.setProperty("--y", `${y}px`);
+      slideRef.current.style.setProperty("--x", `${xRef.current}px`);
+      slideRef.current.style.setProperty("--y", `${yRef.current}px`);
 
       frameRef.current = requestAnimationFrame(animate);
     };
@@ -37,10 +28,8 @@ const Slide = ({
   }, []);
 
   const handleMouseMove = (event) => {
-    const el = slideRef.current;
-    if (!el) return;
-
-    const r = el.getBoundingClientRect();
+    if (!slideRef.current) return;
+    const r = slideRef.current.getBoundingClientRect();
     xRef.current = event.clientX - (r.left + Math.floor(r.width / 2));
     yRef.current = event.clientY - (r.top + Math.floor(r.height / 2));
   };
@@ -50,11 +39,7 @@ const Slide = ({
     yRef.current = 0;
   };
 
-  const imageLoaded = (event) => {
-    event.currentTarget.style.opacity = "1";
-  };
-
-  const { src, button, title } = slide;
+  const { src, button, title, icons = [] } = slide; // Ajout des icônes
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
@@ -91,7 +76,6 @@ const Slide = ({
             }}
             alt={title}
             src={src.src}
-            onLoad={imageLoaded}
             loading="eager"
             decoding="sync"
           />
@@ -100,18 +84,24 @@ const Slide = ({
           )}
         </div>
 
-        {/* Conteneur du texte et du bouton (en dessous de l'image) */}
+        {/* Conteneur du texte et des icônes */}
         <div
           className={`absolute bottom-0 left-0 w-full h-[20%] flex flex-col items-center justify-center bg-background/80 backdrop-blur-sm p-4 rounded-b-[1%] transition-opacity duration-300 ${
             current === index ? "opacity-100" : "opacity-0"
           }`}
         >
-          <h2 className="text-lg md:text-2xl lg:text-3xl font-semibold text-primary">
-            {title}
-          </h2>
-          <button
-            className="mt-4 px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
-          >
+          <div className="flex items-center space-x-4">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-semibold text-primary">
+              {title}
+            </h2>
+            {/* Affichage des icônes */}
+            <div className="flex space-x-2">
+              {icons.map(({ icon: Icon, color }, i) => (
+                <Icon key={i} className="w-8 h-8" style={{ color }} />
+              ))}
+            </div>
+          </div>
+          <button className="mt-4 px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl">
             Voir le projet
           </button>
         </div>
@@ -119,6 +109,7 @@ const Slide = ({
     </div>
   );
 };
+
 
 const CarouselControl = ({
   type,

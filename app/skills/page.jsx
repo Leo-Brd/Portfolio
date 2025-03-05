@@ -26,6 +26,7 @@ import { IoTerminal } from "react-icons/io5";
 import ChatGPTLogo from "@/public/ChatGPT_logo.png";
 import { BiHandicap } from "react-icons/bi";
 import { FaChrome } from "react-icons/fa";
+import { CiMobile1 } from "react-icons/ci";
 
 const tools = [
   { icon: <SiHtml5 className="w-[40px] h-[40px] text-[#E34F26]" />, name: "HTML5", category: "Langages" },
@@ -42,6 +43,7 @@ const tools = [
   { icon: <FaChrome className="w-[40px] h-[40px] text-[#237aff]" />, name: "Chrome Devtools", category: "Outils de développement" },
   { icon: <SiFigma className="w-[40px] h-[40px] text-[#F24E1E]" />, name: "Figma", category: "Design" },
   { icon: <SiCanva className="w-[40px] h-[40px] text-[#3bc5ba]" />, name: "Canva", category: "Design" },
+  { icon: <CiMobile1 className="w-[40px] h-[40px] text-black dark:text-white" />, name: "Responsive Design", category: "Design" },
   { icon: <SiReact className="w-[40px] h-[40px] text-[#61DAFB]" />, name: "React", category: "Frameworks" },
   { icon: <SiNodedotjs className="w-[40px] h-[40px] text-[#339933]" />, name: "Node.js Express", category: "Frameworks" },
   { icon: <SiMongodb className="w-[40px] h-[40px] text-[#47A248]" />, name: "MongoDB", category: "Bases de données" },

@@ -1,5 +1,4 @@
 "use client";
-import Link from 'next/link';
 import { SiGithub, SiLinkedin, SiDiscord, SiNextdotjs, SiTailwindcss, SiVercel } from "react-icons/si";
 
 export default function Footer() {
