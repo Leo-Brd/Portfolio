@@ -1,6 +1,7 @@
 "use client";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
+import Link from "next/link";
 
 const Slide = ({ slide, index, current, handleSlideClick }) => {
   const slideRef = useRef(null);
@@ -105,9 +106,11 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
             </div>
 
           </div>
-          <button className="mt-4 px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl">
-            Voir le projet
-          </button>
+          <Link href={`/projects/${title.toLowerCase().replace(/\s+/g, "-")}`}>
+            <button className="mt-4 px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl">
+              Voir le projet
+            </button>
+          </Link>
         </div>
       </li>
     </div>
