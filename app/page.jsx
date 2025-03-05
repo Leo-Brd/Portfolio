@@ -40,11 +40,20 @@ export default function Home() {
         Développeur web
       </motion.p>
 
+      <motion.p
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="text-xl md:text-2xl text-muted-foreground mt-4"
+      >
+        ウェブ開発者
+      </motion.p>
+
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="mt-12 mb-[150px] flex space-x-6 z-20"
+        className="mt-10 mb-[150px] flex space-x-6 z-20"
       >
         <a
           href="https://github.com/Leo-Brd"
