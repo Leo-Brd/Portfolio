@@ -3,5 +3,20 @@
     "home": "Home",
     "skills": "Skills",
     "projects": "Projects",
-    "devweb": "Web developer"
+    "devweb": "Web developer",
+
+    "footer-droits": "© 2025 LeoBrd. All rights reserved.",
+    "footer-construit": "Build with :",
+
+    "a-propos-title": "About me",
+    "a-propos-text": "Passionate web developer, I transform ideas into intuitive and efficient interfaces. Adept at technical challenges and neat designs, I like to create digital experiences that leave a lasting impression. Whether in front-end or back-end, I put my expertise at the service of innovative projects. Explore my achievements and discover how I can help you realize your digital ambitions.",
+    "passions-title": "My passions",
+    "passions-dev-title": "Development",
+    "passions-dev-text": "I am passionate about creating innovative solutions and learning new technologies. Developing a project from A to Z or trying to replicate a mockup are things that stimulate me.",
+    "passions-lecture-title": "Reading",
+    "passions-lecture-text": "I love exploring worlds through books, whether it's through the art of manga or literature. Discovering a new work is always a moment that brings me joy.",
+    "passions-musique-title": "Music",
+    "passions-musique-text": "Music is a source of inspiration for me. I am very interested in the musical culture of many genres such as rap, pop, etc. I also master music composition using software like FL Studio.",
+    "passions-jv-title": "Video Games",
+    "passions-jv-text": "Video games are a way for me to escape, but also an art form that explores endless universes. They are a big part of my childhood, and I love discovering new games of all kinds."
 }

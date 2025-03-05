@@ -1,27 +1,30 @@
 "use client";
 import { motion } from "framer-motion";
 import { FaCode, FaBook, FaHeadphones, FaGamepad } from "react-icons/fa";
+import { useTranslation } from 'next-i18next';
 
 export function Passions() {
+  const { t } = useTranslation('common');
+
   const passions = [
     {
-      title: "Développement",
-      description: "Je suis passionné par la création de solutions innovantes et l'apprentissage de nouvelles technologies. Elaborer un projet de A à Z ou bien tenter de reproduire une maquette sont des choses qui me stimulent.",
+      title: "passions-dev-title",
+      description: "passions-dev-text",
       icon: <FaCode className="w-12 h-12 text-primary" />,
     },
     {
-      title: "Lecture",
-      description: "J'adore explorer des univers à travers les livres, que ce soit par l'art du manga ou de la littérature. La découverte d'une nouvelle oeuvre est toujours un moment qui me procure du plaisir.",
+      title: "passions-lecture-title",
+      description: "passions-lecture-text",
       icon: <FaBook className="w-12 h-12 text-primary" />,
     },
     {
-      title: "Musique",
-      description: "La musique est une source d'inspiration pour moi. Je m'intéresse beaucoup à la culture musicale de nombreux genres comme le rap, la pop etc... Je maîtrise aussi la composition musicale via des logiciels comme FL Studio.",
+      title: "passions-musique-title",
+      description: "passions-musique-text",
       icon: <FaHeadphones className="w-12 h-12 text-primary" />,
     },
     {
-      title: "Jeux Vidéo",
-      description: "Les jeux vidéo sont pour moi une façon de m'évader, mais aussi un art qui explore des univers sans fin. Il s'agit d'une grande part de mon enfance et j'adore découvrir de nouveaux jeux de tous types.",
+      title: "passions-jv-title",
+      description: "passions-jv-text",
       icon: <FaGamepad className="w-12 h-12 text-primary" />,
     },
   ];
@@ -35,7 +38,7 @@ export function Passions() {
         transition={{ duration: 0.8 }}
         className="text-4xl font-bold text-primary mb-12"
       >
-        Mes Passions
+        {t("passions-title")}
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl">
@@ -53,11 +56,11 @@ export function Passions() {
             </div>
 
             <h3 className="text-2xl font-semibold text-primary text-center mb-4">
-              {passion.title}
+              {t(passion.title)}
             </h3>
 
             <p className="text-muted-foreground text-center">
-              {passion.description}
+              {t(passion.description)}
             </p>
           </motion.div>
         ))}

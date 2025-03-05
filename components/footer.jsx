@@ -1,13 +1,16 @@
 "use client";
 import { SiGithub, SiLinkedin, SiDiscord, SiNextdotjs, SiTailwindcss, SiVercel } from "react-icons/si";
+import { useTranslation } from 'next-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation('common');
+
   return (
     <footer className="bottom-0 left-0 w-full bg-background/80 backdrop-blur-md border-t border-border z-50">
       <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
 
         <p className="text-muted-foreground text-sm">
-          © 2025 LeoBrd. Tous droits réservés.
+          {t("footer-droits")}
         </p>
 
         <div className="flex space-x-8">
@@ -41,7 +44,7 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center space-x-4">
-          <span className="text-muted-foreground text-sm">Construit avec :</span>
+          <span className="text-muted-foreground text-sm">{t("footer-construit")}</span>
           <div className="flex space-x-4">
             <a
               href="https://nextjs.org/"

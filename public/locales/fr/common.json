@@ -3,5 +3,20 @@
     "home": "Accueil",
     "skills": "Compétences",
     "projects": "Projets",
-    "devweb": "Développeur web"
+    "devweb": "Développeur web",
+
+    "footer-droits": "© 2025 LeoBrd. Tous droits réservés.",
+    "footer-construit": "Construit avec :",
+
+    "a-propos-title": "À propos de moi",
+    "a-propos-text": "Développeur web passionné, je transforme des idées en interfaces intuitives et performantes. Adepte des défis techniques et des designs soignés, j'aime créer des expériences numériques qui marquent les esprits. Que ce soit en front-end ou en back-end, je mets mon expertise au service de projets innovants. Explorez mes réalisations et découvrez comment je peux vous aider à concrétiser vos ambitions numériques.",
+    "passions-title": "Mes Passions",
+    "passions-dev-title": "Développement",
+    "passions-dev-text": "Je suis passionné par la création de solutions innovantes et l'apprentissage de nouvelles technologies. Elaborer un projet de A à Z ou bien tenter de reproduire une maquette sont des choses qui me stimulent.",
+    "passions-lecture-title": "Lecture",
+    "passions-lecture-text": "J'adore explorer des univers à travers les livres, que ce soit par l'art du manga ou de la littérature. La découverte d'une nouvelle oeuvre est toujours un moment qui me procure du plaisir.",
+    "passions-musique-title": "Musique",
+    "passions-musique-text": "La musique est une source d'inspiration pour moi. Je m'intéresse beaucoup à la culture musicale de nombreux genres comme le rap, la pop etc... Je maîtrise aussi la composition musicale via des logiciels comme FL Studio.",
+    "passions-jv-title": "Jeux Vidéo",
+    "passions-jv-text": "Les jeux vidéo sont pour moi une façon de m'évader, mais aussi un art qui explore des univers sans fin. Il s'agit d'une grande part de mon enfance et j'adore découvrir de nouveaux jeux de tous types."
 }

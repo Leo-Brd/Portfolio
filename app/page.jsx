@@ -107,13 +107,10 @@ export default function Home() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-primary mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-            À propos de moi
+            {t("a-propos-title")}
           </h2>
           <p className="text-lg text-muted-foreground">
-          Développeur web passionné, je transforme des idées en interfaces intuitives et performantes.
-Adepte des défis techniques et des designs soignés, j'aime créer des expériences numériques qui marquent les esprits.
-Que ce soit en front-end ou en back-end, je mets mon expertise au service de projets innovants.
-Explorez mes réalisations et découvrez comment je peux vous aider à concrétiser vos ambitions numériques.
+            {t("a-propos-text")}
           </p>
         </motion.div>
 
