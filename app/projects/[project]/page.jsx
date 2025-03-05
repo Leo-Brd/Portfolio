@@ -4,6 +4,7 @@ import { openClassroomsProjects, otherProjects } from "@/public/projects/project
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from 'next-i18next';
+import { FaGithub } from "react-icons/fa"; // Importez l'icône GitHub
 
 export default function ProjectPage() {
   const { t, i18n } = useTranslation('common');
@@ -106,6 +107,19 @@ export default function ProjectPage() {
               {project.description}
             </p>
           </div>
+
+          {/* Bouton GitHub */}
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors duration-300"
+            >
+              <FaGithub className="w-6 h-6 mr-2" />
+              Voir sur GitHub
+            </a>
+          )}
         </motion.div>
       </div>
     </div>
