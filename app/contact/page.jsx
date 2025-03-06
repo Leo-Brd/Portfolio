@@ -6,8 +6,8 @@ import { useState } from 'react';
 
 export default function ContactPage() {
   const { t } = useTranslation('common');
-  const [formStatus, setFormStatus] = useState(''); // Pour gérer l'état du formulaire
-
+  const [formStatus, setFormStatus] = useState('');
+  const [isError, setIsError] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -30,12 +30,15 @@ export default function ContactPage() {
       const result = await response.json();
       if (response.ok) {
         setFormStatus('Mail envoyé avec succès !');
+        setIsError(false);
       } else {
         setFormStatus('Erreur lors de l\'envoi du mail');
+        setIsError(true);
       }
     } catch (error) {
       console.error(error);
       setFormStatus('Erreur lors de l\'envoi du mail');
+      setIsError(true);
     }
   };
 
@@ -118,7 +121,16 @@ export default function ContactPage() {
               Envoyer
             </button>
           </form>
-          {formStatus && <p className="mt-4 text-center text-primary">{formStatus}</p>}
+
+          {formStatus && (
+            <p
+              className={`mt-4 text-center ${
+                isError ? 'text-red-500' : 'text-green-500'
+              }`}
+            >
+              {formStatus}
+            </p>
+          )}
         </motion.div>
 
         {/* Section des liens de contact */}

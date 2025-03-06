@@ -15,10 +15,8 @@ export async function POST(request) {
       html: `<p>Message de ${name} (${email}):</p><p>${message}</p>`,
     };
 
-    // Envoyer le mail
     await sgMail.send(msg);
 
-    // Réponse JSON en cas de succès
     return NextResponse.json(
       { message: 'Mail envoyé avec succès !' },
       { status: 200 }
@@ -26,7 +24,6 @@ export async function POST(request) {
   } catch (error) {
     console.error(error);
 
-    // Réponse JSON en cas d'erreur
     return NextResponse.json(
       { error: 'Erreur lors de l\'envoi du mail' },
       { status: 500 }
