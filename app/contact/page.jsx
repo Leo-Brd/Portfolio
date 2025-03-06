@@ -2,10 +2,43 @@
 import { motion } from "framer-motion";
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import { useTranslation } from 'next-i18next';
+import { useState } from 'react';
 
 export default function ContactPage() {
-  const { t, i18n } = useTranslation('common');
-  
+  const { t } = useTranslation('common');
+  const [formStatus, setFormStatus] = useState(''); // Pour gérer l'état du formulaire
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('/api/sendMail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        setFormStatus('Mail envoyé avec succès !');
+      } else {
+        setFormStatus('Erreur lors de l\'envoi du mail');
+      }
+    } catch (error) {
+      console.error(error);
+      setFormStatus('Erreur lors de l\'envoi du mail');
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -35,7 +68,7 @@ export default function ContactPage() {
           <h2 className="text-2xl font-semibold text-primary mb-6">
             Envoyez-moi un mail
           </h2>
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-muted-foreground">
                 Votre nom
@@ -85,6 +118,7 @@ export default function ContactPage() {
               Envoyer
             </button>
           </form>
+          {formStatus && <p className="mt-4 text-center text-primary">{formStatus}</p>}
         </motion.div>
 
         {/* Section des liens de contact */}
@@ -100,27 +134,26 @@ export default function ContactPage() {
 
           {/* Liens de contact */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white rounded-lg hover:shadow-lg dark:shadow-white/10 transition-shadow duration-300">
+              <FaMapMarkerAlt className="w-6 h-6 text-primary" />
+              <span className="text-muted-foreground">Lyon, France</span>
+            </div>
 
-              <div className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white rounded-lg hover:shadow-lg dark:shadow-white/10 transition-shadow duration-300">
-                <FaMapMarkerAlt className="w-6 h-6 text-primary" />
-                <span className="text-muted-foreground">Lyon, France</span>
-              </div>
+            <a
+              href="mailto:leobordet.pro@gmail.com"
+              className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white rounded-lg hover:bg-background/70 transition-all duration-300 hover:shadow-lg dark:shadow-white/10"
+            >
+              <FaEnvelope className="w-6 h-6 text-primary" />
+              <span className="text-muted-foreground">leobordet.pro@gmail.com</span>
+            </a>
 
-              <a
-                href="mailto:leobordet.pro@gmail.com"
-                className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white rounded-lg hover:bg-background/70 transition-all duration-300 hover:shadow-lg dark:shadow-white/10"
-              >
-                <FaEnvelope className="w-6 h-6 text-primary" />
-                <span className="text-muted-foreground">leobordet.pro@gmail.com</span>
-              </a>
-
-              <a
-                href="tel:+33783194855"
-                className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white rounded-lg hover:bg-background/70 transition-all duration-300 hover:shadow-lg dark:shadow-white/10"
-              >
-                <FaPhone className="w-6 h-6 text-primary" />
-                <span className="text-muted-foreground">+33 7 83 19 48 55</span>
-              </a>
+            <a
+              href="tel:+33783194855"
+              className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white rounded-lg hover:bg-background/70 transition-all duration-300 hover:shadow-lg dark:shadow-white/10"
+            >
+              <FaPhone className="w-6 h-6 text-primary" />
+              <span className="text-muted-foreground">+33 7 83 19 48 55</span>
+            </a>
           </div>
         </motion.div>
       </div>

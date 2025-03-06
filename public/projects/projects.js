@@ -30,7 +30,7 @@ export const openClassroomsProjects = [
         { icon: SiHtml5, color: "text-[#E34F26]" },
         { icon: SiCss3, color: "text-[#1572B6]" },
         { icon: CiMobile1, color: "text-black", darkColor: "text-white" },],
-      description:"( scénario fictif )\nLa start-up Booki souhaitait réaliser leur site internet et m'ont chargés d'intégrer son interface. Il permet aux usagers de trouver les hébergements et des activités dans la ville de leur choix. J'ai utilisé les langages HTML et CSS afin de reproduire la maquette qui m'était fournie.\n \nLe site est responsive, ce qui signifie que le contenu s'adapte selon la taille d'écran. Le site a une version tablette ainsi qu'une version mobile.",
+      description:"( scénario fictif )\nLa start-up Booki souhaitait réaliser leur site internet et m'ont chargés d'intégrer son interface. Il permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix. J'ai utilisé les langages HTML et CSS afin de reproduire la maquette qui m'était fournie.\n \nLe site est responsive, ce qui signifie que le contenu s'adapte selon la taille d'écran. Le site a une version tablette ainsi qu'une version mobile.",
       github: "https://github.com/Leo-Brd/OC_Booki",
     },
     {
