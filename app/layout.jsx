@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
           <meta property="og:title" content="LeoBrd - Développeur Web" />
           <meta property="og:description" content="Bienvenue sur mon portfolio ! Découvrez mes projets et compétences en développement web." />
           <meta property="og:url" content="https://portfolio-gamma-vert-55.vercel.app/" />
-          <meta property="og:image" content="https://portfolio-gamma-vert-55.vercel.app/public/cards_img.png" />
+          <meta property="og:image" content="https://portfolio-gamma-vert-55.vercel.app/cards_img.png" />
           <meta property="og:image:alt" content="Aperçu du portfolio de LeoBrd" />
           <meta property="og:site_name" content="LeoBrd Portfolio" />
           <meta property="og:locale" content="fr_FR" />
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="LeoBrd - Développeur Web" />
           <meta name="twitter:description" content="Découvrez mon portfolio et mes projets en développement web." />
-          <meta name="twitter:image" content="https://portfolio-gamma-vert-55.vercel.app/public/cards_img.png" />
+          <meta name="twitter:image" content="https://portfolio-gamma-vert-55.vercel.app/cards_img.png" />
           <meta name="twitter:image:alt" content="Aperçu du portfolio de LeoBrd" />
 
 
