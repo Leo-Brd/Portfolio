@@ -6,14 +6,13 @@ import { GithubActivity } from "@/components/github-activity"
 import { CareerPath } from "@/components/career-path"
 import { Certifications } from "@/components/certifications"
 import { Passions } from "@/components/passions"
-import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { SiGithub, SiLinkedin, SiDiscord } from "react-icons/si";
 import { useTranslation } from 'next-i18next';
 
 export default function Home() {
-  const { t, i18n } = useTranslation('common');
+  const { t } = useTranslation('common');
 
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth";
