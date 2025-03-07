@@ -2,6 +2,8 @@ import Booki_1 from "@/public/projects/booki_1.png"
 import Booki_2 from "@/public/projects/booki_2.png"
 import Booki_3 from "@/public/projects/booki_3.png"
 import SophieBluel from "@/public/projects/sophie_bluel.png"
+import SophieBluel_2 from "@/public/projects/sophie_bluel_2.png"
+import SophieBluel_3 from "@/public/projects/sophie_bluel_3.png"
 import NinaCarducci from "@/public/projects/nina_carducci.png"
 import Kasa from "@/public/projects/kasa.png"
 import MonVieuxGrimoire from "@/public/projects/mon_vieux_grimoire.png"
@@ -35,12 +37,12 @@ export const openClassroomsProjects = [
     },
     {
       title: "Sophie Bluel",
-      images: [SophieBluel],
+      images: [SophieBluel, SophieBluel_2, SophieBluel_3],
       icons: [
         { icon: SiHtml5, color: "text-[#E34F26]" },
         { icon: SiCss3, color: "text-[#1572B6]" },
         { icon: SiJavascript, color: "text-[#F7DF1E]" }],
-      description:"test",
+      description:"( scénario fictif )\nUne équipe travaillant sur le portfolio d'une architecte d'intérieur m'a recruté pour que je m'occupe de la partie Frontend. J'ai utilisé le langage Javascript mêlé au HTML/CSS afin de rendre la page dynamique et faire des requêtes à l'API.\nLe site est composé d'une présentation professionnelle ainsi que d'un formulaire de contact. Il possède une page de connexion qui permet à l'architecte de s'identifier. En mode connecté, il est possible d'ajouter ou de supprimer des projets dynamiquement via une modale. Les projets peuvent être triés par catégorie dans la page principale.",
       github: "https://github.com/Leo-Brd/OC_Sophie_Bluel",
     },
     {

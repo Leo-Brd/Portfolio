@@ -70,13 +70,13 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
           }}
         >
           <img
-            className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+            className="absolute inset-0 w-[100%] h-[100%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
             style={{
               opacity: current === index ? 1 : 0.5,
               objectPosition: "left center",
             }}
-            alt={images[0].alt} // Utilisez la propriété alt
-            src={images[0].src} // Utilisez la propriété src
+            alt={images[0].alt}
+            src={images[0].src}
             loading="eager"
             decoding="sync"
           />

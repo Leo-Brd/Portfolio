@@ -40,7 +40,6 @@ export default function RootLayout({ children }) {
           <meta name="twitter:image" content="https://portfolio-gamma-vert-55.vercel.app/cards_img.png" />
           <meta name="twitter:image:alt" content="Aperçu du portfolio de LeoBrd" />
 
-
         </head>
         <body>
           <Header />
