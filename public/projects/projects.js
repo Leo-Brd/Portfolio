@@ -9,6 +9,9 @@ import NinaCarducci_2 from "@/public/projects/nina_carducci_2.png"
 import NinaCarducci_3 from "@/public/projects/nina_carducci_3.png"
 import NinaCarducci_4 from "@/public/projects/nina_carducci_4.png"
 import Kasa from "@/public/projects/kasa.png"
+import Kasa_2 from "@/public/projects/kasa_2.png"
+import Kasa_3 from "@/public/projects/kasa_3.png"
+import Kasa_4 from "@/public/projects/kasa_4.png"
 import MonVieuxGrimoire from "@/public/projects/mon_vieux_grimoire.png"
 import Qwenta from "@/public/projects/qwenta.png"
 import {
@@ -60,11 +63,12 @@ export const openClassroomsProjects = [
     },
     {
       title: "Kasa",
-      images: [Kasa],
+      images: [Kasa, Kasa_2, Kasa_3, Kasa_4],
       icons: [
         { icon: SiReact, color: "text-[#61DAFB]" },
-        { icon: SiSass, color: "text-[#CC6699]" }],
-      description:"test",
+        { icon: SiSass, color: "text-[#CC6699]" },
+        { icon: CiMobile1, color: "text-black", darkColor: "text-white" },],
+      description:"( scénario fictif )\nL'entreprise de location immobilière Kasa entamait la refonte de son site internet. En tant que développeur Frontend freelance, j'ai été chargé de recoder le site en utilisant le framework javascript React. Le site permet aux utilisateurs de se renseigner sur les appartements disponibles.\nJ'ai donc reproduis la maquette en créant les composants React nécessaires. Le style du site a été réalisé avec le langage Sass qui permet de rendre l'utilisation du CSS plus pratique. Quelques petites animations ont été réalisées, par exemple lors de l'ouverture des collapses. Le site est responsive et donc adapté pour les utilisateurs sur mobile.",
       github: "https://github.com/Leo-Brd/OC_Kasa",
     },
     {
