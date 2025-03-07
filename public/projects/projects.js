@@ -5,6 +5,9 @@ import SophieBluel from "@/public/projects/sophie_bluel.png"
 import SophieBluel_2 from "@/public/projects/sophie_bluel_2.png"
 import SophieBluel_3 from "@/public/projects/sophie_bluel_3.png"
 import NinaCarducci from "@/public/projects/nina_carducci.png"
+import NinaCarducci_2 from "@/public/projects/nina_carducci_2.png"
+import NinaCarducci_3 from "@/public/projects/nina_carducci_3.png"
+import NinaCarducci_4 from "@/public/projects/nina_carducci_4.png"
 import Kasa from "@/public/projects/kasa.png"
 import MonVieuxGrimoire from "@/public/projects/mon_vieux_grimoire.png"
 import Qwenta from "@/public/projects/qwenta.png"
@@ -47,12 +50,12 @@ export const openClassroomsProjects = [
     },
     {
       title: "Nina Carducci",
-      images: [NinaCarducci],
+      images: [NinaCarducci, NinaCarducci_2, NinaCarducci_3, NinaCarducci_4],
       icons: [
         { icon: VscDebugAll, color: "text-[#DC3545]" },
         { icon: BiHandicap, color: "text-black", darkColor: "text-white" },
         { icon: TbSeo, color: "text-[#0D6EFD]" }],
-        description:"test",
+        description:"( scénario fictif )\nAprès avoir remarqué de nombreux problèmes sur le site de la photographe Nina Carducci, je l'ai contacté afin de lui proposer mes services.\nJ'ai tout d'abord réglé quelques erreurs de code qui faisaient disfonctionner le site. J'ai ensuite réalisé un audit et un rapport d'intervention afin de lister les modifications apportées.\nLes performances du site ont été nettement améliorées, en grande partie grâce à la compression des images. Le site a été restructuré et adapté afin d'être accessible par tout type d'utilisateur ( notamment les personnes handicapées ). J' ai aussi rendu le code plus clair et j'ai ajouté des balises afin d'améliorer son référencement par les navigateurs de recherche ( SEO ).",
         github: "https://github.com/Leo-Brd/OC_Nina_Carducci",
     },
     {

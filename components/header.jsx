@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Importez usePathname
+import { usePathname } from "next/navigation";
 import { IconSun, IconMoon } from "@tabler/icons-react";
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
