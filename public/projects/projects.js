@@ -20,6 +20,7 @@ import Qwenta from "@/public/projects/qwenta.png"
 import Qwenta_2 from "@/public/projects/qwenta_2.png"
 import Qwenta_3 from "@/public/projects/qwenta_3.png"
 import Qwenta_4 from "@/public/projects/qwenta_4.png"
+import Mangabunka from "@/public/projects/mangabunka.png"
 import {
   SiHtml5,
   SiCss3,
@@ -101,17 +102,17 @@ export const openClassroomsProjects = [
 export const otherProjects = [
     {
       title: "MangaBunka",
-      images: [SophieBluel],
+      images: [Mangabunka],
       icons: [
         { icon: SiReact, color: "text-[#61DAFB]" },
         { icon: SiNodedotjs, color: "text-[#339933]" },
         { icon: SiMongodb, color: "text-[#47A248]" }],
-      description:"test",
+      description:"(Site en développement, revenez plus tard)",
       github: "https://github.com/Leo-Brd/MangaBunka",
     },
     {
       title: "Autre",
-      images: [SophieBluel],
+      images: [Mangabunka],
       icons: [],
       description:"test",
       github: "https://github.com/Leo-Brd/OC_Sophie_Bluel",
