@@ -17,6 +17,9 @@ import MonVieuxGrimoire_2 from "@/public/projects/mon_vieux_grimoire_2.png"
 import MonVieuxGrimoire_3 from "@/public/projects/mon_vieux_grimoire_3.png"
 import MonVieuxGrimoire_4 from "@/public/projects/mon_vieux_grimoire_4.png"
 import Qwenta from "@/public/projects/qwenta.png"
+import Qwenta_2 from "@/public/projects/qwenta_2.png"
+import Qwenta_3 from "@/public/projects/qwenta_3.png"
+import Qwenta_4 from "@/public/projects/qwenta_4.png"
 import {
   SiHtml5,
   SiCss3,
@@ -85,11 +88,11 @@ export const openClassroomsProjects = [
     },
     {
       title: "Qwenta",
-      images: [Qwenta],
+      images: [Qwenta, Qwenta_2, Qwenta_3, Qwenta_4],
       icons: [
         { icon: SiFeedly, color: "text-[#339933]" },
         { icon: RiNotionFill, color: "text-black", darkColor: "text-white" }],
-      description:"test",
+      description:"( scénario fictif )\nEn tant que développeur de l'agence Webgencia, j'ai été choisi afin de planifier notre prochain projet. Il s'agissait du nouveau site internet \"Menu Maker\" de l'entreprise Qwenta. Le site permet aux restaurateurs de créer un menu de restaurant personnalisé afin de l'utiliser comme ils le souhaitent.\nJ'ai tout d'abord effectué une veille technologique organisée afin de sélectionner les outils du projet. J'ai ensuite créé le document qui liste les détails des spécifications techniques. J'ai alors réparti les tâches au sein d'un tableau Kanban sur Notion afin d'organiser le projet. J'ai finis par préparer la présentation au Product Owner afin de le briefer.",
       github: "https://github.com/Leo-Brd/OC_Qwenta",
     },
 ];
