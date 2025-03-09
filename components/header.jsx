@@ -1,13 +1,14 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { IconSun, IconMoon } from "@tabler/icons-react";
+import { IconSun, IconMoon, IconMenu2, IconX } from "@tabler/icons-react";
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { GB, FR } from "country-flag-icons/react/3x2";
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const { t, i18n } = useTranslation("common");
   const pathname = usePathname();
 
@@ -27,23 +28,42 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="mx-auto px-6 py-4 flex items-center justify-between max-w-screen-xl">
+        
         {/* Titre */}
         <Link href="/" className="text-3xl text-primary">
           {t("title")}
         </Link>
 
+        {/* Menu burger pour mobile */}
+        <button
+          className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? (
+            <IconX className="w-7 h-7 text-foreground" />
+          ) : (
+            <IconMenu2 className="w-7 h-7 text-foreground" />
+          )}
+        </button>
+
         {/* Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <nav
+          className={`fixed md:static top-16 left-0 w-full md:w-auto bg-background md:bg-transparent flex flex-col md:flex-row items-center justify-center md:justify-start space-y-6 md:space-y-0 md:space-x-8 transition-all duration-300 ease-in-out ${
+            menuOpen ? "shadow-lg block h-[calc(100vh-4rem)] gap-8" : "hidden md:flex"
+          }`}
+        >
           {["home", "skills", "projects", "contact"].map((key) => (
             <Link
               key={key}
               href={`/${key === "home" ? "" : key}`}
-              className={`text-2xl ${
+              className={`text-2xl md:text-xl lg:text-2xl ${
                 isActive(`/${key === "home" ? "" : key}`)
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
               } transition-colors relative group`}
+              onClick={() => setMenuOpen(false)}
             >
               {t(key)}
               <span
@@ -58,7 +78,7 @@ export default function Header() {
         </nav>
 
         {/* Mode sombre et langue */}
-        <div className="flex gap-8">
+        <div className="hidden md:flex gap-8">
           <button
             onClick={toggleDarkMode}
             className="p-2 rounded-lg hover:bg-muted transition-colors"
