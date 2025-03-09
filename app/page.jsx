@@ -28,7 +28,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-8xl mt-20 md:text-9xl font-tinos text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent"
+        className="text-7xl mt-20 md:text-8xl lg:text-9xl font-tinos text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent"
       >
         {"<LeoBrd />"}
       </motion.h1>
@@ -135,11 +135,12 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mb-28 flex justify-around"
+          className="mb-28 flex flex-col justify-around md:flex-row gap-8 items-center md:items-start"
         >
           <Languages />
           <ProgrammingLanguages />
         </motion.div>
+        
       </section>
 
       <motion.div

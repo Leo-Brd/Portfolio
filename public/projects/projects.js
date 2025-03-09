@@ -109,12 +109,5 @@ export const otherProjects = [
         { icon: SiMongodb, color: "text-[#47A248]" }],
       description:"(Site en développement, revenez plus tard)",
       github: "https://github.com/Leo-Brd/MangaBunka",
-    },
-    {
-      title: "Autre",
-      images: [Mangabunka],
-      icons: [],
-      description:"test",
-      github: "https://github.com/Leo-Brd/OC_Sophie_Bluel",
-    },
+    }
 ];

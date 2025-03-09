@@ -58,7 +58,7 @@ export function CareerPath() {
               className="w-12 h-12 transition-all duration-300 hover:scale-110 hover:shadow-lg"
             />
             {hoveredLogo === "OCLogo" && (
-              <div className="absolute top-0 left-40 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
+              <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
                 <h3 className="text-xl font-bold">OpenClassroom's</h3>
                 <p className="text-lg text-foreground">
                   {getModalContent("OCLogo")}
@@ -78,7 +78,7 @@ export function CareerPath() {
             >
               <Si42 className="w-12 h-12 transition-all duration-300 hover:scale-110 hover:shadow-lg" />
               {hoveredLogo === "42" && (
-                <div className="absolute w-80 top-0 right-40 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/3 w-80 sm:w-64 lg:-translate-x-[700px] lg:w-96 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
                   <h3 className="text-xl font-bold">Ecole 42</h3>
                   <p className="text-lg text-foreground">
                     {getModalContent("42")}
@@ -114,7 +114,7 @@ export function CareerPath() {
               className="w-12 h-12 rounded transition-all duration-300 hover:scale-110 hover:shadow-lg"
             />
             {hoveredLogo === "EstiamLogo" && (
-              <div className="absolute top-0 left-40 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
+              <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
                 <h3 className="text-xl font-bold">Estiam</h3>
                 <p className="text-lg text-foreground">
                   {getModalContent("EstiamLogo")}
@@ -138,7 +138,7 @@ export function CareerPath() {
                 className="w-18 h-14 object-cover transition-all duration-300 hover:scale-110 hover:shadow-lg"
               />
               {hoveredLogo === "Lyon2Logo" && (
-                <div className="absolute w-80 top-0 right-40 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/3 w-80 sm:w-64 lg:-translate-x-[700px] lg:w-96 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
                   <h3 className="text-xl font-bold">Université Lumière Lyon 2</h3>
                   <p className="text-lg text-foreground">
                     {getModalContent("Lyon2Logo")}
@@ -174,7 +174,7 @@ export function CareerPath() {
               className="w-14 h-12 rounded transition-all duration-300 hover:scale-110 hover:shadow-lg"
             />
             {hoveredLogo === "JpsLogo" && (
-              <div className="absolute top-0 left-40 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
+              <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
                 <h3 className="text-xl font-bold">Lycée Jean Paul Sartre</h3>
                 <p className="text-lg text-foreground">
                   {getModalContent("JpsLogo")}
