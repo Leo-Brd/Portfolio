@@ -47,7 +47,7 @@ export default function ContactPage() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground p-8 mt-24"
+      className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground py-8 sm:p-8 mt-24"
     >
       {/* Titre de la page */}
       <motion.h1
