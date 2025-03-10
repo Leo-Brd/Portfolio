@@ -54,13 +54,13 @@ export default function ContactPage() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-4xl md:text-5xl font-bold text-primary mb-8"
+        className="text-4xl md:text-5xl font-bold text-primary dark:text-secondary mb-8"
       >
         Contactez-moi
       </motion.h1>
 
       {/* Conteneur principal */}
-      <div className="w-full max-w-4xl bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-8 shadow-lg">
+      <div className="w-full max-w-4xl bg-card backdrop-blur-sm border border-white/20 rounded-lg p-8 shadow-lg">
         {/* Section du formulaire */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -68,47 +68,47 @@ export default function ContactPage() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-12"
         >
-          <h2 className="text-2xl font-semibold text-primary mb-6">
+          <h2 className="text-2xl font-semibold text-primary dark:text-secondary mb-6">
             Envoyez-moi un mail
           </h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-muted-foreground">
+              <label htmlFor="name" className="block text-sm font-medium text-muted-foreground dark:text-secondary">
                 Votre nom
               </label>
               <input
                 type="text"
                 id="name"
                 name="name"
-                className="w-full px-4 py-2 mt-1 bg-background/50 border dark:border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full px-4 py-2 mt-1 bg-background/50 border dark:border-white/80 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="Entrez votre nom"
                 required
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-muted-foreground">
+              <label htmlFor="email" className="block text-sm font-medium text-muted-foreground dark:text-secondary">
                 Votre e-mail
               </label>
               <input
                 type="email"
                 id="email"
                 name="email"
-                className="w-full px-4 py-2 mt-1 bg-background/50 border dark:border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full px-4 py-2 mt-1 bg-background/50 border dark:border-white/80 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="Entrez votre e-mail"
                 required
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-muted-foreground">
+              <label htmlFor="message" className="block text-sm font-medium text-muted-foreground dark:text-secondary">
                 Votre message
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows="5"
-                className="w-full px-4 py-2 mt-1 bg-background/50 border dark:border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full px-4 py-2 mt-1 bg-background/50 border dark:border-white/80 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="Écrivez votre message ici..."
                 required
               />
@@ -146,14 +146,14 @@ export default function ContactPage() {
 
           {/* Liens de contact */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white rounded-lg hover:shadow-lg dark:shadow-white/10 transition-shadow duration-300">
+            <div className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white/80 rounded-lg hover:shadow-lg dark:shadow-white/10 transition-shadow duration-300">
               <FaMapMarkerAlt className="w-6 h-6 text-primary" />
               <span className="text-muted-foreground">Lyon, France</span>
             </div>
 
             <a
               href="mailto:leobordet.pro@gmail.com"
-              className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white rounded-lg hover:bg-background/70 transition-all duration-300 hover:shadow-lg dark:shadow-white/10"
+              className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white/80 rounded-lg hover:bg-background/70 transition-all duration-300 hover:shadow-lg dark:shadow-white/10"
             >
               <FaEnvelope className="w-6 h-6 text-primary" />
               <span className="text-muted-foreground">leobordet.pro@gmail.com</span>
@@ -161,7 +161,7 @@ export default function ContactPage() {
 
             <a
               href="tel:+33783194855"
-              className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white rounded-lg hover:bg-background/70 transition-all duration-300 hover:shadow-lg dark:shadow-white/10"
+              className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white/80 rounded-lg hover:bg-background/70 transition-all duration-300 hover:shadow-lg dark:shadow-white/10"
             >
               <FaPhone className="w-6 h-6 text-primary" />
               <span className="text-muted-foreground">+33 7 83 19 48 55</span>
