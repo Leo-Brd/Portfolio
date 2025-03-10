@@ -1,6 +1,4 @@
 "use client";
-
-import Link from 'next/link';
 import { Bar, BarChart, XAxis, YAxis, Tooltip } from "recharts";
 import {
   Card,
@@ -14,6 +12,7 @@ import {
   ChartContainer,
 } from "@/components/ui/chart";
 import { SiHtml5, SiCss3, SiJavascript, SiPython, SiC } from "react-icons/si";
+import Link from "next/link";
 
 // Données des langages de programmation
 const programmingData = [
@@ -26,19 +25,24 @@ const programmingData = [
 // Configuration des couleurs et des icônes
 const programmingConfig = {
   "html/css": {
-    icon: <div className="flex"><SiHtml5 className="w-6 h-6 text-[#E44D26]" /><SiCss3 className="w-6 h-6 text-[#264DE4]" /></div>,
+    icon: (
+      <div className="flex">
+        <SiHtml5 className="w-5 h-5 sm:w-6 sm:h-6 text-[#E44D26]" />
+        <SiCss3 className="w-5 h-5 sm:w-6 sm:h-6 text-[#264DE4]" />
+      </div>
+    ),
     color: "hsl(var(--chart-1))",
   },
   javascript: {
-    icon: <SiJavascript className="w-8 h-8 text-[#F7DF1E]" />,
+    icon: <SiJavascript className="w-6 h-6 sm:w-8 sm:h-8 text-[#F7DF1E]" />,
     color: "hsl(var(--chart-2))",
   },
   python: {
-    icon: <SiPython className="w-7 h-7 text-[#3776AB]" />,
+    icon: <SiPython className="w-6 h-6 sm:w-7 sm:h-7 text-[#3776AB]" />,
     color: "hsl(var(--chart-3))",
   },
   c: {
-    icon: <SiC className="w-7 h-7 text-[#235186]" />,
+    icon: <SiC className="w-6 h-6 sm:w-7 sm:h-7 text-[#235186]" />,
     color: "hsl(var(--chart-4))",
   },
 };
@@ -57,9 +61,9 @@ const CustomTooltip = ({ active, payload }) => {
 
 export function ProgrammingLanguages() {
   return (
-    <Card className="w-[400px]">
+    <Card className="w-full sm:w-[400px]">
       <CardHeader>
-        <CardTitle className="text-3xl">Mais aussi en...</CardTitle>
+        <CardTitle className="text-2xl sm:text-3xl">Mais aussi en...</CardTitle>
       </CardHeader>
       <CardContent>
         <ChartContainer config={programmingConfig}>
@@ -71,6 +75,8 @@ export function ProgrammingLanguages() {
               left: 20,
               right: 20,
             }}
+            width={300}
+            height={200}
           >
             <YAxis
               dataKey="language"
@@ -109,7 +115,7 @@ export function ProgrammingLanguages() {
       </CardContent>
       <CardFooter className="text-sm text-muted-foreground">
         <Link href="/skills">
-            <p className=' hover:text-blue-600'> {"⏩ "} Pour en savoir plus...</p>
+          <p className="hover:text-blue-600">{"⏩ "} Pour en savoir plus...</p>
         </Link>
       </CardFooter>
     </Card>

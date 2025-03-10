@@ -24,19 +24,19 @@ const chartData = [
 // Configuration des couleurs et des étiquettes
 const chartConfig = {
   fr: {
-    icon: <FR className="w-8 h-8" />,
+    icon: <FR className="w-6 h-6 sm:w-8 sm:h-8" />,
     color: "hsl(var(--chart-1))",
   },
   gb: {
-    icon: <GB className="w-8 h-8" />,
+    icon: <GB className="w-6 h-6 sm:w-8 sm:h-8" />,
     color: "hsl(var(--chart-2))",
   },
   es: {
-    icon: <ES className="w-8 h-8" />,
+    icon: <ES className="w-6 h-6 sm:w-8 sm:h-8" />,
     color: "hsl(var(--chart-3))",
   },
   jp: {
-    icon: <JP className="w-8 h-8" />,
+    icon: <JP className="w-6 h-6 sm:w-8 sm:h-8" />,
     color: "hsl(var(--chart-4))",
   },
 };
@@ -55,9 +55,9 @@ const CustomTooltip = ({ active, payload }) => {
 
 export function Languages() {
   return (
-    <Card className="w-[400px]">
+    <Card className="w-full sm:w-[400px]"> {/* Largeur ajustée */}
       <CardHeader>
-        <CardTitle className="text-3xl">Je peux parler en...</CardTitle>
+        <CardTitle className="text-2xl sm:text-3xl">Je peux parler en...</CardTitle>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -69,6 +69,8 @@ export function Languages() {
               left: 20,
               right: 20,
             }}
+            width={300}
+            height={200}
           >
             <YAxis
               dataKey="language"

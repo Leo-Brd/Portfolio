@@ -28,7 +28,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-7xl mt-20 md:text-8xl lg:text-9xl font-tinos text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent"
+        className="text-6xl mt-20 md:text-8xl lg:text-9xl font-tinos text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent"
       >
         {"<LeoBrd />"}
       </motion.h1>
@@ -148,7 +148,7 @@ export default function Home() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.4 }}
       viewport={{ once: true }}
-      className="w-full max-w-6xl mt-10 px-4"
+      className="w-full max-w-6xl mt-10 sm:px-4"
       >
         <GithubActivity />
       </motion.div>
