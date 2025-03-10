@@ -6,7 +6,7 @@
     "devweb": "Développeur web",
     "contact": "Contact",
 
-    "footer-droits": "© 2025 LeoBrd. Tous droits réservés.",
+    "footer-droits": "© {{year}} LeoBrd. Tous droits réservés.",
     "footer-construit": "Construit avec :",
 
     "a-propos-title": "À propos de moi",

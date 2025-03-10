@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
 
         <p className="text-muted-foreground text-sm">
-          {t("footer-droits")}
+          {t("footer-droits", { year: new Date().getFullYear() })}
         </p>
 
         <div className="flex space-x-8">
