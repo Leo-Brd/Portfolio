@@ -7,7 +7,7 @@ export default function Projects() {
   const { t, i18n } = useTranslation('common');
 
   return (
-    <div className="relative sm:overflow-hidden w-full pt-20 lg:py-20 mt-10 mb-36 lg:my-10">
+    <div className="relative overflow-hidden w-full h-[1380px] sm:h-[1520px] md:h-[1950px] lg:h-full pt-20 lg:py-20 mt-10 lg:my-10">
 
       <h1 className="text-4xl md:text-5xl font-bold mb-10 text-center text-foreground">Mes projets</h1>
 
