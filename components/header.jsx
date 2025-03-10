@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
-      <div className="mx-auto px-6 py-4 flex items-center justify-between max-w-screen-xl">
+      <div className="px-6 py-4 flex items-center justify-between lg:justify-around">
         
         {/* Titre */}
         <Link href="/" className="text-3xl text-primary">

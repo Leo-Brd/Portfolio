@@ -46,7 +46,7 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10"
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[90vmin] h-[60vmin] md:w-[70vmin] md:h-[70vmin] mx-[2vmin] md:mx-[4vmin] z-10"
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -87,12 +87,12 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
 
         {/* Conteneur du texte et des icônes */}
         <div
-          className={`absolute bottom-0 left-0 w-full h-[20%] flex flex-col items-center justify-center bg-background/80 backdrop-blur-sm p-4 rounded-b-[1%] transition-opacity duration-300 ${
+          className={`absolute bottom-0 left-0 w-full h-[20%] flex flex-col items-center justify-center bg-background/80 backdrop-blur-sm p-2 md:p-4 rounded-b-[1%] transition-opacity duration-300 ${
             current === index ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="flex items-center space-x-4">
-            <h2 className="text-lg md:text-2xl lg:text-3xl font-semibold text-primary">
+          <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 mt-16 lg:mt-0">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-primary">
               {title}
             </h2>
             {/* Affichage des icônes */}
@@ -100,13 +100,13 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
               {icons.map(({ icon: Icon, color, darkColor }, i) => (
                 <Icon
                   key={i}
-                  className={`w-8 h-8 ${color} ${darkColor ? `dark:${darkColor}` : ""}`}
+                  className={`w-6 h-6 md:w-8 md:h-8 ${color} ${darkColor ? `dark:${darkColor}` : ""}`}
                 />
               ))}
             </div>
           </div>
           <Link href={`/projects/${title.toLowerCase().replace(/\s+/g, "-")}`}>
-            <button className="mt-4 px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl">
+            <button className="mt-2 md:mt-4 px-4 py-1 md:px-6 md:py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl text-sm md:text-base">
               Voir le projet
             </button>
           </Link>
@@ -116,12 +116,7 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
   );
 };
 
-
-const CarouselControl = ({
-  type,
-  title,
-  handleClick
-}) => {
+const CarouselControl = ({ type, title, handleClick }) => {
   return (
     <button
       className={`w-10 h-10 flex items-center mx-2 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
@@ -135,9 +130,7 @@ const CarouselControl = ({
   );
 };
 
-export default function Carousel({
-  slides
-}) {
+export default function Carousel({ slides }) {
   const [current, setCurrent] = useState(0);
 
   const handlePreviousClick = () => {
@@ -160,11 +153,11 @@ export default function Carousel({
 
   return (
     <div
-      className="relative w-[70vmin] h-[70vmin] mx-auto"
+      className="relative w-[90vmin] h-[60vmin] md:w-[70vmin] md:h-[70vmin] mx-auto"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
-        className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
+        className="absolute flex mx-[-2vmin] md:mx-[-4vmin] transition-transform duration-1000 ease-in-out"
         style={{
           transform: `translateX(-${current * (100 / slides.length)}%)`,
         }}
@@ -179,7 +172,7 @@ export default function Carousel({
           />
         ))}
       </ul>
-      <div className="absolute flex justify-center w-full top-[calc(100%+1rem)]">
+      <div className="absolute flex justify-center w-full top-[calc(100%+1rem)] mt-14 lg:mt-0">
         <CarouselControl
           type="previous"
           title="Voir le projet précédent"
