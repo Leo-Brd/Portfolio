@@ -36,7 +36,7 @@ const chartConfig = {
     color: "hsl(var(--chart-3))",
   },
   jp: {
-    icon: <JP className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <JP className="japan__flag lag w-6 h-6 sm:w-8 sm:h-8" />,
     color: "hsl(var(--chart-4))",
   },
 };

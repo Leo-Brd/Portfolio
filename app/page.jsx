@@ -123,7 +123,7 @@ export default function Home() {
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-center mb-12">
-            Mon parcours
+            {t("parcours-title")}
           </h2>
           <CareerPath />
         </motion.div>
