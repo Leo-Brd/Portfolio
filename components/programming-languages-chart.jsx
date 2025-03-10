@@ -115,7 +115,7 @@ export function ProgrammingLanguages() {
       </CardContent>
       <CardFooter className="text-sm text-muted-foreground">
         <Link href="/skills">
-          <p className="hover:text-blue-600">{"⏩ "} Pour en savoir plus...</p>
+          <p className="hover:text-blue-600 dark:text-secondary">{"⏩ "} Pour en savoir plus...</p>
         </Link>
       </CardFooter>
     </Card>

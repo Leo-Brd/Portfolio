@@ -28,7 +28,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-6xl mt-20 md:text-8xl lg:text-9xl font-tinos text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent"
+        className="text-6xl mt-20 md:text-8xl lg:text-9xl font-tinos text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent dark:to-secondary"
       >
         {"<LeoBrd />"}
       </motion.h1>
@@ -105,7 +105,7 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-primary mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+          <h2 className="text-4xl font-bold text-primary mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent dark:to-secondary">
             {t("a-propos-title")}
           </h2>
           <p className="text-lg text-muted-foreground">

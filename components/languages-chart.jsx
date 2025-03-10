@@ -105,7 +105,7 @@ export function Languages() {
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="text-sm text-muted-foreground">
+      <CardFooter className="text-sm text-muted-foreground dark:text-secondary">
         J'apprends le japonais quotidiennement !
       </CardFooter>
     </Card>

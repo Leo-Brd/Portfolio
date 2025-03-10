@@ -36,7 +36,7 @@ export function Passions() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl font-bold text-primary mb-12"
+        className="text-4xl font-bold text-primary dark:text-secondary mb-12"
       >
         {t("passions-title")}
       </motion.h2>
@@ -55,7 +55,7 @@ export function Passions() {
               {passion.icon}
             </div>
 
-            <h3 className="text-2xl font-semibold text-primary text-center mb-4">
+            <h3 className="text-2xl font-semibold text-primary dark:text-secondary text-center mb-4">
               {t(passion.title)}
             </h3>
 
