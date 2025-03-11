@@ -22,7 +22,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen flex flex-col items-center bg-background text-foreground p-8">
+    <main className="min-h-screen flex flex-col items-center bg-background text-foreground pt-8 sm:p-8">
 
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
