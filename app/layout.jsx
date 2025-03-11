@@ -13,6 +13,9 @@ export default function RootLayout({ children }) {
         <head>
           <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="robots" content="index, follow" />
+          <meta httpEquiv="Content-Language" content="fr" />
+          <meta name="generator" content="LeoBrd Portfolio - Created with Next.js and Tailwind CSS"></meta>
           <meta name="description" content="Je suis un développeur passioné par la création d'applications web modernes et performantes !" />
           <title>LeoBrd - Portfolio</title>
 
@@ -40,6 +43,24 @@ export default function RootLayout({ children }) {
           <meta name="twitter:image" content="https://portfolio-gamma-vert-55.vercel.app/cards_img.png" />
           <meta name="twitter:image:alt" content="Aperçu du portfolio de LeoBrd" />
 
+          <script type="application/ld+json">
+            {`
+              {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "LeoBrd",
+                "jobTitle": "Développeur Web",
+                "url": "https://portfolio-gamma-vert-55.vercel.app/",
+                "sameAs": [
+                  "https://github.com/Leo-Brd",
+                  "https://www.linkedin.com/in/leo-bordet/",
+                  "https://discord.com/users/leo_brd"
+                ],
+                "description": "Développeur web en apprentissage spécialisé en React et Node.js. Découvrez mes projets, compétences et expériences en parcourant mon portfolio !"
+              }
+            `}
+          </script>
+
         </head>
         <body>
           <Header />
@@ -47,6 +68,7 @@ export default function RootLayout({ children }) {
           <Footer />
         </body>
       </html>
+
     </I18nextProvider>
   );
 }
