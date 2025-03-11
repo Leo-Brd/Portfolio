@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/chart";
 import { SiHtml5, SiCss3, SiJavascript, SiPython, SiC } from "react-icons/si";
 import Link from "next/link";
+import { useTranslation } from 'next-i18next';
 
 // Données des langages de programmation
 const programmingData = [
@@ -60,10 +61,12 @@ const CustomTooltip = ({ active, payload }) => {
 };
 
 export function ProgrammingLanguages() {
+  const { t } = useTranslation('common');
+
   return (
     <Card className="w-full sm:w-[400px]">
       <CardHeader>
-        <CardTitle className="text-2xl sm:text-3xl">Mais aussi en...</CardTitle>
+        <CardTitle className="text-2xl sm:text-3xl">{t("code-languages-title")}</CardTitle>
       </CardHeader>
       <CardContent>
         <ChartContainer config={programmingConfig}>
@@ -115,7 +118,7 @@ export function ProgrammingLanguages() {
       </CardContent>
       <CardFooter className="text-sm text-muted-foreground">
         <Link href="/skills">
-          <p className="hover:text-blue-600 dark:text-secondary">{"⏩ "} Pour en savoir plus...</p>
+          <p className="hover:text-blue-600 dark:text-secondary">{"⏩ "} {t("code-languages-subtitle")}</p>
         </Link>
       </CardFooter>
     </Card>

@@ -12,6 +12,7 @@ import {
   ChartContainer,
 } from "@/components/ui/chart";
 import { GB, FR, ES, JP } from "country-flag-icons/react/3x2";
+import { useTranslation } from 'next-i18next';
 
 // Données des langues
 const chartData = [
@@ -54,10 +55,12 @@ const CustomTooltip = ({ active, payload }) => {
 };
 
 export function Languages() {
+  const { t } = useTranslation('common');
+
   return (
     <Card className="w-full sm:w-[400px]"> {/* Largeur ajustée */}
       <CardHeader>
-        <CardTitle className="text-2xl sm:text-3xl">Je peux parler en...</CardTitle>
+        <CardTitle className="text-2xl sm:text-3xl">{t("languages-title")}</CardTitle>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -106,7 +109,7 @@ export function Languages() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="text-sm text-muted-foreground dark:text-secondary">
-        J'apprends le japonais quotidiennement !
+        {t("languages-subtitle")}
       </CardFooter>
     </Card>
   );

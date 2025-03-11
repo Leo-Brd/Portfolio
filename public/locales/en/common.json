@@ -33,5 +33,21 @@
     "42-text": "The 42 school's piscine is a unique 1-month experience where you learn the C language. It is a very enriching experience both technically and socially, as it pushes us to collaborate and learn quickly. The gamified system is a way to make programming cool and fun.",
     "estiam-text": "This first year of Bachelor's degree in a private school allowed me to develop general IT skills and understand what I liked in this field. I then decided to turn to schools like 42 and OpenClassrooms where the learning method is less academic.",
     "uni-text": "After high school, I started a degree in Computer Science / Economics, which I quickly dropped out of (university wasn't for me). However, it showed me that computer science was a field that interested me more than others. I spent the rest of the year working in a pizzeria while waiting for the next school year. 🍕",
-    "jps-text": "I was in high school in Bron from my sophomore to senior year. I chose Mathematics and Computer Science as my specialties and obtained my Baccalaureate diploma with honors."
+    "jps-text": "I was in high school in Bron from my sophomore to senior year. I chose Mathematics and Computer Science as my specialties and obtained my Baccalaureate diploma with honors.",
+
+    "permis-title": "Driver license",
+    "permis-date": "Obtained in 2023",
+    "bac-title": "General Baccalaureate",
+    "bac-text": "With Honors",
+    "bac-date": "Obtained in 2022",
+    "oc-diploma-title": "OpenClassrooms Diploma",
+    "oc-diploma-text": "Web Development",
+    "oc-diploma-date": "Obtained in 2025",
+
+    "languages-title": "I can speak in...",
+    "languages-subtitle": "I'm learning Japanese every day!",
+    "code-languages-title": "But also in...",
+    "code-languages-subtitle": "To learn more...",
+
+    "github-activity-title": "Recent activity on GitHub"
 }

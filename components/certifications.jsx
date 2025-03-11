@@ -2,8 +2,10 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { FaCar, FaGraduationCap, FaLaptopCode } from "react-icons/fa";
+import { useTranslation } from 'next-i18next';
 
 export function Certifications() {
+  const { t } = useTranslation('common');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -13,14 +15,14 @@ export function Certifications() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3, // Délai entre les animations des enfants
+        staggerChildren: 0.3,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 50 }, // Départ invisible et décalé vers le bas
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, // Animation vers le haut
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
   return (
@@ -38,8 +40,8 @@ export function Certifications() {
         className="relative bg-background/80 backdrop-blur-sm border border-primary/20 rounded-lg p-6 hover:shadow-lg dark:hover:shadow-white/10 transition-shadow duration-300 flex flex-col justify-center items-center text-center"
       >
         <FaCar className="w-12 h-12 text-primary" />
-        <p className="text-lg text-primary/80 dark:text-secondary mt-2">Permis B</p>
-        <p className="text-sm text-secondary mt-1">Obtenu en 2023</p>
+        <p className="text-lg text-primary/80 dark:text-secondary mt-2">{t("permis-title")}</p>
+        <p className="text-sm text-secondary mt-1">{t("permis-date")}</p>
       </motion.div>
 
       {/* Bac général */}
@@ -49,9 +51,9 @@ export function Certifications() {
         className="relative bg-background/80 backdrop-blur-sm border border-primary/20 rounded-lg p-6 hover:shadow-lg dark:hover:shadow-white/10 transition-shadow duration-300 flex flex-col justify-center items-center text-center"
       >
         <FaGraduationCap className="w-12 h-12 text-primary" />
-        <p className="text-lg text-primary/80 dark:text-secondary mt-2">Bac général</p>
-        <p className="text-sm text-primary/80 dark:text-secondary mt-1">Mention Bien</p>
-        <p className="text-sm text-secondary mt-1">Obtenu en 2022</p>
+        <p className="text-lg text-primary/80 dark:text-secondary mt-2">{t("bac-title")}</p>
+        <p className="text-sm text-primary/80 dark:text-secondary mt-1">{t("bac-text")}</p>
+        <p className="text-sm text-secondary mt-1">{t("bac-date")}</p>
       </motion.div>
 
       {/* Diplôme OpenClassrooms */}
@@ -61,9 +63,9 @@ export function Certifications() {
         className="relative bg-background/80 backdrop-blur-sm border border-primary/20 rounded-lg p-6 hover:shadow-lg dark:hover:shadow-white/10 transition-shadow duration-300 flex flex-col justify-center items-center text-center"
       >
         <FaLaptopCode className="w-12 h-12 text-primary" />
-        <p className="text-lg text-primary/80 dark:text-secondary mt-2">Diplôme OpenClassrooms</p>
-        <p className="text-sm text-primary/80 dark:text-secondary mt-1">Développement web</p>
-        <p className="text-sm text-secondary mt-1">Obtenu en 2025</p>
+        <p className="text-lg text-primary/80 dark:text-secondary mt-2">{t("oc-diploma-title")}</p>
+        <p className="text-sm text-primary/80 dark:text-secondary mt-1">{t("oc-diploma-text")}</p>
+        <p className="text-sm text-secondary mt-1">{t("oc-diploma-date")}</p>
       </motion.div>
     </motion.div>
   );

@@ -3,8 +3,10 @@
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
+import { useTranslation } from 'next-i18next';
 
 export function GithubActivity() {
+  const { t } = useTranslation('common');
   const [events, setEvents] = useState([]);
   const username = "Leo-Brd";
 
@@ -19,7 +21,7 @@ export function GithubActivity() {
 
   return (
     <div className="p-6">
-      <h2 className="text-4xl font-bold mb-10 text-center">Activité Récente sur GitHub</h2>
+      <h2 className="text-4xl font-bold mb-10 text-center">{t("github-activity-title")}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {events.slice(0, 6).map((event, index) => (
           <Card key={index} className="hover:shadow-lg dark:shadow-white/10 transition-shadow duration-300">
