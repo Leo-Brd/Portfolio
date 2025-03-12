@@ -4,7 +4,7 @@ import { openClassroomsProjects, otherProjects } from "@/public/projects/project
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from 'next-i18next';
-import { FaGithub } from "react-icons/fa"; // Importez l'icône GitHub
+import { FaGithub } from "react-icons/fa";
 
 export default function ProjectPage() {
   const { t, i18n } = useTranslation('common');
@@ -36,7 +36,7 @@ export default function ProjectPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background py-12">
-      <div className="max-w-[1400px] mx-auto p-8 flex flex-col lg:flex-row gap-12 bg-card rounded-2xl shadow-xl">
+      <div className="max-w-[1400px] mx-auto p-8 flex flex-col lg:flex-row gap-12 bg-card rounded-2xl shadow-xl mt-6 items-center">
         {/* Carrousel d'images (à gauche) */}
         <motion.div
           className="w-full lg:w-1/2 h-[500px] lg:h-[600px] overflow-hidden rounded-lg shadow-lg flex items-center justify-center bg-muted"
