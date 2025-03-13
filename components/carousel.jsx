@@ -60,30 +60,32 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
         }}
       >
         {/* Conteneur de l'image */}
-        <div
-          className="absolute top-0 left-0 w-full h-[80%] bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
-          style={{
-            transform:
-              current === index
-                ? "translate3d(calc(var(--x) / 30), calc(var(--y) / 30), 0)"
-                : "none",
-          }}
-        >
-          <img
-            className="absolute inset-0 w-[100%] h-[100%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+        <Link href={`/projects/${title.toLowerCase().replace(/\s+/g, "-")}`}>
+          <div
+            className="absolute top-0 left-0 w-full h-[80%] bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out cursor-pointer"
             style={{
-              opacity: current === index ? 1 : 0.5,
-              objectPosition: "left center",
+              transform:
+                current === index
+                  ? "translate3d(calc(var(--x) / 30), calc(var(--y) / 30), 0)"
+                  : "none",
             }}
-            alt={images[0].alt}
-            src={images[0].src}
-            loading="eager"
-            decoding="sync"
-          />
-          {current === index && (
-            <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
-          )}
-        </div>
+          >
+            <img
+              className="absolute inset-0 w-[100%] h-[100%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+              style={{
+                opacity: current === index ? 1 : 0.5,
+                objectPosition: "left center",
+              }}
+              alt={images[0].alt}
+              src={images[0].src}
+              loading="eager"
+              decoding="sync"
+            />
+            {current === index && (
+              <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
+            )}
+          </div>
+        </Link>
 
         {/* Conteneur du texte et des icônes */}
         <div
