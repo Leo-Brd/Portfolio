@@ -31,34 +31,34 @@ import { CiMobile1 } from "react-icons/ci";
 import { RiNotionFill } from "react-icons/ri";
 
 const tools = [
-  { icon: <SiHtml5 className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#E34F26]" />, name: "HTML5", category: "Langages" },
-  { icon: <SiCss3 className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#1572B6]" />, name: "CSS3", category: "Langages" },
-  { icon: <SiJavascript className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#F7DF1E]" />, name: "JavaScript", category: "Langages" },
-  { icon: <SiPython className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3776AB]" />, name: "Python", category: "Langages" },
-  { icon: <SiC className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#226db3]" />, name: "C", category: "Langages" },
-  { icon: <SiSass className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#CC6699]" />, name: "Sass", category: "Langages" },
-  { icon: <TbBrandVscode className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#007ACC]" />, name: "VS Code", category: "Outils de développement" },
-  { icon: <SiGithub className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "GitHub", category: "Outils de développement" },
-  { icon: <SiGit className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#F05032]" />, name: "Git", category: "Outils de développement" },
-  { icon: <IoTerminal className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-[#ffffff]" />, name: "Terminal", category: "Outils de développement" },
-  { icon: <img src={ChatGPTLogo.src} alt="Logo de ChatGPT" className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3bc5ba]" />, name: "IA", category: "Outils de développement" },
-  { icon: <FaChrome className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#237aff]" />, name: "Chrome Devtools", category: "Outils de développement" },
+  { icon: <SiHtml5 className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#E34F26]" />, name: "HTML5", category: "Frontend" },
+  { icon: <SiCss3 className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#1572B6]" />, name: "CSS3", category: "Frontend" },
+  { icon: <SiJavascript className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#F7DF1E]" />, name: "JavaScript", category: "Frontend" },
+  { icon: <SiPython className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3776AB]" />, name: "Python", category: "Autres" },
+  { icon: <SiC className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#226db3]" />, name: "C", category: "Autres" },
+  { icon: <SiSass className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#CC6699]" />, name: "Sass", category: "Frontend" },
+  { icon: <TbBrandVscode className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#007ACC]" />, name: "VSCode", category: "Autres" },
+  { icon: <SiGithub className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "GitHub", category: "Gestion de projet" },
+  { icon: <SiGit className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#F05032]" />, name: "Git", category: "Gestion de projet" },
+  { icon: <IoTerminal className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-[#ffffff]" />, name: "Terminal", category: "Autres" },
+  { icon: <img src={ChatGPTLogo.src} alt="Logo de ChatGPT" className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3bc5ba]" />, name: "IA", category: "Autres" },
+  { icon: <FaChrome className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#237aff]" />, name: "Chrome Devtools", category: "Optimisation technique" },
   { icon: <SiFigma className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#F24E1E]" />, name: "Figma", category: "Design" },
   { icon: <SiCanva className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3bc5ba]" />, name: "Canva", category: "Design" },
   { icon: <CiMobile1 className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "Responsive Design", category: "Design" },
-  { icon: <SiReact className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#61DAFB]" />, name: "React", category: "Frameworks" },
-  { icon: <SiNodedotjs className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#339933]" />, name: "Node.js Express", category: "Frameworks" },
-  { icon: <SiMongodb className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#47A248]" />, name: "MongoDB", category: "Bases de données" },
-  { icon: <TbSeo className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#0D6EFD]" />, name: "Référencement", category: "Autres" },
-  { icon: <BiHandicap className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "Accessibilité", category: "Autres" },
-  { icon: <VscDebugAll className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#DC3545]" />, name: "Debug", category: "Autres" },
-  { icon: <SiFeedly className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3ba83b]" />, name: "Feedly (veille technologique)", category: "Autres" },
-  { icon: <RiNotionFill className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "Notion", category: "Autres" },
+  { icon: <SiReact className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#61DAFB]" />, name: "React", category: "Frontend" },
+  { icon: <SiNodedotjs className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#339933]" />, name: "Node.js Express", category: "Backend" },
+  { icon: <SiMongodb className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#47A248]" />, name: "MongoDB", category: "Backend" },
+  { icon: <TbSeo className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#0D6EFD]" />, name: "Référencement", category: "Optimisation technique" },
+  { icon: <BiHandicap className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "Accessibilité", category: "Optimisation technique" },
+  { icon: <VscDebugAll className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#DC3545]" />, name: "Debug", category: "Optimisation technique" },
+  { icon: <SiFeedly className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3ba83b]" />, name: "Feedly (veille technologique)", category: "Gestion de projet" },
+  { icon: <RiNotionFill className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "Notion", category: "Gestion de projet" },
 ];
 
 const mainSkills = [
-  { icon: <SiReact className="w-[80px] h-[80px] text-[#61DAFB]" />, name: "React", description: "Développement d'interfaces dynamiques et réactives." },
-  { icon: <SiNodedotjs className="w-[80px] h-[80px] text-[#339933]" />, name: "Node.js", description: "Développement back-end avec JavaScript." },
+  { icon: <SiReact className="w-[80px] h-[80px] text-[#61DAFB]" />, name: "React", description: "Développement front-end d'interfaces dynamiques et réactives." },
+  { icon: <SiNodedotjs className="w-[80px] h-[80px] text-[#339933]" />, name: "Node.js", description: "Développement back-end avec le framework Express en Javascript." },
   { icon: <SiGit className="w-[80px] h-[80px] text-[#F05032]" />, name: "Git", description: "Gestion de versions pour le travail collaboratif." },
 ];
 
@@ -71,7 +71,7 @@ export default function Skills() {
   const { t, i18n } = useTranslation('common');
   const [selectedCategory, setSelectedCategory] = useState("Tous");
 
-  const categories = ["Tous", "Langages", "Outils de développement", "Design", "Frameworks", "Bases de données", "Autres"];
+  const categories = ["Tous", "Frontend", "Backend", "Design", "Optimisation technique", "Gestion de projet", "Autres"];
 
   const filteredTools = selectedCategory === "Tous"
     ? tools
