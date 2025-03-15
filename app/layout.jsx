@@ -3,6 +3,7 @@ import "./globals.css";
 import React from 'react';
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import PopUp from "@/components/info-popup"
 import { I18nextProvider } from 'react-i18next';
 import i18n from '@/i18n';
 
@@ -64,8 +65,10 @@ export default function RootLayout({ children }) {
         </head>
         <body>
           <Header />
-          {children}
+            {children}
           <Footer />
+
+          <PopUp />
         </body>
       </html>
 
