@@ -23,7 +23,7 @@ import {
 } from "react-icons/si";
 import { TbBrandVscode, TbSeo } from "react-icons/tb";
 import { VscDebugAll } from "react-icons/vsc";
-import { IoTerminal } from "react-icons/io5";
+import { IoTerminal, IoRocket } from "react-icons/io5";
 import ChatGPTLogo from "@/public/logos//ChatGPT_logo.png";
 import { BiHandicap } from "react-icons/bi";
 import { FaChrome } from "react-icons/fa";
@@ -51,8 +51,9 @@ const tools = [
   { icon: <SiMongodb className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#47A248]" />, name: "MongoDB", category: "Backend" },
   { icon: <TbSeo className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#0D6EFD]" />, name: "Référencement", category: "Optimisation technique" },
   { icon: <BiHandicap className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "Accessibilité", category: "Optimisation technique" },
+  { icon: <IoRocket className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#FF6B6B]" />, name: "Boost des performances", category: "Optimisation technique" },
   { icon: <VscDebugAll className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#DC3545]" />, name: "Debug", category: "Optimisation technique" },
-  { icon: <SiFeedly className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3ba83b]" />, name: "Feedly (veille technologique)", category: "Gestion de projet" },
+  { icon: <SiFeedly className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#4CAF50]" />, name: "Veille technologique", category: "Gestion de projet" },
   { icon: <RiNotionFill className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "Notion", category: "Gestion de projet" },
 ];
 
@@ -68,7 +69,7 @@ const learningSkills = [
 ];
 
 export default function Skills() {
-  const { t, i18n } = useTranslation('common');
+  const { t } = useTranslation('common');
   const [selectedCategory, setSelectedCategory] = useState("Tous");
 
   const categories = ["Tous", "Frontend", "Backend", "Design", "Optimisation technique", "Gestion de projet", "Autres"];
