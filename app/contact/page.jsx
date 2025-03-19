@@ -8,15 +8,36 @@ export default function ContactPage() {
   const { t } = useTranslation('common');
   const [formStatus, setFormStatus] = useState('');
   const [isError, setIsError] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  const validateForm = () => {
+    const { name, email, message } = formData;
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    setIsFormValid(name.trim() !== '' && isEmailValid && message.trim() !== '');
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+    validateForm();
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(e.target);
-    const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      message: formData.get('message'),
-    };
+    if (!isFormValid) {
+      setFormStatus('Veuillez remplir tous les champs correctement.');
+      setIsError(true);
+      return;
+    }
 
     try {
       const response = await fetch('/api/sendMail', {
@@ -24,13 +45,14 @@ export default function ContactPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(formData),
       });
 
       const result = await response.json();
       if (response.ok) {
         setFormStatus('Mail envoyé avec succès !');
         setIsError(false);
+        setFormData({ name: '', email: '', message: '' });
       } else {
         setFormStatus('Erreur lors de l\'envoi du mail');
         setIsError(true);
@@ -80,6 +102,8 @@ export default function ContactPage() {
                 type="text"
                 id="name"
                 name="name"
+                value={formData.name}
+                onChange={handleInputChange}
                 className="w-full px-4 py-2 mt-1 bg-background/50 border dark:border-white/80 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="Entrez votre nom"
                 required
@@ -94,6 +118,8 @@ export default function ContactPage() {
                 type="email"
                 id="email"
                 name="email"
+                value={formData.email}
+                onChange={handleInputChange}
                 className="w-full px-4 py-2 mt-1 bg-background/50 border dark:border-white/80 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="Entrez votre e-mail"
                 required
@@ -107,6 +133,8 @@ export default function ContactPage() {
               <textarea
                 id="message"
                 name="message"
+                value={formData.message}
+                onChange={handleInputChange}
                 rows="5"
                 className="w-full px-4 py-2 mt-1 bg-background/50 border dark:border-white/80 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="Écrivez votre message ici..."
@@ -116,7 +144,10 @@ export default function ContactPage() {
 
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors duration-300"
+              disabled={!isFormValid}
+              className={`w-full px-6 py-3 bg-primary text-white rounded-lg transition-colors duration-300 ${
+                isFormValid ? 'hover:bg-primary/90' : 'opacity-80 cursor-not-allowed'
+              }`}
             >
               Envoyer
             </button>
