@@ -49,5 +49,20 @@
     "code-languages-title": "But also in...",
     "code-languages-subtitle": "To learn more...",
 
-    "github-activity-title": "Recent activity on GitHub"
+    "github-activity-title": "Recent activity on GitHub",
+
+    "main-skills-title": "My Main Skills",
+    "tool-skills-title": "What I master...",
+    "learning-skills-title": "In the process of learning...",
+    "react-description": "Front-end development of dynamic and reactive interfaces.",
+    "node-description": "Back-end development with the Express framework in Javascript.",
+    "git-description": "Version control for collaborative work.",
+    "technical-optimization-name": "Technical Optimization",
+    "project-management-name": "Project Management",
+    "ia-name": "AI",
+    "accessibility-name": "Accessibility",
+    "performance-boost-name": "Performance Boost",
+    "technology-watch-name": "Technology watch",
+    "next-description": "High-performance web applications with server-side rendering.",
+    "tailwind-description": "Fast and flexible design with a utility framework."
 }

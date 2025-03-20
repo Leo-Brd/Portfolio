@@ -49,5 +49,20 @@
     "code-languages-title": "Mais aussi en...",
     "code-languages-subtitle": "Pour en savoir plus...",
 
-    "github-activity-title": "Activité récente sur GitHub"
+    "github-activity-title": "Activité récente sur GitHub",
+
+    "main-skills-title": "Mes Compétences Principales",
+    "tool-skills-title": "Ce que je maîtrise...",
+    "learning-skills-title": "En Cours d'Apprentissage...",
+    "react-description": "Développement front-end d'interfaces dynamiques et réactives.",
+    "node-description": "Développement back-end avec le framework Express en Javascript.",
+    "git-description": "Gestion de versions pour le travail collaboratif.",
+    "technical-optimization-name": "Optimisation technique",
+    "project-management-name": "Gestion de projet",
+    "ia-name": "IA",
+    "accessibility-name": "Accessibilité",
+    "performance-boost-name": "Boost des performances",
+    "technology-watch-name": "Veille technologique",
+    "next-description": "Applications web performantes avec rendu côté serveur.",
+    "tailwind-description": "Design rapide et flexible avec un framework utilitaire."
 }
