@@ -38,7 +38,7 @@ export function SchoolPath() {
 
   return (
     <div className="relative mb-32">
-      <div className="absolute left-1/2 w-1 h-full bg-primary/20 transform -translate-x-1/2" />
+      <div className="absolute left-1/2 w-1 h-full bg-primary/20 dark:bg-white/80 transform -translate-x-1/2" />
 
       <div className="space-y-8">
         {/* OpenClassrooms */}
