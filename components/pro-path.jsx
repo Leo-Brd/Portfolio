@@ -3,7 +3,7 @@ import { useState } from "react";
 import MediathequeLogo from "@/public/logos/Chassieu_mediatheque.png";
 import SuperPauletteLogo from "@/public/logos/Super_paulette.png";
 import { useTranslation } from 'next-i18next';
-import { FaLaptopCode } from "react-icons/fa";
+import { LuSearchCode } from "react-icons/lu";
 
 export function ProPath() {
   const { t } = useTranslation('common');
@@ -48,7 +48,7 @@ export function ProPath() {
             onMouseEnter={() => handleMouseEnter("RechercheLogo")}
             onMouseLeave={handleMouseLeave}
           >
-            <FaLaptopCode className="w-12 h-12 transition-all rounded duration-300 hover:scale-110 hover:shadow-lg"/>
+            <LuSearchCode className="w-12 h-12 transition-all rounded duration-300 hover:scale-110 hover:shadow-lg"/>
             {hoveredLogo === "RechercheLogo" && (
               <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
                 <h3 className="text-xl font-bold mb-2">{t("recherche-entreprise-modal-title")}</h3>

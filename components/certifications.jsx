@@ -39,7 +39,12 @@ export function Certifications() {
         whileHover={{ scale: 1.05 }}
         className="relative bg-background/80 backdrop-blur-sm border border-primary/20 rounded-lg p-6 hover:shadow-lg dark:hover:shadow-white/10 transition-shadow duration-300 flex flex-col justify-center items-center text-center"
       >
-        <FaCar className="w-12 h-12 text-primary" />
+        <motion.div
+          whileHover={{ y: -10 }}
+          transition={{ type: "spring", stiffness: 200 }}
+        >
+          <FaCar className="w-12 h-12 text-primary" />
+        </motion.div>
         <p className="text-lg text-primary/80 dark:text-secondary mt-2">{t("permis-title")}</p>
         <p className="text-sm text-secondary mt-1">{t("permis-date")}</p>
       </motion.div>
@@ -50,7 +55,12 @@ export function Certifications() {
         whileHover={{ scale: 1.05 }}
         className="relative bg-background/80 backdrop-blur-sm border border-primary/20 rounded-lg p-6 hover:shadow-lg dark:hover:shadow-white/10 transition-shadow duration-300 flex flex-col justify-center items-center text-center"
       >
-        <FaGraduationCap className="w-12 h-12 text-primary" />
+        <motion.div
+          whileHover={{ y: -10 }}
+          transition={{ type: "spring", stiffness: 200 }}
+        >
+          <FaGraduationCap className="w-12 h-12 text-primary" />
+        </motion.div>
         <p className="text-lg text-primary/80 dark:text-secondary mt-2">{t("bac-title")}</p>
         <p className="text-sm text-primary/80 dark:text-secondary mt-1">{t("bac-text")}</p>
         <p className="text-sm text-secondary mt-1">{t("bac-date")}</p>
@@ -62,7 +72,12 @@ export function Certifications() {
         whileHover={{ scale: 1.05 }}
         className="relative bg-background/80 backdrop-blur-sm border border-primary/20 rounded-lg p-6 hover:shadow-lg dark:hover:shadow-white/10 transition-shadow duration-300 flex flex-col justify-center items-center text-center"
       >
-        <FaLaptopCode className="w-12 h-12 text-primary" />
+        <motion.div
+          whileHover={{ y: -10 }}
+          transition={{ type: "spring", stiffness: 200 }}
+        >
+          <FaLaptopCode className="w-12 h-12 text-primary" />
+        </motion.div>
         <p className="text-lg text-primary/80 dark:text-secondary mt-2">{t("oc-diploma-title")}</p>
         <p className="text-sm text-primary/80 dark:text-secondary mt-1">{t("oc-diploma-text")}</p>
         <p className="text-sm text-secondary mt-1">{t("oc-diploma-date")}</p>
