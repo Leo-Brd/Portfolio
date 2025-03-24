@@ -7,7 +7,7 @@ import Lyon2Logo from "@/public/logos/Lyon2_logo.png";
 import JpsLogo from "@/public/logos/JPS_logo.jpg";
 import { useTranslation } from 'next-i18next';
 
-export function CareerPath() {
+export function SchoolPath() {
   const { t } = useTranslation('common');
   const [hoveredLogo, setHoveredLogo] = useState(null);
 

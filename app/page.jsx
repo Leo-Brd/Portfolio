@@ -3,7 +3,8 @@ import { Boxes } from "@/components/background-boxes";
 import { Languages } from "@/components/languages-chart";
 import { ProgrammingLanguages } from "@/components/programming-languages-chart"
 import { GithubActivity } from "@/components/github-activity"
-import { CareerPath } from "@/components/career-path"
+import { ProPath } from "@/components/pro-path"
+import { SchoolPath } from "@/components/school-path"
 import { Certifications } from "@/components/certifications"
 import { Passions } from "@/components/passions"
 import { motion } from "framer-motion";
@@ -123,9 +124,22 @@ export default function Home() {
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-center mb-12">
-            {t("parcours-title")}
+            {t("school-parcours-title")}
           </h2>
-          <CareerPath />
+          <SchoolPath />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <h2 className="text-4xl font-bold text-center mb-12">
+            {t("pro-parcours-title")}
+          </h2>
+          <ProPath />
         </motion.div>
 
         <Certifications />

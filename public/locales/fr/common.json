@@ -21,7 +21,7 @@
     "passions-jv-title": "Jeux Vidéo",
     "passions-jv-text": "Les jeux vidéo sont pour moi une façon de m'évader, mais aussi un art qui explore des univers infinis. Il s'agit d'une grande part de mon enfance et j'adore découvrir de nouveaux jeux de tous types.",
 
-    "parcours-title": "Mon parcours",
+    "school-parcours-title": "Mon parcours scolaire",
     "42-date": "Juillet 2024",
     "oc-title": "OpenClassrooms : Formation développeur web",
     "42-title": "Piscine de l'école 42",
@@ -34,6 +34,19 @@
     "estiam-text": "Cette première année de Bachelor dans une école privée m'a permis de développer des compétences générales en informatique et de comprendre ce qui me plaisait dans ce domaine. J'ai ensuite décidé de me tourner vers des écoles comme 42 et OpenClassrooms où la manière d'apprendre est moins scolaire.",
     "uni-text": "Après le lycée, j'ai débuté une license en Informatique / Economie que j'ai très vite arrêté ( la fac ne me correspondait pas ). Cela m'a quand même montré que l'informatique était un domaine qui m'intéressait plus que les autres. J'ai passé le reste de l'année à travailler dans une pizzeria en attendant la rentrée. 🍕",
     "jps-text": "J'étais au lycée à Bron de ma seconde à ma terminale. J'ai choisi les spécialités Maths et NSI ( Informatique ) et ait obtenu le diplôme du Bac avec la mention Bien.",
+
+    "pro-parcours-title": "Mon parcours professionnel",
+    "super-paulette-date": "Avril / Septembre 2023",
+    "mediatheque-date": "Novembre 2018",
+    "mediatheque-title": "Stage à la Médiathèque",
+    "super-paulette-title": "CDI - Employé polyvalent en restauration",
+    "recherche-entreprise-title": "Recherche une entreprise...",
+    "mediatheque-modal-title": "Médiathèque / Ludothèque de Chassieu",
+    "super-paulette-modal-title": "Super Paulette",
+    "recherche-entreprise-modal-title": "Je recherche une entreprise pour une alternance ou un stage",
+    "mediatheque-text": "J'ai effectué mon stage de 3ème à la Médiathèque de Chassieu. Cela a été mon premier contact avec le monde du travail. J' ai eu l'occasion de tenir l'accueil de la bibliothèque, ranger des livres, entretenir l'espace informatique et participer aux évènements pour enfants et personnes âgées.",
+    "super-paulette-text": "En attendant ma rentrée à l'ESTIAM, j'ai eu l'occasion de travailler en restauration chez Super Paulette à Villeurbanne. Au contact avec les clients, j'y ai développé de nombreuses compétences : prendre des commandes, servir et encaisser, préparer les pizzas, nettoyer le restaurant, gérer les stocks etc...",
+    "recherche-entreprise-text": "Si vous êtes intéressé, vous pouvez me contacter via la page de contact !",
 
     "permis-title": "Permis B",
     "permis-date": "Obtenu en 2023",

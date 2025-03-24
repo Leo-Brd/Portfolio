@@ -21,7 +21,7 @@
     "passions-jv-title": "Video Games",
     "passions-jv-text": "Video games are a way for me to escape, but also an art form that explores endless universes. They are a big part of my childhood, and I love discovering new games of all kinds.",
 
-    "parcours-title": "My course",
+    "school-parcours-title": "My scholar journey",
     "42-date": "July 2024",
     "oc-title": "OpenClassrooms : web developer course",
     "42-title": "School 42's piscine",
@@ -34,6 +34,19 @@
     "estiam-text": "This first year of Bachelor's degree in a private school allowed me to develop general IT skills and understand what I liked in this field. I then decided to turn to schools like 42 and OpenClassrooms where the learning method is less academic.",
     "uni-text": "After high school, I started a degree in Computer Science / Economics, which I quickly dropped out of (university wasn't for me). However, it showed me that computer science was a field that interested me more than others. I spent the rest of the year working in a pizzeria while waiting for the next school year. 🍕",
     "jps-text": "I was in high school in Bron from my sophomore to senior year. I chose Mathematics and Computer Science as my specialties and obtained my Baccalaureate diploma with honors.",
+
+    "pro-parcours-title": "My professional journey",
+    "super-paulette-date": "April/September 2023",
+    "mediatheque-date": "November 2018",
+    "mediatheque-title": "Internship at the Media Library",
+    "super-paulette-title": "Permanent contract - Multi-skilled Restaurant Employee",
+    "recherche-entreprise-title": "Looking for a company...",
+    "mediatheque-modal-title": "Media Library/Game Library of Chassieu",
+    "super-paulette-modal-title": "Super Paulette",
+    "recherche-entreprise-modal-title": "I'm looking for a company for an apprenticeship or internship",
+    "mediatheque-text": "I completed my 9th grade internship at the Chassieu Media Library. This was my first exposure to the working world. I had the opportunity to work at the library reception desk, shelve books, maintain the computer area, and participate in events for children and seniors.",
+    "super-paulette-text": "While waiting to start at ESTIAM, I worked in the food service industry at Super Paulette in Villeurbanne. Through customer interactions, I developed many skills: taking orders, serving and handling payments, preparing pizzas, cleaning the restaurant, managing inventory, etc...",
+    "recherche-entreprise-text": "If you're interested, you can contact me through the contact page!",
 
     "permis-title": "Driver license",
     "permis-date": "Obtained in 2023",
