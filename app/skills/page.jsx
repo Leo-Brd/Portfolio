@@ -26,7 +26,7 @@ import { VscDebugAll } from "react-icons/vsc";
 import { IoTerminal, IoRocket } from "react-icons/io5";
 import ChatGPTLogo from "@/public/logos//ChatGPT_logo.png";
 import { BiHandicap } from "react-icons/bi";
-import { FaChrome } from "react-icons/fa";
+import { FaChrome, FaNpm } from "react-icons/fa";
 import { CiMobile1 } from "react-icons/ci";
 import { RiNotionFill } from "react-icons/ri";
 
@@ -60,6 +60,7 @@ export default function Skills() {
     { icon: <VscDebugAll className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#DC3545]" />, name: "Debug", category: t("technical-optimization-name") },
     { icon: <SiFeedly className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#4CAF50]" />, name: t("technology-watch-name"), category: t("project-management-name") },
     { icon: <RiNotionFill className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "Notion", category: t("project-management-name") },
+    { icon: <FaNpm className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "NPM", category: t("project-management-name") },
   ];
   
   const mainSkills = [
