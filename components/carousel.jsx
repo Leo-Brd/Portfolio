@@ -40,7 +40,7 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
     yRef.current = 0;
   };
 
-  const { images, button, title, icons = [] } = slide;
+  const { images, title, icons = [] , carouselImgPosition} = slide;
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
@@ -74,7 +74,7 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
               className="absolute inset-0 w-[100%] h-[100%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
               style={{
                 opacity: current === index ? 1 : 0.5,
-                objectPosition: "left center",
+                objectPosition: `${carouselImgPosition} center`,
               }}
               alt={images[0].alt}
               src={images[0].src}

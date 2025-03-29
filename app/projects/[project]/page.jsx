@@ -4,11 +4,11 @@ import { openClassroomsProjects, otherProjects } from "@/public/projects/project
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from 'next-i18next';
-import { FaGithub, FaTimes } from "react-icons/fa"; // Import de l'icône de croix
-import Link from "next/link"; // Import du composant Link
+import { FaGithub, FaTimes } from "react-icons/fa";
+import Link from "next/link";
 
 export default function ProjectPage() {
-  const { t, i18n } = useTranslation('common');
+  const { t } = useTranslation('common');
   const params = useParams();
 
   const allProjects = [...openClassroomsProjects, ...otherProjects];
@@ -40,7 +40,7 @@ export default function ProjectPage() {
 
       <div className="relative max-w-[1400px] mx-auto p-8 flex flex-col lg:flex-row gap-12 bg-card rounded-2xl shadow-xl mt-6 items-center">
         
-        {/* Bouton de fermeture (croix) */}
+        {/* Bouton de fermeture */}
         <Link
           href="/projects"
           className="absolute top-6 right-6 p-2 bg-card rounded-full shadow-lg dark:border dark:border-white dark:shadow-white/30 hover:translate-y-1 transition-all duration-300 z-50"
@@ -48,7 +48,7 @@ export default function ProjectPage() {
           <FaTimes className="w-6 h-6 text-primary" />
         </Link>
 
-        {/* Carrousel d'images (à gauche) */}
+        {/* Carrousel d'images */}
         <motion.div
           className="w-full lg:w-1/2 h-[500px] lg:h-[600px] overflow-hidden rounded-lg shadow-lg flex items-center justify-center bg-muted"
           initial={{ opacity: 0, x: -50 }}
@@ -60,6 +60,11 @@ export default function ProjectPage() {
               src={project.images[currentImageIndex].src}
               alt={`${project.title} - Image ${currentImageIndex + 1}`}
               className="w-full h-full object-cover object-left-top"
+              style={{
+                objectPosition: project.ProjectPageImgPosition === "left" 
+                  ? "left center" 
+                  : "center center"
+              }}
             />
 
             {/* Boutons de navigation du carrousel */}

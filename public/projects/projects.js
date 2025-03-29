@@ -20,6 +20,7 @@ import Qwenta from "@/public/projects/qwenta.png"
 import Qwenta_2 from "@/public/projects/qwenta_2.png"
 import Qwenta_3 from "@/public/projects/qwenta_3.png"
 import Qwenta_4 from "@/public/projects/qwenta_4.png"
+import Portfolio_1 from "@/public/projects/portfolio_1.png"
 import Mangabunka from "@/public/projects/mangabunka.png"
 import {
   SiHtml5,
@@ -30,6 +31,8 @@ import {
   SiFeedly,
   SiReact,
   SiNodedotjs,
+  SiNextdotjs,
+  SiTailwindcss,
 } from "react-icons/si";
 import { TbSeo } from "react-icons/tb";
 import { VscDebugAll } from "react-icons/vsc";
@@ -47,6 +50,8 @@ export const openClassroomsProjects = [
         { icon: CiMobile1, color: "text-black", darkColor: "text-white" },],
       description:"( scénario fictif )\nLa start-up Booki souhaitait réaliser leur site internet et m'ont chargés d'intégrer son interface. Il permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix. J'ai utilisé les langages HTML et CSS afin de reproduire la maquette qui m'était fournie.\n \nLe site est responsive, ce qui signifie que le contenu s'adapte selon la taille d'écran. Le site a une version tablette ainsi qu'une version mobile.",
       github: "https://github.com/Leo-Brd/OC_Booki",
+      carouselImgPosition: "left",
+      ProjectPageImgPosition: "left",
     },
     {
       title: "Sophie Bluel",
@@ -57,6 +62,8 @@ export const openClassroomsProjects = [
         { icon: SiJavascript, color: "text-[#F7DF1E]" }],
       description:"( scénario fictif )\nUne équipe travaillant sur le portfolio d'une architecte d'intérieur m'a recruté pour que je m'occupe de la partie Frontend. J'ai utilisé le langage Javascript mêlé au HTML/CSS afin de rendre la page dynamique et faire des requêtes à l'API.\nLe site est composé d'une présentation professionnelle ainsi que d'un formulaire de contact. Il possède une page de connexion qui permet à l'architecte de s'identifier. En mode connecté, il est possible d'ajouter ou de supprimer des projets dynamiquement via une modale. Les projets peuvent être triés par catégorie dans la page principale.\n\n Difficultés rencontrées :\nJ'ai eu un soucis de rechargement de page lors de la soumission du formulaire. C'est en parcourant dans les ChromeDevtools que j'ai trouvé que le problème venait de l'extension Live Server qui rechargait ma page lors du clic. J'ai aussi eu quelques soucis lors du fetch pour ajouter des projets, que j'ai pu résoudre à l'aide de mon mentor.",
       github: "https://github.com/Leo-Brd/OC_Sophie_Bluel",
+      carouselImgPosition: "center",
+      ProjectPageImgPosition: "left",
     },
     {
       title: "Nina Carducci",
@@ -67,6 +74,8 @@ export const openClassroomsProjects = [
         { icon: TbSeo, color: "text-[#0D6EFD]" }],
         description:"( scénario fictif )\nAprès avoir remarqué de nombreux problèmes sur le site de la photographe Nina Carducci, je l'ai contacté afin de lui proposer mes services.\nJ'ai tout d'abord réglé quelques erreurs de code qui faisaient disfonctionner le site. J'ai ensuite réalisé un audit et un rapport d'intervention afin de lister les modifications apportées.\nLes performances du site ont été nettement améliorées, en grande partie grâce à la compression des images. Le site a été restructuré et adapté afin d'être accessible par tout type d'utilisateur ( notamment les personnes handicapées ). J' ai aussi rendu le code plus clair et j'ai ajouté des balises afin d'améliorer son référencement par les navigateurs de recherche ( SEO ).",
         github: "https://github.com/Leo-Brd/OC_Nina_Carducci",
+        carouselImgPosition: "center",
+        ProjectPageImgPosition: "left",
     },
     {
       title: "Kasa",
@@ -77,6 +86,8 @@ export const openClassroomsProjects = [
         { icon: CiMobile1, color: "text-black", darkColor: "text-white" },],
       description:"( scénario fictif )\nL'entreprise de location immobilière Kasa entamait la refonte de son site internet. En tant que développeur Frontend freelance, j'ai été chargé de recoder le site en utilisant le framework javascript React. Le site permet aux utilisateurs de trouver un appartement à louer et de se renseigner sur celui-ci.\nJ'ai donc reproduis la maquette en créant les composants React nécessaires. Le style du site a été réalisé avec le langage Sass qui permet de rendre l'utilisation du CSS plus pratique. Quelques petites animations ont été réalisées, par exemple lors de l'ouverture des collapses. Le site est responsive et donc adapté pour les utilisateurs sur mobile.",
       github: "https://github.com/Leo-Brd/OC_Kasa",
+      carouselImgPosition: "center",
+      ProjectPageImgPosition: "left",
     },
     {
       title: "Mon vieux grimoire",
@@ -86,6 +97,8 @@ export const openClassroomsProjects = [
         { icon: SiMongodb, color: "text-[#47A248]" }],
       description:"( scénario fictif )\nUn collègue souhaitait réaliser un site de référencement et de notation de livres pour une chaîne de librairie nommée \"Mon vieux grimoire\". J'ai accepté de m'occuper de la partie Backend qui devait être réalisée avec le framework Express de Nodejs, en communiquant avec une base de données MongoDB.\nJ'ai tout d'abord réalisé les méthodes qui permettent aux utilisateurs de s'inscrire et de se connecter. J'ai ensuite réalisé les routes API qui servent à créer, modifier ou supprimer des livres. Les images des livres sont stockées avec Multer et compressées avec Sharp. J'ai finis par coder les routes qui permettent aux utilisateurs de noter les livres postés sur le site. Les 3 livres les mieux notés apparaissent sur chaque page.\n\n Difficultés rencontrées :\nJ'ai pu rencontrer quelques problèmes lors de ce projet, notamment lors de l'affichage des notes, les données renvoyées causaient des erreurs d'affichage (j'ai finis par résoudre l'erreur de syntaxe en parcourant le code avec mon mentor). Lors du stockage des images avec Multer, j'ai eu du mal à permettre la suppression des images à cause des permissions windows, mais j'ai finis par trouver une solution sur internet.",
       github: "https://github.com/Leo-Brd/OC_Mon_Vieux_Grimoire",
+      carouselImgPosition: "center",
+      ProjectPageImgPosition: "left",
     },
     {
       title: "Qwenta",
@@ -95,6 +108,20 @@ export const openClassroomsProjects = [
         { icon: RiNotionFill, color: "text-black", darkColor: "text-white" }],
       description:"( scénario fictif )\nEn tant que développeur de l'agence Webgencia, j'ai été choisi afin de planifier notre prochain projet. Il s'agissait du nouveau site internet \"Menu Maker\" de l'entreprise Qwenta. Le site permet aux restaurateurs de créer un menu de restaurant personnalisé afin de l'utiliser comme ils le souhaitent.\nJ'ai tout d'abord effectué une veille technologique organisée afin de sélectionner les outils du projet. J'ai ensuite créé le document qui liste les détails des spécifications techniques. J'ai alors réparti les tâches au sein d'un tableau Kanban sur Notion afin d'organiser le projet. J'ai finis par préparer la présentation au Product Owner afin de le briefer.",
       github: "https://github.com/Leo-Brd/OC_Qwenta",
+      carouselImgPosition: "center",
+      ProjectPageImgPosition: "left",
+    },
+    {
+      title: "Portfolio",
+      images: [Portfolio_1],
+      icons: [
+        { icon: SiNextdotjs, color: "text-black", darkColor: "text-white" },
+        { icon: SiTailwindcss, color: "text-[#38BDF8]" },
+        { icon: CiMobile1, color: "text-black", darkColor: "text-white" }],
+      description:"Le dernier projet de la formation était la création de mon portfolio professionnel (celui sur lequel vous êtes actuellement ). J'ai choisi de le réaliser avec le framework Next.js et d'utiliser Tailwind CSS pour le style. Celui-ci est entièrement responsive et a été hébergé à l'aide de Vercel. Vous pouvez le parcourir afin de découvrir mon parcours, mes compétences et mes projets. Il est aussi possible de me contacter directement depuis la page de contact.",
+      github: "https://github.com/Leo-Brd/Portfolio",
+      carouselImgPosition: "center",
+      ProjectPageImgPosition: "center",
     },
 ];
   
