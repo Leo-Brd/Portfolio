@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IconSun, IconMoon, IconMenu2, IconX } from "@tabler/icons-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import { GB, FR } from "country-flag-icons/react/3x2";
 
@@ -12,9 +12,28 @@ export default function Header() {
   const { t, i18n } = useTranslation("common");
   const pathname = usePathname();
 
+  // Détection initiale du mode préféré
+  useEffect(() => {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setDarkMode(prefersDark);
+    document.documentElement.classList.toggle('dark', prefersDark);
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e) => {
+      setDarkMode(e.matches);
+      document.documentElement.classList.toggle('dark', e.matches);
+    };
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    const newMode = !darkMode;
+    setDarkMode(newMode);
     document.documentElement.classList.toggle("dark");
+    
+    localStorage.setItem('darkMode', newMode);
   };
 
   const toggleLanguage = () => {

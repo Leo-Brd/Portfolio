@@ -6,15 +6,31 @@ export default function PopupAlternance() {
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    const hasSeenPopup = localStorage.getItem("hasSeenPopup");
-    setShowPopup(true);
-    if (!hasSeenPopup) {
-      setShowPopup(true);
+    if (typeof window !== 'undefined') {
+      const popupData = localStorage.getItem("popupAlternanceData");
+      
+      if (!popupData) {
+        setShowPopup(true);
+      } else {
+        const { lastClosedDate } = JSON.parse(popupData);
+        const now = new Date();
+        const lastClosed = new Date(lastClosedDate);
+        
+        // Réaffiche la popup tous les jours à minuit
+        const isNewDay = now.getDate() !== lastClosed.getDate() || 
+                         now.getMonth() !== lastClosed.getMonth() || 
+                         now.getFullYear() !== lastClosed.getFullYear();
+        
+        setShowPopup(isNewDay);
+      }
     }
   }, []);
 
   const closePopup = () => {
-    localStorage.setItem("hasSeenPopup", "true");
+    const popupData = {
+      lastClosedDate: new Date().toISOString()
+    };
+    localStorage.setItem("popupAlternanceData", JSON.stringify(popupData));
     setShowPopup(false);
   };
 
