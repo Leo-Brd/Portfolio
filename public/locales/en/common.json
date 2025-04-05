@@ -81,5 +81,6 @@
     "performance-boost-name": "Performance Boost",
     "technology-watch-name": "Technology watch",
     "next-description": "High-performance web applications with server-side rendering.",
-    "tailwind-description": "Fast and flexible design with a utility framework."
+    "sql-description": "Relational database management language for structured data.",
+    "php-description": "Server-side scripting language for dynamic web development."
 }

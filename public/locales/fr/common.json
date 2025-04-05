@@ -81,5 +81,6 @@
     "performance-boost-name": "Boost des performances",
     "technology-watch-name": "Veille technologique",
     "next-description": "Applications web performantes avec rendu côté serveur.",
-    "tailwind-description": "Design rapide et flexible avec un framework utilitaire."
+    "sql-description": "Langage de gestion de bases de données relationnelles pour des données structurées.",
+    "php-description": "Langage de script côté serveur pour le développement web dynamique."
 }

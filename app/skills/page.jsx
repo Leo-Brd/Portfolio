@@ -26,22 +26,24 @@ import { VscDebugAll } from "react-icons/vsc";
 import { IoTerminal, IoRocket } from "react-icons/io5";
 import ChatGPTLogo from "@/public/logos//ChatGPT_logo.png";
 import { BiHandicap } from "react-icons/bi";
-import { FaChrome, FaNpm } from "react-icons/fa";
+import { FaChrome, FaNpm, FaDatabase, FaPhp } from "react-icons/fa";
 import { CiMobile1 } from "react-icons/ci";
 import { RiNotionFill } from "react-icons/ri";
 
 
 export default function Skills() {
   const { t } = useTranslation('common');
-  const [selectedCategory, setSelectedCategory] = useState("Tous");
+  const [selectedCategory, setSelectedCategory] = useState("Frontend");
 
   const tools = [
     { icon: <SiHtml5 className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#E34F26]" />, name: "HTML5", category: "Frontend" },
     { icon: <SiCss3 className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#1572B6]" />, name: "CSS3", category: "Frontend" },
     { icon: <SiJavascript className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#F7DF1E]" />, name: "JavaScript", category: "Frontend" },
+    { icon: <SiSass className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#CC6699]" />, name: "Sass", category: "Frontend" },
+    { icon: <SiTailwindcss className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#38BDF8]" />, name: "Tailwind CSS", category: "Frontend" },
+    { icon: <SiReact className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#61DAFB]" />, name: "React", category: "Frontend" },
     { icon: <SiPython className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3776AB]" />, name: "Python", category: "Autres" },
     { icon: <SiC className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#226db3]" />, name: "C", category: "Autres" },
-    { icon: <SiSass className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#CC6699]" />, name: "Sass", category: "Frontend" },
     { icon: <TbBrandVscode className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#007ACC]" />, name: "VSCode", category: "Autres" },
     { icon: <SiGithub className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "GitHub", category: t("project-management-name") },
     { icon: <SiGit className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#F05032]" />, name: "Git", category: t("project-management-name") },
@@ -51,7 +53,6 @@ export default function Skills() {
     { icon: <SiFigma className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#F24E1E]" />, name: "Figma", category: "Design" },
     { icon: <SiCanva className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3bc5ba]" />, name: "Canva", category: "Design" },
     { icon: <CiMobile1 className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "Responsive Design", category: "Design" },
-    { icon: <SiReact className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#61DAFB]" />, name: "React", category: "Frontend" },
     { icon: <SiNodedotjs className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#339933]" />, name: "Node.js Express", category: "Backend" },
     { icon: <SiMongodb className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#47A248]" />, name: "MongoDB", category: "Backend" },
     { icon: <TbSeo className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#0D6EFD]" />, name: "SEO", category: t("technical-optimization-name") },
@@ -71,13 +72,14 @@ export default function Skills() {
   
   const learningSkills = [
     { icon: <SiNextdotjs className="w-[60px] h-[60px] text-black dark:text-white" />, name: "Next.js", description: t("next-description") },
-    { icon: <SiTailwindcss className="w-[60px] h-[60px] text-[#38BDF8]" />, name: "Tailwind CSS", description: t("tailwind-description") },
+    { icon: <FaDatabase className="w-[60px] h-[60px] text-[#00758F]" />, name: "SQL", description: t("sql-description") },
+    { icon: <FaPhp className="w-[60px] h-[60px] text-[#777BB4]" />, name: "PHP", description: t("php-description") },
   ];
 
-  const categories = ["Tous", "Frontend", "Backend", "Design", t("technical-optimization-name"), t("project-management-name"), "Autres"];
+  const categories = ["Frontend", "Backend", "Design", t("technical-optimization-name"), t("project-management-name"), "Autres"];
 
-  const filteredTools = selectedCategory === "Tous"
-    ? tools
+  const filteredTools = selectedCategory === "Frontend"
+    ? tools.filter((tool) => tool.category === "Frontend")
     : tools.filter((tool) => tool.category === selectedCategory);
 
   return (
@@ -100,7 +102,7 @@ export default function Skills() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 * index }}
               className={`p-8 bg-card border border-border rounded-2xl shadow-lg flex flex-col items-center text-center hover:shadow-xl dark:shadow-white/10 transition-shadow ${
-                index === 2 ? "sm:col-span-2 lg:col-span-1" : ""
+                index === 2 ? "sm:col-span-2 lg:col-span-1 w-full sm:w-auto" : ""
               }`}
             >
               <div className="w-20 h-20 mb-6 flex items-center justify-center text-6xl">
@@ -120,12 +122,12 @@ export default function Skills() {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="mb-28"
       >
-        <h2 className="text-2xl md:text-4xl font-bold mb-12 text-left text-foreground">
+        <h2 className="text-2xl md:text-4xl font-bold mb-12 text-center md:text-left text-foreground">
           {t("tool-skills-title")}
         </h2>
 
         {/* Boutons de filtrage */}
-        <div className="flex flex-wrap gap-4 mb-8">
+        <div className="flex flex-wrap gap-4 mb-8 justify-center md:justify-start">
           {categories.map((category) => (
             <button
               key={category}
@@ -143,7 +145,7 @@ export default function Skills() {
 
         {/* Outils filtrés */}
         <div className="relative h-auto">
-          <div className="flex flex-wrap gap-6 justify-start items-start align-content-start">
+          <div className="flex flex-wrap gap-6 justify-center md:justify-start items-start align-content-start">
             {filteredTools.map((tool, index) => (
               <ToolIcon key={index} tool={tool} index={index} />
             ))}
@@ -161,16 +163,14 @@ export default function Skills() {
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-foreground">
           {t("learning-skills-title")}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-items-center">
           {learningSkills.map((skill, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 * index }}
-              className={`p-8 bg-card border border-border rounded-2xl shadow-lg flex flex-col items-center text-center hover:shadow-xl dark:shadow-white/10 transition-shadow ${
-                index === 2 ? "sm:col-span-2" : ""
-              }`}
+              className="p-8 bg-card border border-border rounded-2xl shadow-lg flex flex-col items-center text-center hover:shadow-xl dark:shadow-white/10 transition-shadow w-full"
             >
               <div className="w-20 h-20 mb-6 flex items-center justify-center text-6xl">
                 {skill.icon}

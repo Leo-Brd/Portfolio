@@ -29,7 +29,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-6xl mt-20 md:text-8xl lg:text-9xl font-tinos text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent dark:to-secondary"
+        className="text-6xl mt-20 md:text-8xl lg:text-9xl font-tinos text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent dark:text-primary"
       >
         {"<LeoBrd />"}
       </motion.h1>
@@ -38,7 +38,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="text-2xl md:text-3xl text-muted-foreground mt-6"
+        className="text-2xl md:text-3xl text-muted-foreground mt-6 dark:text-secondary"
       >
         {t("devweb")}
       </motion.p>
@@ -47,7 +47,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="text-xl md:text-2xl text-muted-foreground mt-4"
+        className="text-xl md:text-2xl text-muted-foreground mt-4 dark:text-secondary"
       >
         ウェブ開発者
       </motion.p>
@@ -62,7 +62,7 @@ export default function Home() {
           href="https://github.com/Leo-Brd"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-primary transition-colors"
+          className="text-muted-foreground hover:text-primary transition-colors dark:text-secondary dark:hover:text-primary"
           aria-label="GitHub"
         >
           <SiGithub className="w-10 h-10 hover:scale-110 transition-transform duration-300" />
@@ -71,7 +71,7 @@ export default function Home() {
           href="https://www.linkedin.com/in/leo-bordet/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-primary transition-colors"
+          className="text-muted-foreground hover:text-primary transition-colors dark:text-secondary dark:hover:text-primary"
           aria-label="LinkedIn"
         >
           <SiLinkedin className="w-10 h-10 hover:scale-110 transition-transform duration-300" />
@@ -80,7 +80,7 @@ export default function Home() {
           href="https://discord.com/users/leo_brd"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-primary transition-colors"
+          className="text-muted-foreground hover:text-primary transition-colors dark:text-secondary dark:hover:text-primary"
           aria-label="Discord"
         >
           <SiDiscord className="w-10 h-10 hover:scale-110 transition-transform duration-300" />
@@ -106,7 +106,7 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-primary mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent dark:to-secondary">
+          <h2 className="text-4xl font-bold text-primary mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent dark:text-secondary ">
             {t("a-propos-title")}
           </h2>
           <p className="text-lg text-muted-foreground">
