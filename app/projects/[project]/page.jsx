@@ -38,14 +38,14 @@ export default function ProjectPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background py-12">
 
-      <div className="relative max-w-[1400px] mx-auto p-8 flex flex-col lg:flex-row gap-12 bg-card rounded-2xl shadow-xl mt-6 items-center">
+      <div className="relative max-w-[1400px] mx-auto p-8 flex flex-col lg:flex-row gap-12 bg-card rounded-2xl shadow-xl mt-6 items-center dark:border dark:shadow-white/10">
         
         {/* Bouton de fermeture */}
         <Link
           href="/projects"
-          className="absolute top-6 right-6 p-2 bg-card rounded-full shadow-lg dark:border dark:border-white dark:shadow-white/30 hover:translate-y-1 transition-all duration-300 z-50"
+          className="absolute top-6 right-6 p-2 bg-card rounded-full shadow-lg dark:border dark:bg-primary dark:shadow-white/30 hover:translate-y-1 transition-all duration-300 z-50"
         >
-          <FaTimes className="w-6 h-6 text-primary" />
+          <FaTimes className="w-6 h-6 text-primary dark:text-white" />
         </Link>
 
         {/* Carrousel d'images */}

@@ -22,6 +22,11 @@ import Qwenta_3 from "@/public/projects/qwenta_3.png"
 import Qwenta_4 from "@/public/projects/qwenta_4.png"
 import Portfolio_1 from "@/public/projects/portfolio_1.png"
 import Mangabunka from "@/public/projects/mangabunka.png"
+import Mangabunka_2 from "@/public/projects/mangabunka_2.png"
+import Mangabunka_3 from "@/public/projects/mangabunka_3.png"
+import Mangabunka_4 from "@/public/projects/mangabunka_4.png"
+import Mangabunka_5 from "@/public/projects/mangabunka_5.png"
+import Mangabunka_6 from "@/public/projects/mangabunka_6.png"
 import {
   SiHtml5,
   SiCss3,
@@ -129,12 +134,13 @@ export const openClassroomsProjects = [
 export const otherProjects = [
     {
       title: "MangaBunka",
-      images: [Mangabunka],
+      images: [Mangabunka, Mangabunka_2, Mangabunka_3, Mangabunka_4, Mangabunka_5, Mangabunka_6],
       icons: [
         { icon: SiReact, color: "text-[#61DAFB]" },
+        { icon: SiSass, color: "text-[#CC6699]" },
         { icon: SiNodedotjs, color: "text-[#339933]" },
         { icon: SiMongodb, color: "text-[#47A248]" }],
-      description:"(Site en développement, revenez plus tard)",
+      description:"Mangabunka est une plateforme de quiz interactive dédiée aux fans de mangas et d'animés. Développée avec une stack MERN (MongoDB, Express, React, Node.js), l'application propose différents modes de jeu avec des questions générées via l'API Open Trivia.\nLes utilisateurs peuvent créer un compte (via email/mot de passe ou connexion Google), personnaliser leur profil et suivre leurs statistiques (parties jouées, score moyen, niveau et XP). Trois niveaux de difficulté sont disponibles (Easy, Medium, Hard), ainsi qu'un mode \"All\" avec des questions aléatoires. Un classement permet de se mesurer aux autres joueurs.\nCe projet allie ma passion pour la culture japonaise et mes compétences en développement full-stack, avec une attention particulière portée à l'expérience utilisateur et aux bonnes pratiques de sécurité.",
       github: "https://github.com/Leo-Brd/MangaBunka",
     }
 ];
