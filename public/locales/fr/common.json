@@ -82,5 +82,16 @@
     "technology-watch-name": "Veille technologique",
     "next-description": "Applications web performantes avec rendu côté serveur.",
     "sql-description": "Langage de gestion de bases de données relationnelles pour des données structurées.",
-    "php-description": "Langage de script côté serveur pour le développement web dynamique."
+    "php-description": "Langage de script côté serveur pour le développement web dynamique.",
+
+    "contact-title": "Contactez moi !",
+    "contact-form-title": "Envoyez-moi un mail",
+    "contact-name-title": "Votre nom",
+    "contact-name-placeholder": "Entrez votre nom",
+    "contact-mail-title": "Votre e-mail",
+    "contact-mail-placeholder": "Entrez votre e-mail",
+    "contact-message-title": "Votre message",
+    "contact-message-placeholder": "Écrivez votre message ici...",
+    "contact-form-send": "Envoyer",
+    "contact-details": "Mes coordonnées"
 }

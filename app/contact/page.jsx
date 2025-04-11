@@ -78,7 +78,7 @@ export default function ContactPage() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="text-4xl md:text-5xl font-bold text-primary dark:text-secondary mb-8"
       >
-        Contactez-moi
+        {t("contact-title")}
       </motion.h1>
 
       {/* Conteneur principal */}
@@ -91,12 +91,12 @@ export default function ContactPage() {
           className="mb-12"
         >
           <h2 className="text-2xl font-semibold text-primary dark:text-secondary mb-6">
-            Envoyez-moi un mail
+            {t("contact-form-title")}
           </h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-muted-foreground dark:text-secondary">
-                Votre nom
+                {t("contact-name-title")}
               </label>
               <input
                 type="text"
@@ -105,14 +105,14 @@ export default function ContactPage() {
                 value={formData.name}
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 mt-1 bg-background/50 border dark:border-white/80 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="Entrez votre nom"
+                placeholder= {t("contact-name-placeholder")}
                 required
               />
             </div>
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-muted-foreground dark:text-secondary">
-                Votre e-mail
+                {t("contact-mail-title")}
               </label>
               <input
                 type="email"
@@ -121,14 +121,14 @@ export default function ContactPage() {
                 value={formData.email}
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 mt-1 bg-background/50 border dark:border-white/80 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="Entrez votre e-mail"
+                placeholder= {t("contact-mail-placeholder")}
                 required
               />
             </div>
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-muted-foreground dark:text-secondary">
-                Votre message
+                {t("contact-message-title")}
               </label>
               <textarea
                 id="message"
@@ -137,7 +137,7 @@ export default function ContactPage() {
                 onChange={handleInputChange}
                 rows="5"
                 className="w-full px-4 py-2 mt-1 bg-background/50 border dark:border-white/80 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="Écrivez votre message ici..."
+                placeholder= {t("contact-message-placeholder")}
                 required
               />
             </div>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                 isFormValid ? 'hover:bg-primary/90' : 'opacity-80 cursor-not-allowed'
               }`}
             >
-              Envoyer
+              {t("contact-form-send")}
             </button>
           </form>
 
@@ -172,7 +172,7 @@ export default function ContactPage() {
           className="space-y-6"
         >
           <h2 className="text-2xl font-semibold text-primary mb-6">
-            Mes coordonnées
+            {t("contact-details")}
           </h2>
 
           {/* Liens de contact */}

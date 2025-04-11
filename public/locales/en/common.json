@@ -82,5 +82,16 @@
     "technology-watch-name": "Technology watch",
     "next-description": "High-performance web applications with server-side rendering.",
     "sql-description": "Relational database management language for structured data.",
-    "php-description": "Server-side scripting language for dynamic web development."
+    "php-description": "Server-side scripting language for dynamic web development.",
+
+    "contact-title": "Contact me !",
+    "contact-form-title": "Send me an email",
+    "contact-name-title": "Your name",
+    "contact-name-placeholder": "Enter your name",
+    "contact-mail-title": "Your e-mail",
+    "contact-mail-placeholder": "Enter your e-mail",
+    "contact-message-title": "Your message",
+    "contact-message-placeholder": "Write your message here...",
+    "contact-form-send": "Send",
+    "contact-details": "My contact details"
 }
