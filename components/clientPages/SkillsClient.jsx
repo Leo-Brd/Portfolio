@@ -20,6 +20,7 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiC,
+  SiPostman,
 } from "react-icons/si";
 import { TbBrandVscode, TbSeo } from "react-icons/tb";
 import { VscDebugAll } from "react-icons/vsc";
@@ -29,38 +30,54 @@ import { BiHandicap } from "react-icons/bi";
 import { FaChrome, FaNpm, FaDatabase, FaPhp } from "react-icons/fa";
 import { CiMobile1 } from "react-icons/ci";
 import { RiNotionFill } from "react-icons/ri";
+import { FcDocument } from "react-icons/fc";
+import { LiaMarkdown } from "react-icons/lia";
 
 export default function SkillsClient() {
   const { t } = useTranslation('common');
   const [selectedCategory, setSelectedCategory] = useState("Frontend");
 
   const tools = [
+    // Frontend
     { icon: <SiHtml5 className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#E34F26]" />, name: "HTML5", category: "Frontend" },
     { icon: <SiCss3 className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#1572B6]" />, name: "CSS3", category: "Frontend" },
     { icon: <SiJavascript className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#F7DF1E]" />, name: "JavaScript", category: "Frontend" },
     { icon: <SiSass className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#CC6699]" />, name: "Sass", category: "Frontend" },
     { icon: <SiTailwindcss className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#38BDF8]" />, name: "Tailwind CSS", category: "Frontend" },
     { icon: <SiReact className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#61DAFB]" />, name: "React", category: "Frontend" },
-    { icon: <SiPython className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3776AB]" />, name: "Python", category: "Autres" },
-    { icon: <SiC className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#226db3]" />, name: "C", category: "Autres" },
-    { icon: <TbBrandVscode className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#007ACC]" />, name: "VSCode", category: "Autres" },
-    { icon: <SiGithub className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "GitHub", category: t("project-management-name") },
-    { icon: <SiGit className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#F05032]" />, name: "Git", category: t("project-management-name") },
-    { icon: <IoTerminal className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-[#ffffff]" />, name: "Terminal", category: "Autres" },
-    { icon: <img src={ChatGPTLogo.src} alt="Logo de ChatGPT" className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3bc5ba]" />, name: t("ia-name"), category: "Autres" },
-    { icon: <FaChrome className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#237aff]" />, name: "Chrome Devtools", category: t("technical-optimization-name") },
+
+    // Backend
+    { icon: <SiNodedotjs className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#339933]" />, name: "Node.js Express", category: "Backend" },
+    { icon: <SiMongodb className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#47A248]" />, name: "NoSQL", category: "Backend" },
+
+    // Design
     { icon: <SiFigma className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#F24E1E]" />, name: "Figma", category: "Design" },
     { icon: <SiCanva className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3bc5ba]" />, name: "Canva", category: "Design" },
     { icon: <CiMobile1 className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "Responsive Design", category: "Design" },
-    { icon: <SiNodedotjs className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#339933]" />, name: "Node.js Express", category: "Backend" },
-    { icon: <SiMongodb className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#47A248]" />, name: "NoSQL", category: "Backend" },
+
+    // Optimisation technique
+    { icon: <FaChrome className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#237aff]" />, name: "Chrome Devtools", category: t("technical-optimization-name") },
     { icon: <TbSeo className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#0D6EFD]" />, name: "SEO", category: t("technical-optimization-name") },
     { icon: <BiHandicap className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: t("accessibility-name"), category: t("technical-optimization-name") },
     { icon: <IoRocket className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#FF6B6B]" />, name: t("performance-boost-name"), category: t("technical-optimization-name") },
     { icon: <VscDebugAll className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#DC3545]" />, name: "Debug", category: t("technical-optimization-name") },
+
+    // Gestion de projet
+    { icon: <SiGithub className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "GitHub", category: t("project-management-name") },
+    { icon: <SiGit className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#F05032]" />, name: "Git", category: t("project-management-name") },
+    { icon: <FaNpm className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: t("package-manager-name"), category: t("project-management-name") },
     { icon: <SiFeedly className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#4CAF50]" />, name: t("technology-watch-name"), category: t("project-management-name") },
     { icon: <RiNotionFill className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: t("methode-agile-name"), category: t("project-management-name") },
-    { icon: <FaNpm className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: t("package-manager-name"), category: t("project-management-name") },
+    { icon: <FcDocument className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px]" />, name: t("documentation-name"), category: t("project-management-name") },
+
+    // Autres
+    { icon: <SiPython className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3776AB]" />, name: "Python", category: "Autres" },
+    { icon: <SiC className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#226db3]" />, name: "C", category: "Autres" },
+    { icon: <TbBrandVscode className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#007ACC]" />, name: "VSCode", category: "Autres" },
+    { icon: <IoTerminal className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-[#ffffff]" />, name: "Terminal", category: "Autres" },
+    { icon: <img src={ChatGPTLogo.src} alt="Logo de ChatGPT" className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3bc5ba]" />, name: t("ia-name"), category: "Autres" },
+    { icon: <SiPostman className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#FF6C37]" />, name: "Postman", category: "Autres" },
+    { icon: <LiaMarkdown className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "Markdown", category: "Autres" },
   ];
   
   const mainSkills = [
