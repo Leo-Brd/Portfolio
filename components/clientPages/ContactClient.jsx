@@ -170,10 +170,15 @@ export default function ContactClient() {
           </h2>
           {/* Liens de contact */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white/80 rounded-lg hover:shadow-lg dark:shadow-white/10 transition-shadow duration-300">
+            <a
+                href="https://www.google.com/maps/place/Lyon,+France"
+                target="_blank"
+                rel="noopener noreferrer" 
+                className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white/80 rounded-lg hover:shadow-lg dark:shadow-white/10 transition-shadow duration-300 cursor-pointer"
+            >
               <FaMapMarkerAlt className="w-6 h-6 text-primary" />
               <span className="text-muted-foreground">Lyon, France</span>
-            </div>
+            </a>
             <a
               href="mailto:leobordet.pro@gmail.com"
               className="flex items-center space-x-4 p-4 bg-background/50 border dark:border-white/80 rounded-lg hover:bg-background/70 transition-all duration-300 hover:shadow-lg dark:shadow-white/10"
