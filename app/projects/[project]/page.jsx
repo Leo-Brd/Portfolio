@@ -43,7 +43,7 @@ export default function ProjectPage() {
         {/* Bouton de fermeture */}
         <Link
           href="/projects"
-          className="absolute top-6 right-6 p-2 bg-card rounded-full shadow-lg dark:border dark:bg-primary dark:shadow-white/30 hover:translate-y-1 transition-all duration-300 z-50"
+          className="absolute top-6 right-6 p-2 bg-card rounded-full shadow-lg dark:border dark:bg-primary dark:shadow-white/30 hover:translate-y-1 transition-all duration-300 z-2"
         >
           <FaTimes className="w-6 h-6 text-primary dark:text-white" />
         </Link>
