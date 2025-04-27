@@ -7,6 +7,7 @@ import {
   SiHtml5,
   SiCss3,
   SiJavascript,
+  SiTypescript,
   SiPython,
   SiGithub,
   SiFigma,
@@ -24,7 +25,7 @@ import {
 } from "react-icons/si";
 import { TbBrandVscode, TbSeo } from "react-icons/tb";
 import { VscDebugAll } from "react-icons/vsc";
-import { IoTerminal, IoRocket } from "react-icons/io5";
+import { IoTerminal, IoRocket, IoExtensionPuzzleOutline } from "react-icons/io5";
 import ChatGPTLogo from "@/public/logos//ChatGPT_logo.png";
 import { BiHandicap } from "react-icons/bi";
 import { FaChrome, FaNpm, FaDatabase, FaPhp } from "react-icons/fa";
@@ -42,6 +43,7 @@ export default function SkillsClient() {
     { icon: <SiHtml5 className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#E34F26]" />, name: "HTML5", category: "Frontend" },
     { icon: <SiCss3 className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#1572B6]" />, name: "CSS3", category: "Frontend" },
     { icon: <SiJavascript className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#F7DF1E]" />, name: "JavaScript", category: "Frontend" },
+    { icon: <SiTypescript className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3178c6]" />, name: "TypeScript", category: "Frontend" },
     { icon: <SiSass className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#CC6699]" />, name: "Sass", category: "Frontend" },
     { icon: <SiTailwindcss className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#38BDF8]" />, name: "Tailwind CSS", category: "Frontend" },
     { icon: <SiReact className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#61DAFB]" />, name: "React", category: "Frontend" },
@@ -78,6 +80,7 @@ export default function SkillsClient() {
     { icon: <img src={ChatGPTLogo.src} alt="Logo de ChatGPT" className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3bc5ba]" />, name: t("ia-name"), category: "Autres" },
     { icon: <SiPostman className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#FF6C37]" />, name: "Postman", category: "Autres" },
     { icon: <LiaMarkdown className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "Markdown", category: "Autres" },
+    { icon: <IoExtensionPuzzleOutline className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: t("extension-name"), category: "Autres" },
   ];
   
   const mainSkills = [

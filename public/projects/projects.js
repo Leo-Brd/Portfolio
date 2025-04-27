@@ -27,10 +27,16 @@ import Mangabunka_3 from "@/public/projects/mangabunka/mangabunka_3.webp"
 import Mangabunka_4 from "@/public/projects/mangabunka/mangabunka_4.webp"
 import Mangabunka_5 from "@/public/projects/mangabunka/mangabunka_5.webp"
 import Mangabunka_6 from "@/public/projects/mangabunka/mangabunka_6.webp"
+import Kipik from "@/public/projects/kipik/kipik_1.webp"
+import Kipik_2 from "@/public/projects/kipik/kipik_2.webp"
+import Kipik_3 from "@/public/projects/kipik/kipik_3.webp"
+import Kipik_4 from "@/public/projects/kipik/kipik_4.webp"
+import Kipik_5 from "@/public/projects/kipik/kipik_5.webp"
 import {
   SiHtml5,
   SiCss3,
   SiJavascript,
+  SiTypescript,
   SiSass,
   SiMongodb,
   SiFeedly,
@@ -44,6 +50,7 @@ import { VscDebugAll } from "react-icons/vsc";
 import { BiHandicap } from "react-icons/bi";
 import { CiMobile1 } from "react-icons/ci";
 import { RiNotionFill } from "react-icons/ri";
+import { IoExtensionPuzzleOutline } from "react-icons/io5";
 
 export const openClassroomsProjects = [
     {
@@ -142,5 +149,15 @@ export const otherProjects = [
         { icon: SiMongodb, color: "text-[#47A248]" }],
       description:"Mangabunka est une plateforme de quiz interactive dédiée aux fans de mangas et d'animés. Développée avec une stack MERN (MongoDB, Express, React, Node.js), l'application propose différents modes de jeu avec des questions générées via l'API Open Trivia.\nLes utilisateurs peuvent créer un compte (via email/mot de passe ou connexion Google), personnaliser leur profil et suivre leurs statistiques (parties jouées, score moyen, niveau et XP). Trois niveaux de difficulté sont disponibles (Easy, Medium, Hard), ainsi qu'un mode \"All\" avec des questions aléatoires. Un classement permet de se mesurer aux autres joueurs.\nCe projet allie ma passion pour la culture japonaise et mes compétences en développement full-stack, avec une attention particulière portée à l'expérience utilisateur et aux bonnes pratiques de sécurité.",
       github: "https://github.com/Leo-Brd/MangaBunka",
+    },
+    {
+      title: "Kipik",
+      images: [Kipik, Kipik_2, Kipik_3, Kipik_4, Kipik_5],
+      icons: [
+        { icon: SiTypescript, color: "text-[#3178c6]" },
+        { icon: SiSass, color: "text-[#CC6699]" },
+        { icon: IoExtensionPuzzleOutline, color: "text-black", darkColor: "text-white" },],
+      description:"Kipik est une extension Chrome Manifest V3 qui permet d'avoir accès à de nombreuses informations sur n'importe quel site internet. Réalisée à l'aide de Typescript et Sass, celle-ci propose 2 modes d'analyse.\n Tout d'abord, l'analyse via l'extension permet d'envoyer des scripts dans la page sur laquelle vous vous trouvez afin de détecter :\n- Les technos utilisées ( frameworks, CMS, librairies... )\n- Les polices utilisées (avec un aperçu si possible )\n- Plusieurs autres informations ( balises metas, stockage etc... )\nIl est aussi possible d'utiliser l'analyse avec l'API de Pagespeed afin d'avoir les notes de l'audit du site ( performances, accessibilité, SEO, bonnes pratiques ) ainsi que les métriques de performance. ",
+      github: "https://github.com/Leo-Brd/Kipik",
     }
 ];
