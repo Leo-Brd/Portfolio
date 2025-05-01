@@ -38,9 +38,9 @@
     --muted-foreground: 156 163 175;
     --popover: 3 7 18;
     --popover-foreground: 249 250 251;
-    --card: 2 8 23;
+    --card: 10 18 38;
     --card-foreground: 249 250 251;
-    --border: 31 41 55;
+    --border: 51 65 85;
     --input: 31 41 55;
     --primary: 59 130 246;
     --primary-foreground: 249 250 251;
@@ -51,12 +51,12 @@
     --destructive: 127 29 29;
     --destructive-foreground: 249 250 251;
     --ring: 109 40 217;
-    --chart-1: 38 98 217;
-    --chart-2: 46 184 138;
-    --chart-3: 232 140 48;
-    --chart-4: 175 87 219;
-    --chart-5: 226 54 112;
-  }
+    --chart-1: 4 86 251;
+    --chart-2: 4 210 251;
+    --chart-3: 45 4 251;
+    --chart-4: 19 213 251;
+    --chart-5: 0 85 255;
+  }  
 }
 
 

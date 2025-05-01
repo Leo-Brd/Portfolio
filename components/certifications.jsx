@@ -156,7 +156,7 @@ export function Certifications() {
             key={`card-${index}`}
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
-            className="relative bg-background/80 backdrop-blur-sm border border-border rounded-lg p-5 hover:shadow-lg dark:hover:shadow-white/10 transition-shadow duration-300 flex flex-col justify-center items-center text-center min-w-[270px] w-[270px]"
+            className="relative bg-card/80 backdrop-blur-sm border border-border rounded-lg p-5 hover:shadow-lg dark:hover:shadow-white/10 transition-shadow duration-300 flex flex-col justify-center items-center text-center min-w-[270px] w-[270px]"
           >
             <motion.div
               whileHover={{ y: -10 }}

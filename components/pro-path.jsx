@@ -32,7 +32,7 @@ export function ProPath() {
 
   return (
     <div className="relative mb-32">
-      <div className="absolute left-1/2 w-1 h-full bg-primary/20 dark:bg-white/80 transform -translate-x-1/2" />
+      <div className="absolute left-1/2 w-1 h-full bg-primary/20 dark:bg-white/60 transform -translate-x-1/2" />
 
       <div className="space-y-8">
         {/* Recherche d'entreprise */}
@@ -50,7 +50,7 @@ export function ProPath() {
           >
             <LuSearchCode className="w-12 h-12 transition-all rounded duration-300 hover:scale-110 hover:shadow-lg"/>
             {hoveredLogo === "RechercheLogo" && (
-              <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
+              <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
                 <h3 className="text-xl font-bold mb-2">{t("recherche-entreprise-modal-title")}</h3>
                 <p className="text-lg text-foreground">
                   {getModalContent("RechercheLogo")}
@@ -74,7 +74,7 @@ export function ProPath() {
               className="w-17 h-12 transition-all rounded object-cover duration-300 hover:scale-110 hover:shadow-lg"
             />
               {hoveredLogo === "SuperPauletteLogo" && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/3 w-80 sm:w-64 lg:-translate-x-[700px] lg:w-96 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/3 w-80 sm:w-64 lg:-translate-x-[700px] lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
                   <h3 className="text-xl font-bold">{t("super-paulette-modal-title")}</h3>
                   <p className="text-lg text-foreground">
                     {getModalContent("SuperPauletteLogo")}
@@ -110,7 +110,7 @@ export function ProPath() {
               className="w-12 h-12 rounded transition-all duration-300 hover:scale-110 hover:shadow-lg"
             />
             {hoveredLogo === "MediathequeLogo" && (
-              <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
+              <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
                 <h3 className="text-xl font-bold">{t("mediatheque-modal-title")}</h3>
                 <p className="text-lg text-foreground">
                   {getModalContent("MediathequeLogo")}

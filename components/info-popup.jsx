@@ -40,10 +40,10 @@ export default function PopupAlternance() {
     <div className="fixed bottom-4 right-4 z-50 animate-fadeIn hidden sm:block">
       <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg max-w-xs border border-gray-300 dark:border-gray-700">
         <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
-          🎯 Je recherche une alternance ou un stage !
+          🎯 Je suis ouvert aux opportunités !
         </h2>
         <p className="text-sm text-gray-700 dark:text-gray-300 mt-1">
-          Je suis à la recherche d'une entreprise qui me permettra de développer mes compétences en développement web.
+          N'hésitez pas à me contacter si mon profil vous intéresse ! Je suis ouvert aux stages et aux contrats de courte durée avant ma rentrée en Septembre.
         </p>
         <div className="mt-3 flex justify-between">
           <Link

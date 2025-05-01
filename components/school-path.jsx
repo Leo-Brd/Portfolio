@@ -38,7 +38,7 @@ export function SchoolPath() {
 
   return (
     <div className="relative mb-32">
-      <div className="absolute left-1/2 w-1 h-full bg-primary/20 dark:bg-white/80 transform -translate-x-1/2" />
+      <div className="absolute left-1/2 w-1 h-full bg-primary/20 dark:bg-white/60 transform -translate-x-1/2" />
 
       <div className="space-y-8">
         {/* OpenClassrooms */}
@@ -60,7 +60,7 @@ export function SchoolPath() {
               className="w-12 h-12 transition-all duration-300 hover:scale-110 hover:shadow-lg"
             />
             {hoveredLogo === "OCLogo" && (
-              <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
+              <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
                 <h3 className="text-xl font-bold">OpenClassroom's</h3>
                 <p className="text-lg text-foreground">
                   {getModalContent("OCLogo")}
@@ -80,7 +80,7 @@ export function SchoolPath() {
             >
               <Si42 className="w-12 h-12 transition-all duration-300 hover:scale-110 hover:shadow-lg" />
               {hoveredLogo === "42" && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/3 w-80 sm:w-64 lg:-translate-x-[700px] lg:w-96 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/3 w-80 sm:w-64 lg:-translate-x-[700px] lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
                   <h3 className="text-xl font-bold">{t("42-modal-title")}</h3>
                   <p className="text-lg text-foreground">
                     {getModalContent("42")}
@@ -116,7 +116,7 @@ export function SchoolPath() {
               className="w-12 h-12 rounded transition-all duration-300 hover:scale-110 hover:shadow-lg"
             />
             {hoveredLogo === "EstiamLogo" && (
-              <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
+              <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
                 <h3 className="text-xl font-bold">Estiam</h3>
                 <p className="text-lg text-foreground">
                   {getModalContent("EstiamLogo")}
@@ -140,7 +140,7 @@ export function SchoolPath() {
                 className="w-18 h-14 object-cover transition-all duration-300 hover:scale-110 hover:shadow-lg"
               />
               {hoveredLogo === "Lyon2Logo" && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/3 w-80 sm:w-64 lg:-translate-x-[700px] lg:w-96 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/3 w-80 sm:w-64 lg:-translate-x-[700px] lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
                   <h3 className="text-xl font-bold">{t("uni-title")}</h3>
                   <p className="text-lg text-foreground">
                     {getModalContent("Lyon2Logo")}
@@ -176,7 +176,7 @@ export function SchoolPath() {
               className="w-14 h-12 rounded transition-all duration-300 hover:scale-110 hover:shadow-lg"
             />
             {hoveredLogo === "JpsLogo" && (
-              <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
+              <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
                 <h3 className="text-xl font-bold">{t("jps-title")}</h3>
                 <p className="text-lg text-foreground">
                   {getModalContent("JpsLogo")}

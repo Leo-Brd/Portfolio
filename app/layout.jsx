@@ -6,6 +6,7 @@ import Footer from "@/components/footer"
 import PopUp from "@/components/info-popup"
 import { I18nextProvider } from 'react-i18next';
 import i18n from '@/i18n';
+import { FaCode } from "react-icons/fa";
 
 export default function RootLayout({ children }) {
   return (
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
           <meta name="description" content="Je suis un développeur passioné par la création d'applications web modernes et performantes !" />
           <title>LeoBrd - Portfolio</title>
 
+          <link rel="icon" type="image/png" href="/logos/favicon.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com"></link>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"></link>
           <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"></link>

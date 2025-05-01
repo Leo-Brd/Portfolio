@@ -10,7 +10,7 @@ export const ToolIcon = ({ tool, index }) => {
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 * index }}
         whileHover={{ scale: 1.2, rotate: 10, transition: { duration: 0.1 } }}
-        className="relative p-4 rounded-full shadow-md border-[0.5px] dark:border-border dark:shadow-white dark:shadow-sm bg-card flex items-center justify-center hover:shadow-lg transition-all cursor-pointer"
+        className="relative p-4 rounded-full shadow-md border-[0.5px] dark:border-border dark:shadow-sm bg-card flex items-center justify-center hover:shadow-lg transition-all cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
