@@ -47,10 +47,12 @@ export default function SkillsClient() {
     { icon: <SiSass className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#CC6699]" />, name: "Sass", category: "Frontend" },
     { icon: <SiTailwindcss className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#38BDF8]" />, name: "Tailwind CSS", category: "Frontend" },
     { icon: <SiReact className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#61DAFB]" />, name: "React", category: "Frontend" },
+    { icon: <SiNextdotjs className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "Next.js", category: "Frontend" },
 
     // Backend
     { icon: <SiNodedotjs className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#339933]" />, name: "Node.js Express", category: "Backend" },
     { icon: <SiMongodb className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#47A248]" />, name: "NoSQL", category: "Backend" },
+    { icon: <FaPhp className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#777BB4]" />, name: "PHP", category: "Backend" },
 
     // Design
     { icon: <SiFigma className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#F24E1E]" />, name: "Figma", category: "Design" },
@@ -90,9 +92,9 @@ export default function SkillsClient() {
   ];
   
   const learningSkills = [
-    { icon: <SiNextdotjs className="w-[60px] h-[60px] text-black dark:text-white" />, name: "Next.js", description: t("next-description") },
     { icon: <FaDatabase className="w-[60px] h-[60px] text-[#00758F]" />, name: "SQL", description: t("sql-description") },
-    { icon: <FaPhp className="w-[60px] h-[60px] text-[#777BB4]" />, name: "PHP", description: t("php-description") },
+    { icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django REST Framework" className="w-[60px] h-[60px] dark:invert" />, name: "Django REST Framework", description: t("drf-description") },
+    { icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux" className="w-[60px] h-[60px]" />, name: "Redux", description: t("redux-description") },
   ];
 
   const categories = ["Frontend", "Backend", "Design", t("technical-optimization-name"), t("project-management-name"), "Autres"];
@@ -197,4 +199,4 @@ export default function SkillsClient() {
       </motion.div>
     </section>
   );
-} 
+}

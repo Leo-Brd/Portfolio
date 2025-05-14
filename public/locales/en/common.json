@@ -74,6 +74,8 @@
     "react-description": "Front-end development of dynamic and reactive interfaces.",
     "node-description": "Back-end development with the Express framework in Javascript.",
     "git-description": "Version control for collaborative work.",
+    "drf-description": "Robust API development in Python language.",
+    "redux-description": "Advanced state management for React apps.",
     "technical-optimization-name": "Technical Optimization",
     "project-management-name": "Project Management",
     "ia-name": "AI",
