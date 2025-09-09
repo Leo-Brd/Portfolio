@@ -23,6 +23,8 @@ export function SchoolPath() {
     switch (logo) {
       case "OCLogo":
         return t("oc-text");
+      case "OCLogo2":
+        return t("oc2-text");
       case "42":
         return t("42-text");
       case "EstiamLogo":
@@ -40,7 +42,40 @@ export function SchoolPath() {
     <div className="relative mb-32">
       <div className="absolute left-1/2 w-1 h-full bg-primary/20 dark:bg-white/60 transform -translate-x-1/2" />
 
+
       <div className="space-y-8">
+
+        {/* OpenClassrooms 2 */}
+        <div className="flex items-center w-full">
+          <div className="w-1/2 pr-8 flex justify-end">
+            <div
+              onMouseEnter={() => handleMouseEnter("OCLogo2")}
+              onMouseLeave={handleMouseLeave}
+              className="relative"
+            >
+              <img
+                src={OCLogo.src}
+                alt="Logo d'OpenClassrooms"
+                className="w-12 h-12 transition-all duration-300 hover:scale-110 hover:shadow-lg"
+              />
+              {hoveredLogo === "OCLogo2" && (
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/3 w-80 sm:w-64 lg:-translate-x-[700px] lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
+                  <h3 className="text-xl font-bold">OpenClassroom's</h3>
+                  <p className="text-lg text-foreground">
+                    {getModalContent("OCLogo2")}
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+          <div className="w-1/2 pl-8">
+            <p className="text-xl font-semibold">2025/2027</p>
+            <p className="text-muted-foreground text-xl">
+              {t("oc2-title")}
+            </p>
+          </div>
+        </div>
+
         {/* OpenClassrooms */}
         <div className="flex items-center w-full">
           <div className="w-1/2 pr-8 text-right">
