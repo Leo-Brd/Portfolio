@@ -2,6 +2,7 @@
 import { useState } from "react";
 import MediathequeLogo from "@/public/logos/Chassieu_mediatheque.png";
 import SuperPauletteLogo from "@/public/logos/Super_paulette.png";
+import SeipraScoreLogo from "@/public/logos/seipra.jpg";
 import { useTranslation } from 'next-i18next';
 import { LuSearchCode } from "react-icons/lu";
 
@@ -19,8 +20,8 @@ export function ProPath() {
 
   const getModalContent = (logo) => {
     switch (logo) {
-      case "RechercheLogo":
-        return t("recherche-entreprise-text");
+      case "SeipraLogo":
+        return t("seipra-text");
       case "SuperPauletteLogo":
         return t("super-paulette-text");
       case "MediathequeLogo":
@@ -35,12 +36,12 @@ export function ProPath() {
       <div className="absolute left-1/2 w-1 h-full bg-primary/20 dark:bg-white/60 transform -translate-x-1/2" />
 
       <div className="space-y-8">
-        {/* Recherche d'entreprise */}
+        {/* Seipra Score */}
         <div className="flex items-center w-full">
           <div className="w-1/2 pr-8 text-right">
-            <p className="text-xl font-semibold">2025</p>
+            <p className="text-xl font-semibold">2025 / 2027</p>
             <p className="text-muted-foreground text-xl">
-              {t("recherche-entreprise-title")}
+              {t("seipra-title")}
             </p>
           </div>
           <div
@@ -48,12 +49,16 @@ export function ProPath() {
             onMouseEnter={() => handleMouseEnter("RechercheLogo")}
             onMouseLeave={handleMouseLeave}
           >
-            <LuSearchCode className="w-12 h-12 transition-all rounded duration-300 hover:scale-110 hover:shadow-lg"/>
+            <img
+              src={SeipraScoreLogo.src}
+              alt="Logo de Seipra Score"
+              className="w-17 h-12 transition-all rounded object-cover duration-300 hover:scale-110 hover:shadow-lg"
+            />
             {hoveredLogo === "RechercheLogo" && (
               <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
-                <h3 className="text-xl font-bold mb-2">{t("recherche-entreprise-modal-title")}</h3>
+                <h3 className="text-xl font-bold mb-2">Seipra Score</h3>
                 <p className="text-lg text-foreground">
-                  {getModalContent("RechercheLogo")}
+                  {getModalContent("SeipraLogo")}
                 </p>
               </div>
             )}
