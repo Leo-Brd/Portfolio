@@ -97,27 +97,33 @@ export function Certifications() {
         animationControls.current.stop();
       }
     } else {
+      const cardWidth = 300;
       const currentX = x.get();
-      const remainingDistance = - (currentX % (300 * cards.length)) - (300 * cards.length);
-      const remainingDuration = duration * (Math.abs(remainingDistance) / (300 * cards.length));
+      const remainingDistance = - (currentX % (cardWidth * cards.length)) - (cardWidth * cards.length);
+      const remainingDuration = duration * (Math.abs(remainingDistance) / (cardWidth * cards.length));
+      
+      const handleAnimationComplete = () => {
+        x.set(x.get() % (cardWidth * cards.length));
+        
+        const handleRestartComplete = () => {
+          x.set(x.get() % (cardWidth * cards.length));
+          restartAnimation();
+        };
+        
+        const restartAnimation = (): void => {
+          animationControls.current = animate(x, [x.get(), x.get() - (cardWidth * cards.length)], {
+            duration: duration,
+            ease: "linear",
+            onComplete: handleRestartComplete
+          });
+        };
+        restartAnimation();
+      };
       
       animationControls.current = animate(x, [currentX, currentX + remainingDistance], {
         duration: remainingDuration,
         ease: "linear",
-        onComplete: () => {
-          x.set(x.get() % (300 * cards.length));
-          const restartAnimation = () => {
-            animationControls.current = animate(x, [x.get(), x.get() - (300 * cards.length)], {
-              duration: duration,
-              ease: "linear",
-              onComplete: () => {
-                x.set(x.get() % (300 * cards.length));
-                restartAnimation();
-              }
-            });
-          };
-          restartAnimation();
-        }
+        onComplete: handleAnimationComplete
       });
     }
   }, [isHovered, isInView, x, duration, cards.length]);
@@ -139,10 +145,13 @@ export function Certifications() {
   };
 
   return (
-    <div 
+    <section
       className="overflow-hidden py-12 relative w-full mb-16"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onFocus={() => setIsHovered(true)}
+      onBlur={() => setIsHovered(false)}
+      aria-label="Certifications carousel"
       style={{
         width: '99vw',
         marginLeft: 'calc(-50vw + 50%)'
@@ -179,6 +188,6 @@ export function Certifications() {
       {/* Masques pour créer l'effet de dégradé sur les bords */}
       <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent pointer-events-none z-10" />
       <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent pointer-events-none z-10" />
-    </div>
+    </section>
   );
 }

@@ -2,6 +2,7 @@
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import React, { useState, useRef, useId, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface SlideImage {
   src: string;
@@ -29,7 +30,7 @@ interface SlideProps {
 }
 
 const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
-  const slideRef = useRef<HTMLLIElement>(null);
+  const slideRef = useRef<HTMLButtonElement>(null);
   const xRef = useRef(0);
   const yRef = useRef(0);
   const frameRef = useRef<number | undefined>(undefined);
@@ -53,7 +54,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     };
   }, []);
 
-  const handleMouseMove = (event: React.MouseEvent<HTMLLIElement>) => {
+  const handleMouseMove = (event: React.MouseEvent<HTMLButtonElement>) => {
     if (!slideRef.current) return;
     const r = slideRef.current.getBoundingClientRect();
     xRef.current = event.clientX - (r.left + Math.floor(r.width / 2));
@@ -69,17 +70,23 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
-      <li
+      <button
         ref={slideRef}
         className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[90vmin] h-[60vmin] md:w-[70vmin] md:h-[70vmin] mx-[2vmin] md:mx-[4vmin] z-10"
         onClick={() => handleSlideClick(index)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleSlideClick(index);
+          }
+        }}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{
           transform:
-            current !== index
-              ? "scale(0.98) rotateX(8deg)"
-              : "scale(1) rotateX(0deg)",
+            current === index
+              ? "scale(1) rotateX(0deg)"
+              : "scale(0.98) rotateX(8deg)",
           transition: "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
           transformOrigin: "bottom",
         }}
@@ -95,7 +102,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
                   : "none",
             }}
           >
-            <img
+            <Image
               className="absolute inset-0 w-[100%] h-[100%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
               style={{
                 opacity: current === index ? 1 : 0.5,
@@ -103,8 +110,8 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
               }}
               alt={images[0].alt}
               src={images[0].src}
-              loading="eager"
-              decoding="sync"
+              fill
+              priority
             />
             {current === index && (
               <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
@@ -141,7 +148,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             </button>
           </Link>
         </div>
-      </li>
+      </button>
     </div>
   );
 };

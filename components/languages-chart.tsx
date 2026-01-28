@@ -8,7 +8,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { ChartContainer } from "@/components/ui/chart";
-import { GB, FR, ES, JP } from "country-flag-icons/react/3x2";
+import { GB as FlagGB, FR as FlagFR, ES as FlagES, JP as FlagJP } from "country-flag-icons/react/3x2";
 import { useTranslation } from 'next-i18next';
 
 // Données des langues
@@ -29,19 +29,19 @@ type ChartConfigType = {
 };
 const chartConfig: ChartConfigType = {
   fr: {
-    icon: <FR className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <FlagFR className="w-6 h-6 sm:w-8 sm:h-8" />,
     color: "hsl(var(--chart-1))",
   },
   gb: {
-    icon: <GB className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <FlagGB className="w-6 h-6 sm:w-8 sm:h-8" />,
     color: "hsl(var(--chart-2))",
   },
   es: {
-    icon: <ES className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <FlagES className="w-6 h-6 sm:w-8 sm:h-8" />,
     color: "hsl(var(--chart-3))",
   },
   jp: {
-    icon: <JP className="japan__flag lag w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <FlagJP className="japan__flag lag w-6 h-6 sm:w-8 sm:h-8" />,
     color: "hsl(var(--chart-4))",
   },
 };
@@ -60,6 +60,24 @@ const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
     );
   }
   return null;
+};
+
+interface CustomTickProps {
+  x?: number;
+  y?: number;
+  payload?: { value: ChartConfigKey };
+}
+
+const CustomTick = ({ x, y, payload }: CustomTickProps) => {
+  if (!payload) return null;
+  const { icon } = chartConfig[payload.value];
+  return (
+    <g transform={`translate(${x},${y})`}>
+      <foreignObject x={-25} y={-16} width={60} height={60}>
+        {icon}
+      </foreignObject>
+    </g>
+  );
 };
 
 export function Languages() {
@@ -89,17 +107,7 @@ export function Languages() {
               tickLine={false}
               tickMargin={10}
               axisLine={false}
-              tick={(props: any) => {
-                const { x, y, payload } = props;
-                const { icon } = chartConfig[(payload.value as ChartConfigKey)];
-                return (
-                  <g transform={`translate(${x},${y})`}>
-                    <foreignObject x={-25} y={-16} width={60} height={60}>
-                      {icon}
-                    </foreignObject>
-                  </g>
-                );
-              }}
+              tick={<CustomTick />}
             />
             <XAxis dataKey="value" type="number" hide />
             <Tooltip

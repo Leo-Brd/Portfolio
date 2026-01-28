@@ -38,10 +38,12 @@ interface ChartContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 const ChartContainer = React.forwardRef<HTMLDivElement, ChartContainerProps>(
   ({ id, className, children, config, ...props }, ref) => {
     const uniqueId = React.useId()
-    const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`
+    const chartId = `chart-${id || uniqueId.replaceAll(":", "")}`
+
+    const contextValue = React.useMemo(() => ({ config }), [config]);
 
     return (
-      <ChartContext.Provider value={{ config }}>
+      <ChartContext.Provider value={contextValue}>
         <div
           data-chart={chartId}
           ref={ref}
@@ -182,7 +184,7 @@ const ChartTooltipContent = React.forwardRef<HTMLDivElement, ChartTooltipContent
         "grid min-w-[8rem] items-start gap-1.5 rounded-lg border border-border/50 bg-background px-2.5 py-1.5 text-xs shadow-xl",
         className
       )}>
-      {!nestLabel ? tooltipLabel : null}
+      {nestLabel ? null : tooltipLabel}
       <div className="grid gap-1.5">
         {payload.map((item, index) => {
           const key = `${nameKey || item.name || item.dataKey || "value"}`

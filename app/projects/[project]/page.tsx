@@ -5,6 +5,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaTimes } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ProjectPage() {
   const params = useParams();
@@ -56,15 +57,18 @@ export default function ProjectPage() {
           transition={{ duration: 0.5 }}
         >
           <div className="relative w-full h-full flex items-center justify-center">
-            <img
+            <Image
               src={project.images[currentImageIndex].src}
               alt={project.title}
+              fill
               className="w-full h-full object-cover object-left-top"
               style={{
                 objectPosition: (project as any).ProjectPageImgPosition === "left" 
                   ? "left center" 
                   : "center center"
               }}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority
             />
 
             {/* Boutons de navigation du carrousel */}

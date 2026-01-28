@@ -25,7 +25,7 @@ export default function ProjectsClient() {
       {/* Titre principal avec animation */}
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-foreground inline-block relative pb-2">
-          Mes projets
+          {t('projects-title')}
           <motion.span 
             className="absolute bottom-0 top-14 left-[12.5%] transform -translate-x-1/2 w-3/4 h-1 bg-primary/80 dark:bg-primary"
             variants={underlineVariants}
@@ -41,7 +41,7 @@ export default function ProjectsClient() {
         <div className="flex items-center justify-center gap-3 mb-8 md:mb-12">
             <FaGraduationCap className="hidden text-4xl text-primary lg:block" />
             <h2 className="text-2xl md:text-3xl font-bold text-center">
-              OpenClassroom's : Formation Développeur web
+              {t('projects-openclassrooms')}
             </h2>
         </div>
         <Carousel
@@ -58,7 +58,7 @@ export default function ProjectsClient() {
         <div className="flex items-center justify-center gap-3 mb-8 md:mb-12">
           <FaCode className="text-4xl text-primary" />
           <h2 className="text-2xl md:text-3xl font-bold text-center">
-            Projets personnels
+            {t('projects-personal')}
           </h2>
         </div>
         <Carousel
