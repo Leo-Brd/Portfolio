@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { IconSun, IconMoon, IconMenu2, IconX } from "@tabler/icons-react";
 import { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
-import { GB, FR } from "country-flag-icons/react/3x2";
+import { GB as FlagGB, FR as FlagFR } from "country-flag-icons/react/3x2";
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
@@ -73,27 +73,32 @@ export default function Header() {
             menuOpen ? "shadow-lg block h-[calc(100vh-4rem)] gap-8" : "hidden md:flex"
           }`}
         >
-          {["home", "skills", "projects", "contact"].map((key) => (
-            <Link
-              key={key}
-              href={`/${key === "home" ? "" : key}`}
-              className={`text-2xl md:text-xl lg:text-2xl ${
-                isActive(`/${key === "home" ? "" : key}`)
-                  ? "text-primary"
-                  : "text-foreground hover:text-primary"
-              } transition-colors relative group`}
-              onClick={() => setMenuOpen(false)}
-            >
-              {t(key)}
-              <span
-                className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all ${
-                  isActive(`/${key === "home" ? "" : key}`)
-                    ? "w-full"
-                    : "w-0 group-hover:w-full"
-                }`}
-              />
-            </Link>
-          ))}
+          {["home", "skills", "projects", "contact"].map((key) => {
+            const href = `/${key === "home" ? "" : key}`;
+            const active = isActive(href);
+            
+            return (
+              <Link
+                key={key}
+                href={href}
+                className={`text-2xl md:text-xl lg:text-2xl ${
+                  active
+                    ? "text-primary"
+                    : "text-foreground hover:text-primary"
+                } transition-colors relative group`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {t(key)}
+                <span
+                  className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all ${
+                    active
+                      ? "w-full"
+                      : "w-0 group-hover:w-full"
+                  }`}
+                />
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Mode sombre et langue */}
@@ -116,9 +121,9 @@ export default function Header() {
             aria-label="Toggle language"
           >
             {i18n.language === "fr" ? (
-              <FR className="w-7 h-7" />
+              <FlagFR className="w-7 h-7" />
             ) : (
-              <GB className="w-7 h-7" />
+              <FlagGB className="w-7 h-7" />
             )}
           </button>
         </div>
