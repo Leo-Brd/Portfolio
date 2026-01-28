@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import MediathequeLogo from "@/public/logos/Chassieu_mediatheque.png";
 import SuperPauletteLogo from "@/public/logos/Super_paulette.png";
 import SeipraScoreLogo from "@/public/logos/seipra.jpg";
@@ -43,15 +44,20 @@ export function ProPath() {
               {t("seipra-title")}
             </p>
           </div>
-          <div
-            className="w-1/2 pl-8 relative"
+          <button
+            className="w-1/2 pl-8 relative text-left"
             onMouseEnter={() => handleMouseEnter("RechercheLogo")}
             onMouseLeave={handleMouseLeave}
+            onFocus={() => handleMouseEnter("RechercheLogo")}
+            onBlur={handleMouseLeave}
+            type="button"
           >
-            <img
-              src={SeipraScoreLogo.src}
+            <Image
+              src={SeipraScoreLogo}
               alt="Logo de Seipra Score"
               className="w-17 h-12 transition-all rounded object-cover duration-300 hover:scale-110 hover:shadow-lg"
+              width={68}
+              height={48}
             />
             {hoveredLogo === "RechercheLogo" && (
               <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
@@ -61,22 +67,27 @@ export function ProPath() {
                 </p>
               </div>
             )}
-          </div>
+          </button>
         </div>
 
         {/* Super Paulette */}
         <div className="flex items-center w-full">
           <div className="w-1/2 pr-8 flex justify-end">
-            <div
+            <button
               onMouseEnter={() => handleMouseEnter("SuperPauletteLogo")}
               onMouseLeave={handleMouseLeave}
+              onFocus={() => handleMouseEnter("SuperPauletteLogo")}
+              onBlur={handleMouseLeave}
               className="relative"
+              type="button"
             >
-              <img
-              src={SuperPauletteLogo.src}
-              alt="Logo de Super Paulette"
-              className="w-17 h-12 transition-all rounded object-cover duration-300 hover:scale-110 hover:shadow-lg"
-            />
+              <Image
+                src={SuperPauletteLogo}
+                alt="Logo de Super Paulette"
+                className="w-17 h-12 transition-all rounded object-cover duration-300 hover:scale-110 hover:shadow-lg"
+                width={68}
+                height={48}
+              />
               {hoveredLogo === "SuperPauletteLogo" && (
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/3 w-80 sm:w-64 lg:-translate-x-[700px] lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
                   <h3 className="text-xl font-bold">{t("super-paulette-modal-title")}</h3>
@@ -85,7 +96,7 @@ export function ProPath() {
                   </p>
                 </div>
               )}
-            </div>
+            </button>
           </div>
           <div className="w-1/2 pl-8">
             <p className="text-xl font-semibold">{t("super-paulette-date")}</p>
@@ -103,15 +114,20 @@ export function ProPath() {
               {t("mediatheque-title")}
             </p>
           </div>
-          <div
-            className="w-1/2 pl-8 relative"
+          <button
+            className="w-1/2 pl-8 relative text-left"
             onMouseEnter={() => handleMouseEnter("MediathequeLogo")}
             onMouseLeave={handleMouseLeave}
+            onFocus={() => handleMouseEnter("MediathequeLogo")}
+            onBlur={handleMouseLeave}
+            type="button"
           >
-            <img
-              src={MediathequeLogo.src}
+            <Image
+              src={MediathequeLogo}
               alt="Logo de la médiathèque de Chassieu"
               className="w-12 h-12 rounded transition-all duration-300 hover:scale-110 hover:shadow-lg"
+              width={48}
+              height={48}
             />
             {hoveredLogo === "MediathequeLogo" && (
               <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
@@ -121,7 +137,7 @@ export function ProPath() {
                 </p>
               </div>
             )}
-          </div>
+          </button>
         </div>
 
       </div>
