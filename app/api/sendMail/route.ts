@@ -2,19 +2,23 @@ import { NextResponse } from 'next/server';
 import sgMail from '@sendgrid/mail';
 import { RateLimiterMemory } from 'rate-limiter-flexible';
 
-const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
-if (!SENDGRID_API_KEY) {
-  throw new Error('SENDGRID_API_KEY is not defined in environment variables');
-}
-sgMail.setApiKey(SENDGRID_API_KEY);
-
 const rateLimiter = new RateLimiterMemory({
   points: 3,
   duration: 60,
 });
 
 export async function POST(request: Request) {
-  const ip = request.headers.get('x-forwarded-for') || request.ip;
+  const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
+  if (!SENDGRID_API_KEY) {
+    return NextResponse.json(
+      { error: 'Configuration serveur manquante' },
+      { status: 500 }
+    );
+  }
+  
+  sgMail.setApiKey(SENDGRID_API_KEY);
+  
+  const ip = request.headers.get('x-forwarded-for') || 'unknown';
 
   try {
 

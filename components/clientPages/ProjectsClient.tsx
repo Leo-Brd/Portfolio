@@ -1,6 +1,6 @@
 "use client";
 import Carousel from "@/components/carousel";
-import { openClassroomsProjects, otherProjects } from "@/public/projects/projects.js";
+import { openClassroomsProjects, otherProjects } from "@/public/projects/projects";
 import { useTranslation } from 'next-i18next';
 import { FaGraduationCap, FaCode } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -47,11 +47,10 @@ export default function ProjectsClient() {
         <Carousel
           slides={openClassroomsProjects.map((project) => ({
             ...project,
-            images: project.images.map((img: any, i: number) =>
-              typeof img === "object" && "src" in img && "alt" in img
-                ? img
-                : { src: img, alt: `${project.title} image ${i + 1}` }
-            ),
+            images: project.images.map((img: any, i: number) => ({
+              src: typeof img === "string" ? img : img.src,
+              alt: `${project.title} image ${i + 1}`
+            })),
           }))}
         />
       </section>
@@ -65,11 +64,10 @@ export default function ProjectsClient() {
         <Carousel
           slides={otherProjects.map((project) => ({
             ...project,
-            images: project.images.map((img: any, i: number) =>
-              typeof img === "object" && "src" in img && "alt" in img
-                ? img
-                : { src: img, alt: `${project.title} image ${i + 1}` }
-            ),
+            images: project.images.map((img: any, i: number) => ({
+              src: typeof img === "string" ? img : img.src,
+              alt: `${project.title} image ${i + 1}`
+            })),
             carouselImgPosition: project.carouselImgPosition || "center",
           }))}
         />
