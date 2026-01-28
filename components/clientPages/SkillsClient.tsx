@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslation } from 'next-i18next';
 import { ToolIcon } from "@/components/ui/toolIcon";
+import Image from "next/image";
 import {
   SiHtml5,
   SiCss3,
@@ -79,7 +80,7 @@ export default function SkillsClient() {
     { icon: <SiC className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#226db3]" />, name: "C", category: "Autres" },
     { icon: <TbBrandVscode className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#007ACC]" />, name: "VSCode", category: "Autres" },
     { icon: <IoTerminal className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-[#ffffff]" />, name: "Terminal", category: "Autres" },
-    { icon: <img src={ChatGPTLogo.src} alt="Logo de ChatGPT" className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3bc5ba]" />, name: t("ia-name"), category: "Autres" },
+    { icon: <Image src={ChatGPTLogo} alt="Logo de ChatGPT" width={40} height={40} className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#3bc5ba]" />, name: t("ia-name"), category: "Autres" },
     { icon: <SiPostman className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-[#FF6C37]" />, name: "Postman", category: "Autres" },
     { icon: <LiaMarkdown className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: "Markdown", category: "Autres" },
     { icon: <IoExtensionPuzzleOutline className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] text-black dark:text-white" />, name: t("extension-name"), category: "Autres" },
@@ -93,8 +94,8 @@ export default function SkillsClient() {
   
   const learningSkills = [
     { icon: <FaDatabase className="w-[60px] h-[60px] text-[#00758F]" />, name: "SQL", description: t("sql-description") },
-    { icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django REST Framework" className="w-[60px] h-[60px] dark:invert" />, name: "Django REST Framework", description: t("drf-description") },
-    { icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux" className="w-[60px] h-[60px]" />, name: "Redux", description: t("redux-description") },
+    { icon: <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django REST Framework" width={60} height={60} className="w-[60px] h-[60px] dark:invert" />, name: "Django REST Framework", description: t("drf-description") },
+    { icon: <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux" width={60} height={60} className="w-[60px] h-[60px]" />, name: "Redux", description: t("redux-description") },
   ];
 
   const categories = ["Frontend", "Backend", "Design", t("technical-optimization-name"), t("project-management-name"), "Autres"];
@@ -118,7 +119,7 @@ export default function SkillsClient() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {mainSkills.map((skill, index) => (
             <motion.div
-              key={index}
+              key={`main-skill-${skill.name}`}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 * index }}
@@ -165,7 +166,7 @@ export default function SkillsClient() {
         <div className="relative h-auto">
           <div className="flex flex-wrap gap-6 justify-center md:justify-start items-start align-content-start">
             {filteredTools.map((tool, index) => (
-              <ToolIcon key={index} tool={tool} index={index} />
+              <ToolIcon key={`tool-${tool.name}`} tool={tool} index={index} />
             ))}
           </div>
         </div>
@@ -182,7 +183,7 @@ export default function SkillsClient() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-items-center">
           {learningSkills.map((skill, index) => (
             <motion.div
-              key={index}
+              key={`learning-skill-${skill.name}`}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 * index }}
