@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { Bar, BarChart, XAxis, YAxis, Tooltip } from "recharts";
 import {
   Card,
@@ -23,7 +24,15 @@ const programmingData = [
 ];
 
 // Configuration des couleurs et des icônes
-const programmingConfig = {
+type ProgrammingConfigKey = "html/css" | "javascript" | "python" | "c";
+type ProgrammingConfig = {
+  [key in ProgrammingConfigKey]: {
+    icon: React.ReactNode;
+    color: string;
+  };
+};
+
+const programmingConfig: ProgrammingConfig = {
   "html/css": {
     icon: (
       <div className="flex">
@@ -47,8 +56,12 @@ const programmingConfig = {
   },
 };
 
-const CustomTooltip = ({ active, payload }) => {
-  if (active && payload && payload.length) {
+interface CustomTooltipProps {
+  active?: boolean;
+  payload?: Array<{ payload: { description: string } }>;
+}
+const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
+  if (active && payload?.length) {
     const data = payload[0].payload;
     return (
       <div className="bg-background border border-border p-3 rounded-lg shadow-sm">
@@ -86,9 +99,9 @@ export function ProgrammingLanguages() {
               tickLine={false}
               tickMargin={10}
               axisLine={false}
-              tick={(props) => {
+              tick={(props: any) => {
                 const { x, y, payload } = props;
-                const icon = programmingConfig[payload.value]?.icon || null;
+                const icon = programmingConfig[(payload.value as ProgrammingConfigKey)]?.icon || null;
                 return (
                   <g transform={`translate(${x},${y})`}>
                     <foreignObject x={-40} y={-15} width={45} height={30}>
@@ -110,7 +123,7 @@ export function ProgrammingLanguages() {
               layout="vertical"
               radius={5}
               isAnimationActive={true}
-              fill={({ payload }) => programmingConfig[payload.language]?.color}
+              fill={programmingData[0].fill}
             />
           </BarChart>
         </ChartContainer>
