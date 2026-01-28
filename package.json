@@ -17,7 +17,7 @@
     "country-flag-icons": "^1.5.18",
     "lucide-react": "^0.476.0",
     "motion": "^12.4.7",
-    "next": "15.1.7",
+    "next": "15.1.11",
     "next-i18next": "^15.4.2",
     "rate-limiter-flexible": "^5.0.5",
     "react": "^19.0.0",
