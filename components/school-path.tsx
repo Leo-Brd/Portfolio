@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import { Si42 } from "react-icons/si";
 import OCLogo from "@/public/logos/OC_logo.png";
 import EstiamLogo from "@/public/logos/Estiam_logo.png";
@@ -48,25 +49,30 @@ export function SchoolPath() {
         {/* OpenClassrooms 2 */}
         <div className="flex items-center w-full">
           <div className="w-1/2 pr-8 flex justify-end">
-            <div
+            <button
               onMouseEnter={() => handleMouseEnter("OCLogo2")}
               onMouseLeave={handleMouseLeave}
+              onFocus={() => handleMouseEnter("OCLogo2")}
+              onBlur={handleMouseLeave}
               className="relative"
+              type="button"
             >
-              <img
-                src={OCLogo.src}
+              <Image
+                src={OCLogo}
                 alt="Logo d'OpenClassrooms"
                 className="w-12 h-12 transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                width={48}
+                height={48}
               />
               {hoveredLogo === "OCLogo2" && (
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/3 w-80 sm:w-64 lg:-translate-x-[700px] lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
-                  <h3 className="text-xl font-bold">OpenClassroom's</h3>
+                  <h3 className="text-xl font-bold">OpenClassroom&apos;s</h3>
                   <p className="text-lg text-foreground">
                     {getModalContent("OCLogo2")}
                   </p>
                 </div>
               )}
-            </div>
+            </button>
           </div>
           <div className="w-1/2 pl-8">
             <p className="text-xl font-semibold">2025/2027</p>
@@ -84,34 +90,42 @@ export function SchoolPath() {
               {t("oc-title")}
             </p>
           </div>
-          <div
-            className="w-1/2 pl-8 relative"
+          <button
+            className="w-1/2 pl-8 relative text-left"
             onMouseEnter={() => handleMouseEnter("OCLogo")}
             onMouseLeave={handleMouseLeave}
+            onFocus={() => handleMouseEnter("OCLogo")}
+            onBlur={handleMouseLeave}
+            type="button"
           >
-            <img
-              src={OCLogo.src}
+            <Image
+              src={OCLogo}
               alt="Logo d'OpenClassrooms"
               className="w-12 h-12 transition-all duration-300 hover:scale-110 hover:shadow-lg"
+              width={48}
+              height={48}
             />
             {hoveredLogo === "OCLogo" && (
               <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
-                <h3 className="text-xl font-bold">OpenClassroom's</h3>
+                <h3 className="text-xl font-bold">OpenClassroom&apos;s</h3>
                 <p className="text-lg text-foreground">
                   {getModalContent("OCLogo")}
                 </p>
               </div>
             )}
-          </div>
+          </button>
         </div>
 
         {/* École 42 */}
         <div className="flex items-center w-full">
           <div className="w-1/2 pr-8 flex justify-end">
-            <div
+            <button
               onMouseEnter={() => handleMouseEnter("42")}
               onMouseLeave={handleMouseLeave}
+              onFocus={() => handleMouseEnter("42")}
+              onBlur={handleMouseLeave}
               className="relative"
+              type="button"
             >
               <Si42 className="w-12 h-12 transition-all duration-300 hover:scale-110 hover:shadow-lg" />
               {hoveredLogo === "42" && (
@@ -122,7 +136,7 @@ export function SchoolPath() {
                   </p>
                 </div>
               )}
-            </div>
+            </button>
           </div>
           <div className="w-1/2 pl-8">
             <p className="text-xl font-semibold">{t("42-date")}</p>
@@ -140,15 +154,20 @@ export function SchoolPath() {
               {t("estiam-title")}
             </p>
           </div>
-          <div
-            className="w-1/2 pl-8 relative"
+          <button
+            className="w-1/2 pl-8 relative text-left"
             onMouseEnter={() => handleMouseEnter("EstiamLogo")}
             onMouseLeave={handleMouseLeave}
+            onFocus={() => handleMouseEnter("EstiamLogo")}
+            onBlur={handleMouseLeave}
+            type="button"
           >
-            <img
-              src={EstiamLogo.src}
+            <Image
+              src={EstiamLogo}
               alt="Logo de l'ESTIAM"
               className="w-12 h-12 rounded transition-all duration-300 hover:scale-110 hover:shadow-lg"
+              width={48}
+              height={48}
             />
             {hoveredLogo === "EstiamLogo" && (
               <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
@@ -158,21 +177,26 @@ export function SchoolPath() {
                 </p>
               </div>
             )}
-          </div>
+          </button>
         </div>
 
         {/* Université Lyon 2 */}
         <div className="flex items-center w-full">
           <div className="w-1/2 pr-8 flex justify-end">
-            <div
+            <button
               className="relative"
               onMouseEnter={() => handleMouseEnter("Lyon2Logo")}
               onMouseLeave={handleMouseLeave}
+              onFocus={() => handleMouseEnter("Lyon2Logo")}
+              onBlur={handleMouseLeave}
+              type="button"
             >
-              <img
-                src={Lyon2Logo.src}
+              <Image
+                src={Lyon2Logo}
                 alt="Logo de l'université Lyon 2"
                 className="w-18 h-14 object-cover transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                width={72}
+                height={56}
               />
               {hoveredLogo === "Lyon2Logo" && (
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/3 w-80 sm:w-64 lg:-translate-x-[700px] lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
@@ -182,7 +206,7 @@ export function SchoolPath() {
                   </p>
                 </div>
               )}
-            </div>
+            </button>
           </div>
           <div className="w-1/2 pl-8">
             <p className="text-xl font-semibold">2022 / 2023</p>
@@ -200,15 +224,20 @@ export function SchoolPath() {
             {t("jps-title")}
             </p>
           </div>
-          <div
-            className="w-1/2 pl-8 relative"
+          <button
+            className="w-1/2 pl-8 relative text-left"
             onMouseEnter={() => handleMouseEnter("JpsLogo")}
             onMouseLeave={handleMouseLeave}
+            onFocus={() => handleMouseEnter("JpsLogo")}
+            onBlur={handleMouseLeave}
+            type="button"
           >
-            <img
-              src={JpsLogo.src}
+            <Image
+              src={JpsLogo}
               alt="Logo du lycée Jean Paul Sartre"
               className="w-14 h-12 rounded transition-all duration-300 hover:scale-110 hover:shadow-lg"
+              width={56}
+              height={48}
             />
             {hoveredLogo === "JpsLogo" && (
               <div className="absolute top-0 left-1/2 transform -translate-x-2/3 w-80 sm:w-64 lg:-translate-x-0 lg:w-96 bg-card backdrop-blur-sm border border-primary/20 rounded-lg p-4 shadow-lg z-10">
@@ -218,7 +247,7 @@ export function SchoolPath() {
                 </p>
               </div>
             )}
-          </div>
+          </button>
         </div>
       </div>
     </div>

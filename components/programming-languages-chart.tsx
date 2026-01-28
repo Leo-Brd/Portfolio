@@ -72,6 +72,26 @@ const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
   return null;
 };
 
+interface CustomTickProps {
+  x?: number;
+  y?: number;
+  payload?: { value: ProgrammingConfigKey };
+}
+
+const CustomTick = ({ x, y, payload }: CustomTickProps) => {
+  if (!payload) return null;
+  const icon = programmingConfig[payload.value]?.icon || null;
+  return (
+    <g transform={`translate(${x},${y})`}>
+      <foreignObject x={-40} y={-15} width={45} height={30}>
+        <div className="flex items-center justify-center">
+          {icon}
+        </div>
+      </foreignObject>
+    </g>
+  );
+};
+
 export function ProgrammingLanguages() {
   const { t } = useTranslation('common');
 
@@ -99,19 +119,7 @@ export function ProgrammingLanguages() {
               tickLine={false}
               tickMargin={10}
               axisLine={false}
-              tick={(props: any) => {
-                const { x, y, payload } = props;
-                const icon = programmingConfig[(payload.value as ProgrammingConfigKey)]?.icon || null;
-                return (
-                  <g transform={`translate(${x},${y})`}>
-                    <foreignObject x={-40} y={-15} width={45} height={30}>
-                      <div className="flex items-center justify-center">
-                        {icon}
-                      </div>
-                    </foreignObject>
-                  </g>
-                );
-              }}
+              tick={<CustomTick />}
             />
             <XAxis dataKey="value" type="number" hide />
             <Tooltip
