@@ -6,7 +6,7 @@ import { initReactI18next } from 'react-i18next';
 import frTranslations from '@/public/locales/fr/common.json';
 import enTranslations from '@/public/locales/en/common.json';
 
-export default i18n
+i18n
   .use(initReactI18next) // Initialise react-i18next
   .init({
     resources: {
@@ -19,3 +19,5 @@ export default i18n
       escapeValue: false, // Pas besoin d'échapper les valeurs React
     },
   });
+
+export default i18n;
