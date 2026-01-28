@@ -6,12 +6,10 @@ export default function PopupAlternance() {
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (globalThis.window !== undefined) {
       const popupData = localStorage.getItem("popupAlternanceData");
       
-      if (!popupData) {
-        setShowPopup(true);
-      } else {
+      if (popupData) {
         const { lastClosedDate } = JSON.parse(popupData);
         const now = new Date();
         const lastClosed = new Date(lastClosedDate);
@@ -22,6 +20,8 @@ export default function PopupAlternance() {
                          now.getFullYear() !== lastClosed.getFullYear();
         
         setShowPopup(isNewDay);
+      } else {
+        setShowPopup(true);
       }
     }
   }, []);
@@ -43,7 +43,7 @@ export default function PopupAlternance() {
           🎯 Je suis ouvert aux opportunités !
         </h2>
         <p className="text-sm text-gray-700 dark:text-gray-300 mt-1">
-          N'hésitez pas à me contacter si mon profil vous intéresse ! Je suis ouvert aux stages et aux contrats de courte durée avant ma rentrée en Septembre.
+          N&apos;hésitez pas à me contacter si mon profil vous intéresse ! Je suis ouvert aux stages et aux contrats de courte durée avant ma rentrée en Septembre.
         </p>
         <div className="mt-3 flex justify-between">
           <Link
